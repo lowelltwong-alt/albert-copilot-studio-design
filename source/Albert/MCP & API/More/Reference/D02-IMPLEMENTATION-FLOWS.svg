@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1900" height="965"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#465d76"/></marker></defs><rect width="100%" height="100%" fill="#f8fafc"/><text x="35" y="40" font-family="Segoe UI" font-size="29" font-weight="700" fill="#17304c">Connected implementation • F01–F10, P/H/S alignment</text><text x="35" y="70" font-family="Segoe UI" font-size="16" fill="#455e78">Legend: yellow human • blue prompt • green flow • purple service/storage • red stop. Proposed design; not executable BPMN or deployment proof.</text>
+<polyline points="330,205 400,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="335.75" y="180" width="58.5" height="20" fill="white"/><text x="365.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">decisions</text>
+<polyline points="700,205 770,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="702.5" y="180" width="65.0" height="20" fill="white"/><text x="735.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">candidates</text>
+<polyline points="1070,205 1140,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1078.0" y="180" width="54" height="20" fill="white"/><text x="1105.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">refs</text>
+<polyline points="1290,261 1290,350 8,350 8,505 30,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="622.0" y="325" width="54" height="20" fill="white"/><text x="649.0" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13">grants</text>
+<polyline points="330,505 400,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="335.75" y="480" width="58.5" height="20" fill="white"/><text x="365.0" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13">artifacts</text>
+<polyline points="550,449 550,342 1488,342 1488,205 1510,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="992.0" y="317" width="54" height="20" fill="white"/><text x="1019.0" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13">rework</text>
+<polyline points="1660,261 1660,350 8,350 8,505 30,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="791.75" y="325" width="84.5" height="20" fill="white"/><text x="834.0" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13">accepted plan</text>
+<polyline points="700,505 770,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="708.0" y="480" width="54" height="20" fill="white"/><text x="735.0" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13">state</text>
+<polyline points="1070,505 1140,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1078.0" y="480" width="54" height="20" fill="white"/><text x="1105.0" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13">review</text>
+<polyline points="1440,505 1510,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1448.0" y="480" width="54" height="20" fill="white"/><text x="1475.0" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13">decision</text>
+<polyline points="1660,561 1660,659 8,659 8,805 30,805" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="807.0" y="634" width="54" height="20" fill="white"/><text x="834.0" y="649" text-anchor="middle" font-family="Segoe UI" font-size="13">delivery</text>
+<a xlink:href="04-ADMIN-SCREENS.md"><rect x="30" y="149" width="300" height="112" rx="12" fill="#fff0d2" stroke="#8197ad"/>
+<text x="180" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">H01-H03</text>
+<text x="180" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Human intake, boundary, profile</text>
+<text x="180" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">04-ADMIN-SCREENS.md</text>
+</a>
+<a xlink:href="10-CONFIGURATION-AND-PLACEMENT.md"><rect x="400" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="550" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">P00-P03</text>
+<text x="550" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Parent / source / profile roles</text>
+<text x="550" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">10-CONFIGURATION-AND-PLACEMENT.md</text>
+</a>
+<a xlink:href="02-FLOWS-AND-STATE.md"><rect x="770" y="149" width="300" height="112" rx="12" fill="#dcf4ec" stroke="#8197ad"/>
+<text x="920" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">F01-F05</text>
+<text x="920" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Intake → witness view</text>
+<text x="920" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">02-FLOWS-AND-STATE.md</text>
+</a>
+<a xlink:href="02-FLOWS-AND-STATE.md"><rect x="1140" y="149" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="1290" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">S01-S03</text>
+<text x="1290" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Layout, chunks, graph / grants</text>
+<text x="1290" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">02-FLOWS-AND-STATE.md</text>
+</a>
+<a xlink:href="04-ADMIN-SCREENS.md"><rect x="1510" y="149" width="300" height="112" rx="12" fill="#fff0d2" stroke="#8197ad"/>
+<text x="1660" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">H04</text>
+<text x="1660" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Human exact rework decision</text>
+<text x="1660" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">04-ADMIN-SCREENS.md</text>
+</a>
+<a xlink:href="10-CONFIGURATION-AND-PLACEMENT.md"><rect x="30" y="449" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="180" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">P04-P06</text>
+<text x="180" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Packet / script / evaluator</text>
+<text x="180" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">10-CONFIGURATION-AND-PLACEMENT.md</text>
+</a>
+<a xlink:href="02-FLOWS-AND-STATE.md"><rect x="400" y="449" width="300" height="112" rx="12" fill="#dcf4ec" stroke="#8197ad"/>
+<text x="550" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">F06-F08</text>
+<text x="550" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Quality, pair, export</text>
+<text x="550" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">02-FLOWS-AND-STATE.md</text>
+</a>
+<a xlink:href="02-FLOWS-AND-STATE.md"><rect x="770" y="449" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="920" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">S04-S05</text>
+<text x="920" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Jobs, artifacts, decision</text>
+<text x="920" y="510" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">ledger</text>
+<text x="920" y="528" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">02-FLOWS-AND-STATE.md</text>
+</a>
+<a xlink:href="04-ADMIN-SCREENS.md"><rect x="1140" y="449" width="300" height="112" rx="12" fill="#fff0d2" stroke="#8197ad"/>
+<text x="1290" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">H05-H07</text>
+<text x="1290" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Approve, custody, delivery</text>
+<text x="1290" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">04-ADMIN-SCREENS.md</text>
+</a>
+<a xlink:href="02-FLOWS-AND-STATE.md"><rect x="1510" y="449" width="300" height="112" rx="12" fill="#dcf4ec" stroke="#8197ad"/>
+<text x="1660" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">F09-F10</text>
+<text x="1660" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Status/cancel + custody</text>
+<text x="1660" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">02-FLOWS-AND-STATE.md</text>
+</a>
+<a xlink:href="11-CASE-STORAGE.md"><rect x="30" y="749" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="180" y="774" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">END</text>
+<text x="180" y="792" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Saved approved exact scope</text>
+<text x="180" y="810" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">11-CASE-STORAGE.md</text>
+</a>
+</svg>

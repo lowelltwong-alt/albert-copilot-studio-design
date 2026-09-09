@@ -1,0 +1,637 @@
+{
+  "revision": "2.0",
+  "estimate_basis": "Planning ranges; no executed benchmark or delivery commitment. Dependencies are finish-to-start unless explicitly split by lead. Optional study excluded from core release.",
+  "tickets": [
+    {
+      "id": "WP01",
+      "title": "Freeze pilot scope and owners",
+      "owner_role": "Product owner",
+      "estimate_person_days": "1\u20132",
+      "depends_on": [],
+      "subtasks": [
+        "Record one synthetic case, witness, rule profile and expected packet/script outputs",
+        "Assign platform, backend, review and QA owners; record data/region/budget decisions",
+        "Pin authorized input/code/policy revisions in an implementation receipt"
+      ],
+      "deliverable": "Signed scope and decision register; no protected source bundled",
+      "acceptance_ids": [
+        "AT21",
+        "AT22"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP02",
+      "title": "Implement domain and transport adapters",
+      "owner_role": "Backend lead",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP01"
+      ],
+      "subtasks": [
+        "Validate transport DTOs and map them explicitly to domain records",
+        "Reject unknown fields, malformed bindings, duplicate logical IDs and unresolved references",
+        "Document sentinel rules and migration/version policy"
+      ],
+      "deliverable": "Versioned schemas, adapter code and compatibility tests",
+      "acceptance_ids": [
+        "AT01",
+        "AT06",
+        "AT28"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP03",
+      "title": "Implement authenticated case and witness access",
+      "owner_role": "Backend security owner",
+      "estimate_person_days": "3\u20135",
+      "depends_on": [
+        "WP02"
+      ],
+      "subtasks": [
+        "Verify token issuer, audience, expiry and delegated identity",
+        "Persist case roles, movement approvals, witness grants and writer/checker assignments",
+        "Apply principal/view checks to queries, summaries, counts, previews and downloads"
+      ],
+      "deliverable": "Authorization middleware and denial tests through both transports",
+      "acceptance_ids": [
+        "AT02",
+        "AT03",
+        "AT04",
+        "AT07",
+        "AT23"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP04",
+      "title": "Implement source custody and versioned review subjects",
+      "owner_role": "Backend owner",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP02",
+        "WP03"
+      ],
+      "subtasks": [
+        "Store immutable originals and extraction derivatives separately",
+        "Issue H01 review subject plus nonce and validate exact approval before any egress",
+        "Bind source byte digest, processor, region, retention and telemetry classes"
+      ],
+      "deliverable": "Custody adapter and approved synthetic intake",
+      "acceptance_ids": [
+        "AT05",
+        "AT06",
+        "AT22"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP05",
+      "title": "Implement job ledger and durable recovery",
+      "owner_role": "Backend owner",
+      "estimate_person_days": "4\u20137",
+      "depends_on": [
+        "WP02",
+        "WP03"
+      ],
+      "subtasks": [
+        "Create transactional idempotency, state-version CAS, worker lease and callback receipt tables",
+        "Fence cancellation; reconcile unknown provider outcome before retry; account charges once",
+        "Commit outbox with state and deliver notifications with bounded retries"
+      ],
+      "deliverable": "Job service, worker adapter and injected-failure evidence",
+      "acceptance_ids": [
+        "AT10",
+        "AT11",
+        "AT12",
+        "AT24"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP06",
+      "title": "Implement OCR/layout adapter",
+      "owner_role": "Document processing owner",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP04",
+        "WP05"
+      ],
+      "subtasks": [
+        "Select an approved OCR adapter and preserve page image dimensions and engine revision",
+        "Translate declared byte/codepoint/UTF-16 offsets to verified selected text",
+        "Render source-page review for uncertain negation, tables, quotations and attributions"
+      ],
+      "deliverable": "One synthetic scanned-document extraction with page/span audit",
+      "acceptance_ids": [
+        "AT08",
+        "AT25"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP07",
+      "title": "Build page and exhibit boundary review",
+      "owner_role": "Power Platform / UI owner",
+      "estimate_person_days": "2\u20133",
+      "depends_on": [
+        "WP06"
+      ],
+      "subtasks": [
+        "Implement H02 crop, span, exhibit alias and continuation fields",
+        "Require exact reviewed page/exhibit revision; retain rejected values in history",
+        "Invalidate dependent chunks and descendants when approved boundaries change"
+      ],
+      "deliverable": "H02 screen and resubmission test",
+      "acceptance_ids": [
+        "AT08",
+        "AT09",
+        "AT25"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP08",
+      "title": "Implement evidence-preserving chunk construction",
+      "owner_role": "Backend owner",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP07"
+      ],
+      "subtasks": [
+        "Reuse authorized source splitting through an explicit adapter",
+        "Prevent cross-exhibit chunks and orphaned Q/A, table-header or qualification spans",
+        "Generate stable logical IDs plus content revisions and dependency edges"
+      ],
+      "deliverable": "Chunk adapter with table, Unicode and exhibit fixtures",
+      "acceptance_ids": [
+        "AT09",
+        "AT25"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP09",
+      "title": "Implement attributed graph and case rule profile",
+      "owner_role": "Knowledge engineer",
+      "estimate_person_days": "3\u20136",
+      "depends_on": [
+        "WP08"
+      ],
+      "subtasks": [
+        "Map claims, assertions, conflicts, inferences, gaps and source anchors to existing graph contracts",
+        "Preserve speaker, time uncertainty and rule-premise provenance",
+        "Expose bounded typed queries and deny bare inference promotion or cross-case edges"
+      ],
+      "deliverable": "Graph adapter with source-to-answer trace and unfamiliar-rule stop",
+      "acceptance_ids": [
+        "AT04",
+        "AT26",
+        "AT27"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP10",
+      "title": "Build case profile review",
+      "owner_role": "Rule custodian + UI owner",
+      "estimate_person_days": "1\u20133",
+      "depends_on": [
+        "WP09"
+      ],
+      "subtasks": [
+        "Capture case family, applicable rules and unresolved assumptions",
+        "Keep neutral posture separate from calling side, incentives and expert scope",
+        "Bind human review to a profile revision and invalidate downstream views on change"
+      ],
+      "deliverable": "Reviewed synthetic case profile and change test",
+      "acceptance_ids": [
+        "AT26",
+        "AT27"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP11",
+      "title": "Implement witness view and role controls",
+      "owner_role": "Backend + UI owner",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP03",
+        "WP10"
+      ],
+      "subtasks": [
+        "Implement H03 form and server validation for human-played roles",
+        "Compile permitted/prohibited evidence views including intermediate queries",
+        "Revoke or revise grant on role/source/profile change and deny stale descendants"
+      ],
+      "deliverable": "Witness view compiler and H03 screenshot/denial evidence",
+      "acceptance_ids": [
+        "AT03",
+        "AT04",
+        "AT07"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP12",
+      "title": "Implement candidate series persistence",
+      "owner_role": "Backend owner",
+      "estimate_person_days": "2\u20133",
+      "depends_on": [
+        "WP05",
+        "WP11"
+      ],
+      "subtasks": [
+        "Save immutable A0 with server-derived digest and writer assignment",
+        "Require same series/kind/current bindings for parent and subsequent candidates",
+        "Store candidate-to-input and candidate-to-evaluation dependencies atomically"
+      ],
+      "deliverable": "Candidate API with baseline and versioned revision receipts",
+      "acceptance_ids": [
+        "AT12",
+        "AT14",
+        "AT18"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP13",
+      "title": "Wire packet generation prompt",
+      "owner_role": "Agent engineer",
+      "estimate_person_days": "1\u20133",
+      "depends_on": [
+        "WP12"
+      ],
+      "subtasks": [
+        "Map P04 inputs to permitted witness excerpts and explicit rule profile",
+        "Produce packet sections with source notes, knowledge limits and examination practice",
+        "Persist each draft with SaveCandidate; no self-issued approval or qualification"
+      ],
+      "deliverable": "Synthetic packet baseline and prompt/config revision",
+      "acceptance_ids": [
+        "AT26",
+        "AT27",
+        "AT29"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP14",
+      "title": "Implement independent evaluation and scoring",
+      "owner_role": "QA/backend owner",
+      "estimate_person_days": "3\u20135",
+      "depends_on": [
+        "WP12"
+      ],
+      "subtasks": [
+        "Issue separate checker assignment with clean context and read-only scoring capability",
+        "Validate exact dimension cells and compute scores without rounded pass comparisons",
+        "Return span-bound defects and policy status; block packet convergence until category map resolved"
+      ],
+      "deliverable": "Evaluation service, rubric-owner decision and score tests",
+      "acceptance_ids": [
+        "AT13",
+        "AT15",
+        "AT16",
+        "AT17"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP15",
+      "title": "Implement material revision control",
+      "owner_role": "Backend + agent owner",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP13",
+        "WP14"
+      ],
+      "subtasks": [
+        "Freeze each baseline/evaluation and derive changed input/artifact/outcome",
+        "Count only independently verified substantive defect resolution; require two accepted revisions",
+        "Stop at five attempts or critical regression; display remaining work without relabeling failure"
+      ],
+      "deliverable": "Packet loop receipts and no-op/cap tests",
+      "acceptance_ids": [
+        "AT14",
+        "AT18",
+        "AT29"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP16",
+      "title": "Wire chaptered script generation and revision",
+      "owner_role": "Agent engineer",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP15"
+      ],
+      "subtasks": [
+        "Map P05 to exact approved packet/view and chapter plan",
+        "Separate spoken words from production/citation notes and report word count",
+        "Run a distinct script series with its own baseline/checker/two counted revisions"
+      ],
+      "deliverable": "Script baseline and two-cycle synthetic trial evidence",
+      "acceptance_ids": [
+        "AT14",
+        "AT16",
+        "AT29"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP17",
+      "title": "Implement cross-artifact consistency gate",
+      "owner_role": "QA/knowledge owner",
+      "estimate_person_days": "2\u20133",
+      "depends_on": [
+        "WP16"
+      ],
+      "subtasks": [
+        "Compare exact packet/script pair for role, dates, exhibit use and source-bound claims",
+        "Emit findings against affected artifact and route revision to its own series",
+        "Invalidate pair decision if either member or any dependency changes"
+      ],
+      "deliverable": "Pair-bound decision and stale-pair denial test",
+      "acceptance_ids": [
+        "AT18",
+        "AT19",
+        "AT29"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP18",
+      "title": "Build final review and controlled export",
+      "owner_role": "UI/backend owner",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP17"
+      ],
+      "subtasks": [
+        "Implement H04 scores/diffs and H05 exact artifact decisions",
+        "Keep generation terminal; record independent artifact approval ledger and enqueue new export job",
+        "Recheck grant/current digest at preview and download; H07 downloads only approved text/notes"
+      ],
+      "deliverable": "Screens, audit receipts and approved synthetic download",
+      "acceptance_ids": [
+        "AT19",
+        "AT20",
+        "AT30"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP19",
+      "title": "Implement Copilot-compatible MCP transport",
+      "owner_role": "Integration engineer",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP03",
+        "WP05",
+        "WP12",
+        "WP14"
+      ],
+      "subtasks": [
+        "Implement official SDK Streamable HTTP transport and eight declared tools",
+        "Configure OAuth plus same service/principal mapping; omit human-decision capability",
+        "Validate tool discovery, bounded outputs, protocol failures and loss recovery"
+      ],
+      "deliverable": "Deployed candidate MCP endpoint and sanitized protocol report",
+      "acceptance_ids": [
+        "AT23",
+        "AT24",
+        "AT31"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP20",
+      "title": "Implement API alternate transport and failover",
+      "owner_role": "Integration engineer",
+      "estimate_person_days": "2\u20133",
+      "depends_on": [
+        "WP19"
+      ],
+      "subtasks": [
+        "Implement all eight agent API operations against the same service ledger",
+        "Import/configure Swagger 2 connector; route automatic fallback only for permitted reads",
+        "Reconcile missing mutation responses using operation ID; same-key retry only under explicit alternate-mode policy"
+      ],
+      "deliverable": "API connector candidate and transport parity/replay tests",
+      "acceptance_ids": [
+        "AT12",
+        "AT23",
+        "AT24",
+        "AT32"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP21",
+      "title": "Configure and validate Copilot Studio agent",
+      "owner_role": "Power Platform owner",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP18",
+        "WP19",
+        "WP20"
+      ],
+      "subtasks": [
+        "Create standard-harness parent/children with exact instruction and connection mappings",
+        "Bind tool inputs/outputs explicitly and use authoritative job polling",
+        "Run test-chat then published-channel discovery/auth/invoke/denial/timeout probes"
+      ],
+      "deliverable": "Exported tenant solution/config plus tenant-specific test receipt",
+      "acceptance_ids": [
+        "AT31",
+        "AT32",
+        "AT33"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP22",
+      "title": "Build status and recovery UI",
+      "owner_role": "UI owner",
+      "estimate_person_days": "2\u20133",
+      "depends_on": [
+        "WP05",
+        "WP18"
+      ],
+      "subtasks": [
+        "Show state, current revision, cost reservation, active blockers and last authoritative poll",
+        "Provide cancel/rework/new-job actions with state-version checks",
+        "Handle double-click, stale tab, retry, access denial and safe error correlation IDs"
+      ],
+      "deliverable": "Accessible status/review screens with failure screenshots",
+      "acceptance_ids": [
+        "AT10",
+        "AT11",
+        "AT24",
+        "AT30"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP23",
+      "title": "Implement real-service acceptance adapter",
+      "owner_role": "QA owner",
+      "estimate_person_days": "2\u20134",
+      "depends_on": [
+        "WP03",
+        "WP05",
+        "WP14",
+        "WP18"
+      ],
+      "subtasks": [
+        "Map the supplied fixture contract to isolated synthetic service namespaces",
+        "Verify fixture setup/teardown and capture request/result revision bindings",
+        "Run both orders with clean baselines, exact primary findings and semantic human tests separately"
+      ],
+      "deliverable": "Production-validator adapter and release-bound acceptance evidence",
+      "acceptance_ids": [
+        "AT01",
+        "AT20",
+        "AT34"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP24",
+      "title": "Measure capacity, accessibility and tenant limits",
+      "owner_role": "Platform + QA owner",
+      "estimate_person_days": "1\u20133",
+      "depends_on": [
+        "WP21",
+        "WP22",
+        "WP23"
+      ],
+      "subtasks": [
+        "Measure synchronous response time, generation latency, response sizes and credits",
+        "Test keyboard/screen-reader status and review controls in target channel",
+        "Agree quotas, rate limits, retention, escalation and backup objectives from observations"
+      ],
+      "deliverable": "Measured pilot limits and accessibility report",
+      "acceptance_ids": [
+        "AT30",
+        "AT33",
+        "AT35"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP25",
+      "title": "Run staged synthetic pilot and defect closure",
+      "owner_role": "Pilot owner",
+      "estimate_person_days": "2\u20135",
+      "depends_on": [
+        "WP24"
+      ],
+      "subtasks": [
+        "Run premises then medical handoff, cold chain and unfamiliar-rule fixtures",
+        "Log critical/serious findings and repair with exact-revision reruns",
+        "Obtain human acceptance for the specific packet/script; distinguish tenant readiness from gold"
+      ],
+      "deliverable": "Pilot report with observed pass/fail and unresolved items",
+      "acceptance_ids": [
+        "AT25",
+        "AT26",
+        "AT27",
+        "AT29",
+        "AT36"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP26",
+      "title": "Implement operational handoff and restore drill",
+      "owner_role": "Operations owner",
+      "estimate_person_days": "2\u20133",
+      "depends_on": [
+        "WP25"
+      ],
+      "subtasks": [
+        "Document on-call ownership, revocation, cancellation, outages and unknown-charge handling",
+        "Restore ledgers/artifacts/dependency links in an isolated synthetic environment",
+        "Reconcile in-flight jobs and demonstrate replay cannot issue duplicate exports or charges"
+      ],
+      "deliverable": "Runbook, recovery drill and downstream acknowledgment",
+      "acceptance_ids": [
+        "AT24",
+        "AT35",
+        "AT36"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP27",
+      "title": "Optional blinded learning study",
+      "owner_role": "Study custodian",
+      "estimate_person_days": "separately scoped",
+      "depends_on": [
+        "WP25"
+      ],
+      "subtasks": [
+        "Obtain explicit protocol/consent/data authority and seal transfer bank before use",
+        "Assign real blinded reviewers and learners; preserve attrition and follow-up timing",
+        "Apply existing analysis/reliability rules without exposing bank to generators"
+      ],
+      "deliverable": "Study protocol and separately evaluated learning evidence",
+      "acceptance_ids": [
+        "AT37"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    },
+    {
+      "id": "WP28",
+      "title": "Prepare later public Git release",
+      "owner_role": "Release owner",
+      "estimate_person_days": "1\u20133",
+      "depends_on": [
+        "WP26"
+      ],
+      "subtasks": [
+        "Confirm code/case/prompt licenses and release scope with owner",
+        "Build allowlisted recipient/public bundle with secret/private-path scan",
+        "Publish only after authorized release review, exact-hash verification and repository checks"
+      ],
+      "deliverable": "Reviewed public release candidate; publication not performed here",
+      "acceptance_ids": [
+        "AT38"
+      ],
+      "done_rule": "Required acceptance evidence is attached to exact code/config/input revisions; blocked owner decisions cannot be marked passed.",
+      "status": "specified_not_implemented"
+    }
+  ]
+}

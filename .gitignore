@@ -1,0 +1,25 @@
+# Generated working material and disposable dependency/runtime caches
+outputs/
+work/
+*.tmp
+*.bak
+*.log
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+node_modules/
+
+# Local secrets and tenant-specific deployment records
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+secrets/
+tenant-private/
+
+# Keep the curated release surface under packages/, source/, docs/, and tools/.

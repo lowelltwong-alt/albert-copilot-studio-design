@@ -1,0 +1,168 @@
+{
+  "edition": "CONNECTED",
+  "revision": "2.0",
+  "namespace": "P",
+  "nodes": [
+    {
+      "node_id": "P00",
+      "prompt_file": "P00-parent.md",
+      "placement": "Parent Description + Instructions sections",
+      "trigger": "route; service result required",
+      "inputs": "trusted operation envelope + current bindings",
+      "outputs": "service-confirmed result/status",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG05",
+        "CFG06",
+        "CFG07",
+        "CFG08"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "P01",
+      "prompt_file": "P01-source-review.md",
+      "placement": "Source Review child Description + Instructions",
+      "trigger": "F02/H02 proposal",
+      "inputs": "layout refs + case candidate grant",
+      "outputs": "source_review_proposal",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG05",
+        "CFG06",
+        "CFG07",
+        "CFG08"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "P02",
+      "prompt_file": "P02-case-profile.md",
+      "placement": "Case Profile child Description + Instructions",
+      "trigger": "F04/H03 proposal",
+      "inputs": "graph snapshot + case candidate grant",
+      "outputs": "case_profile_proposal",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG05",
+        "CFG06",
+        "CFG07",
+        "CFG08"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "P03",
+      "prompt_file": "P03-witness-planner.md",
+      "placement": "Witness Planner child Description + Instructions",
+      "trigger": "F05/H03 proposal",
+      "inputs": "case profile + allowed planning assignment",
+      "outputs": "witness_settings_proposal",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG05",
+        "CFG06",
+        "CFG07",
+        "CFG08"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "P04",
+      "prompt_file": "P04-packet-writer.md",
+      "placement": "Packet Writer child Description + Instructions",
+      "trigger": "F06 packet series",
+      "inputs": "witness view + exact spans + assignment",
+      "outputs": "immutable witness_packet + separate coach annex",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG05",
+        "CFG06",
+        "CFG07",
+        "CFG08"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "P05",
+      "prompt_file": "P05-script-writer.md",
+      "placement": "Script Writer child Description + Instructions",
+      "trigger": "F07 podcast series",
+      "inputs": "current packet + permitted evidence + chapter plan",
+      "outputs": "immutable podcast_script",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG05",
+        "CFG06",
+        "CFG07",
+        "CFG08"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "P06",
+      "prompt_file": "P06-independent-evaluator.md",
+      "placement": "Isolated service-invoked checker Instructions",
+      "trigger": "evaluate frozen input; service persists",
+      "inputs": "service-issued checker assignment + frozen artifact",
+      "outputs": "Evaluation + findings; no approval authority",
+      "model_role": "checker",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG05",
+        "CFG06",
+        "CFG07",
+        "CFG08"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "P07",
+      "prompt_file": "P07-truthful-rehearsal.md",
+      "placement": "Optional Rehearsal child Instructions",
+      "trigger": "F10/H06 only after required approval",
+      "inputs": "approved material + custodian permitted question",
+      "outputs": "observed practice; no invented learning claim",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG05",
+        "CFG06",
+        "CFG07",
+        "CFG08"
+      ],
+      "status": "specified_not_tenant_tested"
+    }
+  ],
+  "execution": "Specification and manual configuration map; not an importable Copilot solution."
+}

@@ -1,0 +1,2053 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Albert service API \u2014 candidate v2",
+    "version": "2.0.0",
+    "description": "Implementation contract, not a live endpoint. POST read operations simplify MCP/connector parity. Replace example host and OAuth values before deployment."
+  },
+  "servers": [
+    {
+      "url": "https://albert.example.invalid"
+    }
+  ],
+  "paths": {
+    "/v1/jobs/start": {
+      "post": {
+        "operationId": "StartJob",
+        "summary": "Start a bounded approved job; returns its handle without waiting for generation.",
+        "security": [
+          {
+            "oauth2": [
+              "write"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StartJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/jobs/get": {
+      "post": {
+        "operationId": "GetJob",
+        "summary": "Read authoritative job state. A notification is only a hint to read this state.",
+        "security": [
+          {
+            "oauth2": [
+              "read"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/jobs/cancel": {
+      "post": {
+        "operationId": "CancelJob",
+        "summary": "Request cancellation using the current state version. Repeated matching requests are idempotent.",
+        "security": [
+          {
+            "oauth2": [
+              "write"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/operations/lookup": {
+      "post": {
+        "operationId": "LookupOperation",
+        "summary": "Reconcile a lost response by caller-supplied operation ID under the same verified identity.",
+        "security": [
+          {
+            "oauth2": [
+              "read"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LookupOperationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/graph/read": {
+      "post": {
+        "operationId": "ReadGraph",
+        "summary": "Read a bounded permitted witness view and attributed source spans. Does not browse arbitrary URLs.",
+        "security": [
+          {
+            "oauth2": [
+              "read"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReadGraphRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GraphPage"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/artifacts/read": {
+      "post": {
+        "operationId": "ReadArtifact",
+        "summary": "Read one permitted section of the exact bound artifact. Rechecks current access and staleness.",
+        "security": [
+          {
+            "oauth2": [
+              "read"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReadArtifactRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ArtifactSection"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/candidates/save": {
+      "post": {
+        "operationId": "SaveCandidate",
+        "summary": "Persist a writer candidate under a service-issued assignment; does not approve or score it.",
+        "security": [
+          {
+            "oauth2": [
+              "write"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaveCandidateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/evaluations/request": {
+      "post": {
+        "operationId": "RequestEvaluation",
+        "summary": "Enqueue evaluation; a service-assigned P06 checker receives controlled worker context.",
+        "security": [
+          {
+            "oauth2": [
+              "write"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestEvaluationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/reviews/decide": {
+      "post": {
+        "operationId": "RecordHumanDecision",
+        "summary": "Human portal only. Validate real reviewer, nonce, exact artifact and current bindings. Never expose to an LLM.",
+        "security": [
+          {
+            "oauth2": [
+              "review"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecordHumanDecisionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Accepted service result (an asynchronous operation returns a job handle).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DecisionReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access or approval denied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found in caller scope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Stale state, idempotency mismatch or other conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid domain input or quality policy unresolved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Capacity or budget limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Temporary service unavailability; reconcile unknown writes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Binding": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "caseId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "caseRevision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "sourceRevision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "sourceSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "graphRevision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "graphSnapshotSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "witnessViewRevision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "witnessViewSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "policyRevision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "accessPolicySha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "caseId",
+          "caseRevision",
+          "sourceRevision",
+          "sourceSha256",
+          "graphRevision",
+          "graphSnapshotSha256",
+          "witnessViewRevision",
+          "witnessViewSha256",
+          "policyRevision",
+          "accessPolicySha256"
+        ]
+      },
+      "StartJobRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "intake",
+              "source_review",
+              "chunk",
+              "graph_profile",
+              "witness_view",
+              "packet",
+              "script",
+              "consistency",
+              "export",
+              "study"
+            ]
+          },
+          "inputArtifactIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "maxItems": 50
+          },
+          "movementApprovalId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "budgetApprovalId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "kind",
+          "inputArtifactIds",
+          "movementApprovalId",
+          "budgetApprovalId"
+        ]
+      },
+      "GetJobRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "readOperationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "canonicalRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "caseId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "jobId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "readOperationId",
+          "canonicalRequestDigest",
+          "caseId",
+          "jobId"
+        ]
+      },
+      "CancelJobRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "jobId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "expectedStateVersion": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "jobId",
+          "expectedStateVersion",
+          "reason"
+        ]
+      },
+      "LookupOperationRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "readOperationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "canonicalRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "caseId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "operationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "expectedRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "readOperationId",
+          "canonicalRequestDigest",
+          "caseId",
+          "operationId",
+          "expectedRequestDigest"
+        ]
+      },
+      "ReadGraphRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "readOperationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "canonicalRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "viewGrantId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "queryKind": {
+            "type": "string",
+            "enum": [
+              "witness_knowledge_at_time",
+              "conflicts_and_corroboration",
+              "issue_proof_matrix",
+              "exhibit_foundation",
+              "impeachment_rehabilitation",
+              "direct_cross_goals",
+              "opened_door_risks",
+              "artifact_dependencies"
+            ]
+          },
+          "subjectId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "atTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "depth": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50
+          },
+          "cursor": {
+            "type": "string",
+            "maxLength": 2000,
+            "nullable": true
+          }
+        },
+        "required": [
+          "readOperationId",
+          "canonicalRequestDigest",
+          "binding",
+          "viewGrantId",
+          "queryKind",
+          "subjectId",
+          "atTime",
+          "depth",
+          "limit",
+          "cursor"
+        ]
+      },
+      "ReadArtifactRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "readOperationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "canonicalRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "artifactId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "viewGrantId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "sectionId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "readOperationId",
+          "canonicalRequestDigest",
+          "binding",
+          "artifactId",
+          "viewGrantId",
+          "sectionId"
+        ]
+      },
+      "SaveCandidateRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "seriesId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "candidateKind": {
+            "type": "string",
+            "enum": [
+              "source_review_proposal",
+              "case_profile_proposal",
+              "witness_settings_proposal",
+              "witness_packet",
+              "podcast_script",
+              "coach_annex"
+            ]
+          },
+          "parentArtifactId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "assignmentId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "grantId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "candidateText": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100000
+          },
+          "sourceAnchorIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "maxItems": 500
+          },
+          "targetFindingIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "maxItems": 100
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "seriesId",
+          "candidateKind",
+          "parentArtifactId",
+          "assignmentId",
+          "grantId",
+          "candidateText",
+          "sourceAnchorIds",
+          "targetFindingIds"
+        ]
+      },
+      "RequestEvaluationRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "artifactId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "seriesId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "witnessGrantId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "artifactId",
+          "seriesId",
+          "witnessGrantId"
+        ]
+      },
+      "ReviewSubject": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "data_movement_approval",
+              "layout_exhibit_review",
+              "case_witness_profile",
+              "quality_rework_plan",
+              "artifact_pair",
+              "study_custody",
+              "vendor_handoff"
+            ]
+          },
+          "subjectId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "subjectDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "kind",
+          "subjectId",
+          "subjectDigest",
+          "expectedVersion"
+        ]
+      },
+      "RecordHumanDecisionRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "reviewSubject": {
+            "$ref": "#/components/schemas/ReviewSubject"
+          },
+          "reviewScreen": {
+            "type": "string",
+            "enum": [
+              "H01",
+              "H02",
+              "H03",
+              "H04",
+              "H05",
+              "H06",
+              "H07"
+            ]
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approve",
+              "reject",
+              "request_changes",
+              "revoke"
+            ]
+          },
+          "reviewNonce": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "reviewSubject",
+          "reviewScreen",
+          "decision",
+          "reviewNonce",
+          "reason"
+        ]
+      },
+      "Job": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "jobId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "operationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "caseId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "queued",
+              "running",
+              "waiting_human",
+              "retry_wait",
+              "reconciling",
+              "needs_rework",
+              "review_ready_pending_human",
+              "succeeded",
+              "failed",
+              "cancel_requested",
+              "cancelled",
+              "stale",
+              "budget_exhausted",
+              "unresolved_not_parity"
+            ]
+          },
+          "stateVersion": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pollAfterSeconds": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 300
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "artifactIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          "error": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "message": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              },
+              "correlationId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "retryable": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "code",
+              "message",
+              "correlationId",
+              "retryable"
+            ],
+            "nullable": true
+          },
+          "correlationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "jobId",
+          "operationId",
+          "caseId",
+          "state",
+          "stateVersion",
+          "pollAfterSeconds",
+          "binding",
+          "artifactIds",
+          "error",
+          "correlationId"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "correlationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "retryable": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "correlationId",
+          "retryable"
+        ]
+      },
+      "Operation": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "operationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "requestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "completed",
+              "rejected",
+              "not_found_pending_commit"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "stateVersion": {
+            "type": "integer",
+            "minimum": 0,
+            "nullable": true
+          },
+          "resultId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "nullable": true
+          },
+          "resultKind": {
+            "type": "string",
+            "enum": [
+              "job",
+              "artifact",
+              "decision",
+              "none"
+            ]
+          },
+          "error": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "message": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              },
+              "correlationId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "retryable": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "code",
+              "message",
+              "correlationId",
+              "retryable"
+            ],
+            "nullable": true
+          },
+          "correlationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "operationId",
+          "requestDigest",
+          "status",
+          "state",
+          "stateVersion",
+          "resultId",
+          "resultKind",
+          "error",
+          "correlationId"
+        ]
+      },
+      "GraphPage": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "graphSnapshotSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "accessPolicySha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "records": {
+            "type": "array",
+            "maxItems": 50,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "recordId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "claim",
+                    "assertion",
+                    "inference",
+                    "conflict",
+                    "gap",
+                    "source_span",
+                    "exhibit",
+                    "rule"
+                  ]
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 3000
+                },
+                "sourceAnchorIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "maxItems": 50
+                },
+                "attribution": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                }
+              },
+              "required": [
+                "recordId",
+                "kind",
+                "text",
+                "sourceAnchorIds",
+                "attribution"
+              ]
+            }
+          },
+          "nextCursor": {
+            "type": "string",
+            "maxLength": 2000,
+            "nullable": true
+          }
+        },
+        "required": [
+          "binding",
+          "graphSnapshotSha256",
+          "accessPolicySha256",
+          "records",
+          "nextCursor"
+        ]
+      },
+      "ArtifactSection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "artifactId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "artifactDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          },
+          "sectionId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 12000
+          },
+          "nextSectionId": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "eligibleForExport": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "artifactId",
+          "artifactDigest",
+          "binding",
+          "sectionId",
+          "text",
+          "nextSectionId",
+          "eligibleForExport"
+        ]
+      },
+      "CandidateReceipt": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "artifactId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "artifactDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "seriesId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "revisionNumber": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft"
+            ]
+          },
+          "binding": {
+            "$ref": "#/components/schemas/Binding"
+          }
+        },
+        "required": [
+          "artifactId",
+          "artifactDigest",
+          "seriesId",
+          "revisionNumber",
+          "status",
+          "binding"
+        ]
+      },
+      "DecisionReceipt": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "decisionId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "reviewSubject": {
+            "$ref": "#/components/schemas/ReviewSubject"
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approve",
+              "reject",
+              "request_changes",
+              "revoke"
+            ]
+          },
+          "exportJobId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "nullable": true
+          }
+        },
+        "required": [
+          "decisionId",
+          "reviewSubject",
+          "decision",
+          "exportJobId"
+        ],
+        "description": "Conditional review/export constraints are enforced by the service using albert-transport.schema.json; this transport projection describes shape only."
+      }
+    },
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://login.microsoftonline.com/REPLACE_TENANT/oauth2/v2.0/authorize",
+            "tokenUrl": "https://login.microsoftonline.com/REPLACE_TENANT/oauth2/v2.0/token",
+            "scopes": {
+              "read": "Read permitted Albert data",
+              "write": "Create approved jobs and candidates",
+              "review": "Record human review in the human portal only"
+            }
+          }
+        }
+      }
+    }
+  }
+}

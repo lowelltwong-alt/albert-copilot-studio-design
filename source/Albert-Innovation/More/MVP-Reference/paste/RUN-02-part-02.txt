@@ -1,0 +1,40 @@
+LOAD_RUN RUN-02 PART 2/3. Acknowledge only; do not execute until BEGIN RUN.
+BEGIN_PART
+ad these headings or a compliance checklist aloud. Select the handful of case tensions worth time and link all ten anchors KC01–KC10 to them. For each planned module list source propositions, host interaction, takeaway, retrieval opportunity, pause budget and estimated spoken words. Include adverse facts and real limits rather than only reassuring points. Missing knowledge or conflicting instructions stops the affected module for resolution.
+
+## Write actual conversation
+
+HOST_A and HOST_B are equal thinking partners. Both may explain, ask, challenge and admit a source limit. One introduces a concrete source-bound tension; the other follows its consequence, probes a tempting conclusion or tests it against the record. A follow-up must change understanding. Use connected exchanges rather than a stack of independent questions. Explain what the record supports before asking the listener to retrieve it later. Maintain accurate attribution naturally in speech.
+
+Use plain spoken language, varied turn lengths, signposts that respond to what was just said, brief analogies that preserve limits, occasional genuine synthesis and a return to the opening tension. Interest comes from the evidence and distinctions. Avoid compulsory catchphrases, filler, theatrical insults, fake surprise, invented character psychology, two hosts saying the same thing, and repeated 'pause, say it, now check' narration. A longer turn is fine when its explanation earns the time. Do not imitate distinctive reference wording or copy its case facts/metaphors.
+
+Include realistic direct/cross sequences with supported follow-ups, careful document handling, a source-bounded redirect where supported, and authentic listener response space. Give feedback from permitted facts after the pause; do not imply the unseen listener answered correctly. Vary practice: timeline reconstruction, document/observation distinction, false-premise detection, delayed recall and unhinted transfer. Keep production cues and citations outside spoken lines.
+
+## Ten things this witness should know cold
+
+Select exactly ten nonduplicative priority anchors from the permitted case material. Each has: ID, plain takeaway, source span, personal-knowledge/time limit, why it matters, associated likely question and chapter. A legitimate anchor can be 'what I cannot establish'; it must still be case-specific and evidenced. Teach each naturally earlier, then give a compact closing recall round and a separate one-page card. 'Know cold' means understand facts and limits, not memorize a polished answer or eliminate honest uncertainty. If ten cannot be supported, explicitly return fewer and `source_depth_shortfall`.
+
+## Deliver and repair
+
+Produce plan, complete PC01–PC08 dialogue, permitted claim map, KC card, separate author-only ledger, speech-only speaker export and timing sheet. Word-count spoken text; estimate `words / rate + intentional_pause_seconds / 60`, with a stated 130–160 words/min sensitivity range and 145 central assumption unless the brief specifies otherwise. These are planning assumptions, not a measured voice rate. Aim for useful depth; never fill the clock with repetition. A 30–40 minute estimate might require roughly 4,000–5,000 spoken words plus pauses, but actual totals govern.
+
+Return issues and a factual self-check, not your own decisive quality grade. Separate A02 and P01 reviewers inspect the full frozen artifact. Accept only evidence-backed fixes, retain the original, update maps/exports after changes and recheck whole assembly once. No API, MCP, audio or external delivery is required. Operator saves/reopens exact files; model chat context alone is not storage.
+```
+<!-- END CORE P06 -->
+
+## Included T06
+
+Source: [reference/process-0.3/T06-pressure-payoff-review.md](../reference/process-0.3/T06-pressure-payoff-review.md). Byte source SHA-256: `11b8b7ee3b95591d49007b471d14b05c62633785476998624dc210b5804c5499`.
+
+<!-- BEGIN CORE T06 -->
+```text
+# T06 · Pressure payoffs and actual review evidence
+
+Use with P06, A02 and P07. This is a small visible planning/review record, not hidden reasoning and not a script for the hosts to read.
+
+Save as `CASE-WITNESS-T06-REV.md`, with planned and as-built sections. Bind the as-built section to the exact script, claims map, card and source/view paths and SHA-256 digests it covers. The planned section records source/view identities before drafting; it is not a completed assembly review. P09 rejects an as-built record whose identities differ from either current review.
+
+Before drafting, select the priority tensions supported by the permitted view. Complete one row per meaningful pressure point, not every sentence:
+
+`Priority | permitted IDs/spans | adverse fact or qualification | what one host introduces | what the cohost changes | resultin
+END_PART

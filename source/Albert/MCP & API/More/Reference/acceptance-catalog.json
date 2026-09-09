@@ -1,0 +1,1736 @@
+{
+  "revision": "2.0",
+  "classification": "Synthetic protocol contract; not product evidence",
+  "clean_state": {
+    "case": "synthetic-premises",
+    "allowedCases": [
+      "synthetic-premises"
+    ],
+    "principal": "synthetic-reader",
+    "grantRecipient": "synthetic-reader",
+    "grantExpired": false,
+    "graphRevision": "g1",
+    "requestedGraphRevision": "g1",
+    "permitted": [
+      "a1",
+      "a2"
+    ],
+    "requested": [
+      "a1"
+    ],
+    "localOnly": true,
+    "egress": false,
+    "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "role": "human_played",
+    "text": "A\u00e9\ud83d\ude42Z",
+    "offsetUnit": "utf16",
+    "start": 2,
+    "length": 2,
+    "selected": "\ud83d\ude42",
+    "exhibitIds": [
+      "E1"
+    ],
+    "jobState": "queued",
+    "nextJobState": "running",
+    "generationJob": true,
+    "cancelGeneration": 2,
+    "callbackCancelGeneration": 2,
+    "keyAlreadyUsed": true,
+    "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "writer": "writer1",
+    "checker": "checker1",
+    "changedInput": true,
+    "changedArtifact": true,
+    "changedOutcome": true,
+    "resolvedMaterialDefect": true,
+    "packetCategoryMapResolved": true,
+    "artifactKind": "podcast_script",
+    "scores": [
+      4.25,
+      4.25,
+      4.25,
+      4.25,
+      4.25,
+      4.25,
+      4.25,
+      4.25
+    ],
+    "seriousFindings": 0,
+    "criticalRegression": false,
+    "countedCycles": 2,
+    "attempts": 2,
+    "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "humanDecision": "approve",
+    "reviewerAuthenticated": true
+  },
+  "fixtures": [
+    {
+      "id": "AT01",
+      "title": "Clean protocol baseline",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": null,
+      "expected_findings": [],
+      "expected_delta_from_clean": []
+    },
+    {
+      "id": "AT02",
+      "title": "Wrong-case read",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-forbidden",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "case_access_denied",
+      "expected_findings": [
+        "case_access_denied"
+      ],
+      "expected_delta_from_clean": [
+        "case_access_denied"
+      ]
+    },
+    {
+      "id": "AT03",
+      "title": "Grant recipient mismatch",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "someone_else",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "grant_recipient_denied",
+      "expected_findings": [
+        "grant_recipient_denied"
+      ],
+      "expected_delta_from_clean": [
+        "grant_recipient_denied"
+      ]
+    },
+    {
+      "id": "AT04",
+      "title": "Forbidden intermediate evidence",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "hidden-node"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "view_access_denied",
+      "expected_findings": [
+        "view_access_denied"
+      ],
+      "expected_delta_from_clean": [
+        "view_access_denied"
+      ]
+    },
+    {
+      "id": "AT05",
+      "title": "Local-only egress request",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": true,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "egress_denied",
+      "expected_findings": [
+        "egress_denied"
+      ],
+      "expected_delta_from_clean": [
+        "egress_denied"
+      ]
+    },
+    {
+      "id": "AT06",
+      "title": "Source bytes changed",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "source_digest_mismatch",
+      "expected_findings": [
+        "source_digest_mismatch"
+      ],
+      "expected_delta_from_clean": [
+        "source_digest_mismatch"
+      ]
+    },
+    {
+      "id": "AT07",
+      "title": "Evidence-only role cannot be a played witness",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "evidence_only",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "role_not_playable",
+      "expected_findings": [
+        "role_not_playable"
+      ],
+      "expected_delta_from_clean": [
+        "role_not_playable"
+      ]
+    },
+    {
+      "id": "AT08",
+      "title": "Wrong declared Unicode units",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "codepoints",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "selected_text_mismatch",
+      "expected_findings": [
+        "selected_text_mismatch"
+      ],
+      "expected_delta_from_clean": [
+        "selected_text_mismatch"
+      ]
+    },
+    {
+      "id": "AT09",
+      "title": "Cross-exhibit chunk",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1",
+          "E2"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "cross_exhibit_chunk",
+      "expected_findings": [
+        "cross_exhibit_chunk"
+      ],
+      "expected_delta_from_clean": [
+        "cross_exhibit_chunk"
+      ]
+    },
+    {
+      "id": "AT10",
+      "title": "Generation cannot use generic success",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "running",
+        "nextJobState": "succeeded",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "generation_success_bypass",
+      "expected_findings": [
+        "generation_success_bypass"
+      ],
+      "expected_delta_from_clean": [
+        "generation_success_bypass"
+      ]
+    },
+    {
+      "id": "AT11",
+      "title": "Callback after cancellation",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 1,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "late_callback_quarantined",
+      "expected_findings": [
+        "late_callback_quarantined"
+      ],
+      "expected_delta_from_clean": [
+        "late_callback_quarantined"
+      ]
+    },
+    {
+      "id": "AT12",
+      "title": "Same key different request",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "idempotency_conflict",
+      "expected_findings": [
+        "idempotency_conflict"
+      ],
+      "expected_delta_from_clean": [
+        "idempotency_conflict"
+      ]
+    },
+    {
+      "id": "AT13",
+      "title": "Writer scores own output",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "writer1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "checker_not_separate",
+      "expected_findings": [
+        "checker_not_separate"
+      ],
+      "expected_delta_from_clean": [
+        "checker_not_separate"
+      ]
+    },
+    {
+      "id": "AT14",
+      "title": "Cosmetic revision is not material",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": false,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "revision_not_counted",
+      "expected_findings": [
+        "revision_not_counted"
+      ],
+      "expected_delta_from_clean": [
+        "revision_not_counted"
+      ]
+    },
+    {
+      "id": "AT15",
+      "title": "Missing packet category mapping",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": false,
+        "artifactKind": "witness_packet",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "packet_policy_unresolved",
+      "expected_findings": [
+        "packet_policy_unresolved"
+      ],
+      "expected_delta_from_clean": [
+        "packet_policy_unresolved"
+      ]
+    },
+    {
+      "id": "AT16",
+      "title": "One podcast dimension misses gate",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.249999,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "podcast_threshold_failed",
+      "expected_findings": [
+        "podcast_threshold_failed"
+      ],
+      "expected_delta_from_clean": [
+        "podcast_threshold_failed"
+      ]
+    },
+    {
+      "id": "AT17",
+      "title": "A serious defect survives",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 1,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "serious_findings_present",
+      "expected_findings": [
+        "serious_findings_present"
+      ],
+      "expected_delta_from_clean": [
+        "serious_findings_present"
+      ]
+    },
+    {
+      "id": "AT18",
+      "title": "Five attempts exhausted without two cycles",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 1,
+        "attempts": 5,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "revision_budget_exhausted",
+      "expected_findings": [
+        "revision_budget_exhausted"
+      ],
+      "expected_delta_from_clean": [
+        "revision_budget_exhausted"
+      ]
+    },
+    {
+      "id": "AT19",
+      "title": "Approval binds older artifact",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": true
+      },
+      "expected_primary": "stale_approval",
+      "expected_findings": [
+        "stale_approval"
+      ],
+      "expected_delta_from_clean": [
+        "stale_approval"
+      ]
+    },
+    {
+      "id": "AT20",
+      "title": "Model claims human approval",
+      "execution": "reference_or_service_adapter",
+      "state": {
+        "case": "synthetic-premises",
+        "allowedCases": [
+          "synthetic-premises"
+        ],
+        "principal": "synthetic-reader",
+        "grantRecipient": "synthetic-reader",
+        "grantExpired": false,
+        "graphRevision": "g1",
+        "requestedGraphRevision": "g1",
+        "permitted": [
+          "a1",
+          "a2"
+        ],
+        "requested": [
+          "a1"
+        ],
+        "localOnly": true,
+        "egress": false,
+        "sourceExpected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceObserved": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "human_played",
+        "text": "A\u00e9\ud83d\ude42Z",
+        "offsetUnit": "utf16",
+        "start": 2,
+        "length": 2,
+        "selected": "\ud83d\ude42",
+        "exhibitIds": [
+          "E1"
+        ],
+        "jobState": "queued",
+        "nextJobState": "running",
+        "generationJob": true,
+        "cancelGeneration": 2,
+        "callbackCancelGeneration": 2,
+        "keyAlreadyUsed": true,
+        "storedDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestDigest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "writer": "writer1",
+        "checker": "checker1",
+        "changedInput": true,
+        "changedArtifact": true,
+        "changedOutcome": true,
+        "resolvedMaterialDefect": true,
+        "packetCategoryMapResolved": true,
+        "artifactKind": "podcast_script",
+        "scores": [
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25,
+          4.25
+        ],
+        "seriousFindings": 0,
+        "criticalRegression": false,
+        "countedCycles": 2,
+        "attempts": 2,
+        "approvedDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "currentDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "humanDecision": "approve",
+        "reviewerAuthenticated": false
+      },
+      "expected_primary": "human_review_required",
+      "expected_findings": [
+        "human_review_required"
+      ],
+      "expected_delta_from_clean": [
+        "human_review_required"
+      ]
+    }
+  ],
+  "manual_cases": [
+    {
+      "id": "AT21",
+      "title": "Scope and version pin",
+      "execution": "tenant_or_human",
+      "acceptance": "Inspect named owners, approved synthetic scope, input/code/policy revisions and decision register. Missing ownership fails commissioning.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT22",
+      "title": "Movement and custody",
+      "execution": "tenant_or_human",
+      "acceptance": "Deny expired/revoked approval, unapproved processor/region/telemetry/retention and altered source revision before network I/O. Confirm no source text in logs.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT23",
+      "title": "Real identity boundary",
+      "execution": "tenant_or_human",
+      "acceptance": "Use two real test principals through MCP and API. Verify issuer/audience/expiry and witness scope. Maker connection cannot widen an end user. Include expired/revoked grant and guessed artifact IDs.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT24",
+      "title": "Races and recovery",
+      "execution": "tenant_or_human",
+      "acceptance": "Inject simultaneous same-key requests, lost response, cancel-before-callback and callback-before-cancel. Crash around outbox commit and provider charge acknowledgement. Verify exactly one job/export/charge and quarantine as applicable.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT25",
+      "title": "Original-page semantic review",
+      "execution": "tenant_or_human",
+      "acceptance": "Use synthetic OCR containing omitted negation, continued exhibits, rotated/table pages and multibyte offsets. Human compares original page, crop and spans. Correct digest alone cannot pass an omitted negation.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT26",
+      "title": "Three familiar families",
+      "execution": "tenant_or_human",
+      "acceptance": "Premises: witness saw condition after incident, cannot infer prior notice. Medical handoff: hearing a handoff does not prove reading a chart. Cold chain: custody and calibration evidence do not establish medical causation. Review actual source-bound output.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT27",
+      "title": "Unfamiliar case family",
+      "execution": "tenant_or_human",
+      "acceptance": "Remove governing rule profile and expertise. Source inventory may complete, domain conclusions must stop with specific missing-rule questions. Preserve conflicting attributed accounts.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT28",
+      "title": "All schema constraints",
+      "execution": "tenant_or_human",
+      "acceptance": "Use the production aggregate validator to reject duplicate dimensions/IDs, missing panel cells, broken cross-case references, malformed scopes, and stale dependency bindings; preserve exact primary findings and clean baselines.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT29",
+      "title": "Real material improvement",
+      "execution": "tenant_or_human",
+      "acceptance": "Freeze packet and script A0/E0 separately. Complete at least two independently verified material revisions each. Prove actual defect resolution with changed evidence and scores, zero serious findings and no critical regression. A cosmetic rewording fails. Packet formal gate needs resolved category map.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT30",
+      "title": "Human UI and download",
+      "execution": "tenant_or_human",
+      "acceptance": "Test H01\u2013H07 required fields, reject/change/approve paths, keyboard navigation, screen-reader labels, double-click and stale-tab handling. H05 creates a distinct export job; download rechecks access and exact current text.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT31",
+      "title": "MCP tenant compatibility",
+      "execution": "tenant_or_human",
+      "acceptance": "Standard harness + Teams: direct or Swagger import, TLS/OAuth callback, initialize, tools/list, all eight tools, errors, section paging. Confirm human-decision capability absent from tools. Record actual tenant/protocol/service/config versions.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT32",
+      "title": "API parity and fallback",
+      "execution": "tenant_or_human",
+      "acceptance": "Import/configure API connector. Compare same operation under same identity across transports. Transient read fallback preserves scope; 401/403/409/422/budget/quality/cancel/TLS-trust failures never trigger fallback. Lost write response uses lookup without new key.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT33",
+      "title": "Published-channel behavior",
+      "execution": "tenant_or_human",
+      "acceptance": "Run published Teams as maker and second pilot user. Measure response limits, cancellation, token renewal, status polling and long-script section retrieval. Test chat alone is insufficient.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT34",
+      "title": "Harness qualification",
+      "execution": "tenant_or_human",
+      "acceptance": "Real adapter supplies isolated synthetic namespaces, clean production-validator baselines, forward/reverse runs, exact expected primary codes and no unexpected deltas. Reference mode never counts. Retain fixture/adapter/service/validator digests and setup/cleanup evidence.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT35",
+      "title": "Capacity and restore",
+      "execution": "tenant_or_human",
+      "acceptance": "Measure latency, credits, concurrency and queue limits with an approved synthetic budget. Restore artifacts plus ledgers and dependencies; reconcile in-flight jobs and demonstrate revoked grants remain revoked.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT36",
+      "title": "Pilot handoff",
+      "execution": "tenant_or_human",
+      "acceptance": "Named pilot/operations owners receive exact artifact/config/test revisions, known defects and recovery runbook; receipt and acknowledgment recorded. No unsatisfied acceptance gate marked passed.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT37",
+      "title": "Optional human study",
+      "execution": "tenant_or_human",
+      "acceptance": "Explicit approved protocol, consent, sealed bank, real blinded reviewer assignment and learning outcomes with 24\u201372-hour follow-up as specified. No model-created ballot or invented study evidence.",
+      "status": "not_run"
+    },
+    {
+      "id": "AT38",
+      "title": "Later public release",
+      "execution": "tenant_or_human",
+      "acceptance": "Confirm licenses and release authority. Scan exact allowlisted bundle for secrets, private paths, client content and internal IDs; review rendered files and archive members. No publication implied by a local ZIP.",
+      "status": "not_run"
+    }
+  ]
+}

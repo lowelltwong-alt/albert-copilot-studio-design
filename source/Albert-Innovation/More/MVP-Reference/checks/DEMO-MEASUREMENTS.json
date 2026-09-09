@@ -1,0 +1,31 @@
+{
+  "scope": "timing convention and two actual order checks only; not a semantic quality gate",
+  "script_sha256": "1b3f25f527e936724891df201bae7ae57e23463f429ffc7de0548cec500ed844",
+  "method": "Python str.split() on text after each exact bold HOST_A/HOST_B [turn-id] label; whitespace-delimited tokens; punctuation and hyphen compounds not split; production metadata/labels/cues excluded",
+  "measurements": {
+    "speaker_lines": 43,
+    "spoken_whitespace_tokens": 1238,
+    "pause_count": 10,
+    "pause_seconds": 116
+  },
+  "estimated_minutes_by_wpm": {
+    "130": 11.456,
+    "145": 10.471,
+    "160": 9.671
+  },
+  "order_checks": [
+    {
+      "chapter": "PC03",
+      "feedback_turn": "PC03-B2",
+      "classification": "reflection; feedback already supplied",
+      "miscredited_practice_rejected": true
+    },
+    {
+      "chapter": "PC04",
+      "feedback_turn": "PC04-B2",
+      "classification": "reflection; feedback already supplied",
+      "miscredited_practice_rejected": true
+    }
+  ],
+  "tool_sha256": "e4272fe6110594d04d380a156b1eb1e5e235b396f416aec6e2567d42d9cea29e"
+}

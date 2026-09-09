@@ -1,0 +1,20 @@
+{
+  "operation": "regenerate three derived RUN-06 paste files after explicit rubric clarification",
+  "files": [
+    {
+      "file": "paste\\RUN-06-part-01.txt",
+      "before_sha256": "37b72b79706cfb84fed490d90802b8e43f8f8823243c4a1241aa3071fa112b5f",
+      "after_sha256": "4bead70cbbd1a0b460f44024c3e103f94da7fdf4b73659bbca590fb771824106"
+    },
+    {
+      "file": "paste\\RUN-06-part-02.txt",
+      "before_sha256": "c5184576bc46e40d1a6f0addbc2ca9d5e34e1a99b2f92a0c6b43bdf8196bcaa1",
+      "after_sha256": "0a8c91f952cd5b38ee1f44f1380c49c1ad3247162f8d500204a1310caf580997"
+    },
+    {
+      "file": "paste\\RUN-06-part-03.txt",
+      "before_sha256": "8292692caf370738b9e396a881d65b43d4dabefd803fc38869d7b962308e601a",
+      "after_sha256": "9e1d87bc452f80cf08097d6200513a4c44156e2ac8715a1370e592918156d0e9"
+    }
+  ]
+}

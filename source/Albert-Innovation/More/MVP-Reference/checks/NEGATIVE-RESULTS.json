@@ -1,0 +1,242 @@
+{
+  "status": "PASS",
+  "scope": "local functional aggregate-validator tests; not semantic source checks or formal DAD assurance qualification",
+  "utc": "2026-09-09T16:57:17.884392+00:00",
+  "baseline_before": {
+    "status": "PASS",
+    "scope": "local functional packaging/graph checks; no semantic-source, model, tenant or formal DAD assurance qualification",
+    "graph": "demo\\WORKED-GRAPH.md",
+    "graph_sha256": "5edb0e2f320eb3ff11492e1e7c87e5f0f31675fbf460dff4270a7ec8a59fe05a",
+    "links_checked": 159,
+    "findings": []
+  },
+  "baseline_after": {
+    "status": "PASS",
+    "scope": "local functional packaging/graph checks; no semantic-source, model, tenant or formal DAD assurance qualification",
+    "graph": "demo\\WORKED-GRAPH.md",
+    "graph_sha256": "5edb0e2f320eb3ff11492e1e7c87e5f0f31675fbf460dff4270a7ec8a59fe05a",
+    "links_checked": 159,
+    "findings": []
+  },
+  "validator_sha256": "9390713688be91ad94dada8d30981a76ab2b9b7b6430166d6befea755ea12da5",
+  "runner_sha256": "b7a89027136dfa48456324c22f0455b9dd183e6cd82cc523b0442ebab1eef998",
+  "catalog_sha256": "038b23e25a9b110828403d0105b5b29ae822ccc59980e4aece370d920c7a5999",
+  "negative_runs": [
+    {
+      "order": "forward",
+      "graph": "checks/fixtures/dangling-edge.md",
+      "graph_sha256": "64e136670e72a1254ec4c1a9ae7677b2d94891e728e0d99a8b8a65b319d8bf36",
+      "first_guard": "DANGLING_EDGE",
+      "complete_findings": [
+        {
+          "rule": "DANGLING_EDGE",
+          "identity": "E45"
+        }
+      ]
+    },
+    {
+      "order": "forward",
+      "graph": "checks/fixtures/truth-upgrade.md",
+      "graph_sha256": "9592bf9d755a217f949a31cdf19a9e80b40edc6d901ae9901588866850d27737",
+      "first_guard": "CONFLICT_TRUTH_UPGRADE",
+      "complete_findings": [
+        {
+          "rule": "CONFLICT_TRUTH_UPGRADE",
+          "identity": "CF01"
+        }
+      ]
+    },
+    {
+      "order": "forward",
+      "graph": "checks/fixtures/grant-unit.md",
+      "graph_sha256": "caed0e3a24ea9a46065e4c8490590094cdbd8959ad0db0244b323287d7961cad",
+      "first_guard": "GRANT_UNIT",
+      "complete_findings": [
+        {
+          "rule": "GRANT_UNIT",
+          "identity": "PG01"
+        }
+      ]
+    },
+    {
+      "order": "forward",
+      "graph": "checks/fixtures/conflict-endpoint.md",
+      "graph_sha256": "a97024251ec056b6e54c52d4364af046e40e7cc21a844b9b459551ffefc20658",
+      "first_guard": "CONFLICT_ENDPOINTS",
+      "complete_findings": [
+        {
+          "rule": "CONFLICT_ENDPOINTS",
+          "identity": "CF01"
+        }
+      ]
+    },
+    {
+      "order": "forward",
+      "graph": "checks/fixtures/span-parent.md",
+      "graph_sha256": "8a0b33cad55859b88a8b3f5e2305b3ac139beaf35ad523f7e2847e76979ecc36",
+      "first_guard": "SPAN_PARENT",
+      "complete_findings": [
+        {
+          "rule": "SPAN_PARENT",
+          "identity": "SP01"
+        }
+      ]
+    },
+    {
+      "order": "forward",
+      "graph": "checks/fixtures/stale-edge.md",
+      "graph_sha256": "3a0f70a99718dcc055de03ef2d90a3d6adfebc87470c5e29f75aa49edbd502ff",
+      "first_guard": "EDGE_REVISION",
+      "complete_findings": [
+        {
+          "rule": "EDGE_REVISION",
+          "identity": "E44"
+        }
+      ]
+    },
+    {
+      "order": "forward",
+      "graph": "checks/fixtures/empty-graph.md",
+      "graph_sha256": "e5151da1a8945fa1f8f155392881b2438ce1a5f275d8e45726c19ab6542f96a6",
+      "first_guard": "MISSING_SECTION",
+      "complete_findings": [
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "sources"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "spans"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "items"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "claims"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "grants"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "conflicts"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "edges"
+        }
+      ]
+    },
+    {
+      "order": "reverse",
+      "graph": "checks/fixtures/empty-graph.md",
+      "graph_sha256": "e5151da1a8945fa1f8f155392881b2438ce1a5f275d8e45726c19ab6542f96a6",
+      "first_guard": "MISSING_SECTION",
+      "complete_findings": [
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "sources"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "spans"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "items"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "claims"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "grants"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "conflicts"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "edges"
+        }
+      ]
+    },
+    {
+      "order": "reverse",
+      "graph": "checks/fixtures/stale-edge.md",
+      "graph_sha256": "3a0f70a99718dcc055de03ef2d90a3d6adfebc87470c5e29f75aa49edbd502ff",
+      "first_guard": "EDGE_REVISION",
+      "complete_findings": [
+        {
+          "rule": "EDGE_REVISION",
+          "identity": "E44"
+        }
+      ]
+    },
+    {
+      "order": "reverse",
+      "graph": "checks/fixtures/span-parent.md",
+      "graph_sha256": "8a0b33cad55859b88a8b3f5e2305b3ac139beaf35ad523f7e2847e76979ecc36",
+      "first_guard": "SPAN_PARENT",
+      "complete_findings": [
+        {
+          "rule": "SPAN_PARENT",
+          "identity": "SP01"
+        }
+      ]
+    },
+    {
+      "order": "reverse",
+      "graph": "checks/fixtures/conflict-endpoint.md",
+      "graph_sha256": "a97024251ec056b6e54c52d4364af046e40e7cc21a844b9b459551ffefc20658",
+      "first_guard": "CONFLICT_ENDPOINTS",
+      "complete_findings": [
+        {
+          "rule": "CONFLICT_ENDPOINTS",
+          "identity": "CF01"
+        }
+      ]
+    },
+    {
+      "order": "reverse",
+      "graph": "checks/fixtures/grant-unit.md",
+      "graph_sha256": "caed0e3a24ea9a46065e4c8490590094cdbd8959ad0db0244b323287d7961cad",
+      "first_guard": "GRANT_UNIT",
+      "complete_findings": [
+        {
+          "rule": "GRANT_UNIT",
+          "identity": "PG01"
+        }
+      ]
+    },
+    {
+      "order": "reverse",
+      "graph": "checks/fixtures/truth-upgrade.md",
+      "graph_sha256": "9592bf9d755a217f949a31cdf19a9e80b40edc6d901ae9901588866850d27737",
+      "first_guard": "CONFLICT_TRUTH_UPGRADE",
+      "complete_findings": [
+        {
+          "rule": "CONFLICT_TRUTH_UPGRADE",
+          "identity": "CF01"
+        }
+      ]
+    },
+    {
+      "order": "reverse",
+      "graph": "checks/fixtures/dangling-edge.md",
+      "graph_sha256": "64e136670e72a1254ec4c1a9ae7677b2d94891e728e0d99a8b8a65b319d8bf36",
+      "first_guard": "DANGLING_EDGE",
+      "complete_findings": [
+        {
+          "rule": "DANGLING_EDGE",
+          "identity": "E45"
+        }
+      ]
+    }
+  ]
+}

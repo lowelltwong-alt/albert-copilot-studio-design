@@ -1,0 +1,5 @@
+{
+  "original_bundle_sha256": "077a457d11abdb632e2a9eec80e1ba275da4b3f91fe18148e19f45b13bebe80a",
+  "new_layout": "MVP instructions, prompts and workflows first; supporting content under More",
+  "authority": "user requested neutral recipient naming and a simpler top level"
+}

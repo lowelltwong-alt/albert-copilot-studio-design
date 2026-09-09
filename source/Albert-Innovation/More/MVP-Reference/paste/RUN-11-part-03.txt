@@ -1,0 +1,61 @@
+LOAD_RUN RUN-11 PART 3/3. Acknowledge only; do not execute until BEGIN RUN.
+BEGIN_PART
+s unclear, task contract changes, an evaluator cannot be
+audited, a candidate needs more than one repair or one recheck, or disagreement
+remains after the independent evaluator audit. There are no recursive
+reviewers. Escalate the named unresolved question to the human adopter.
+
+## Migration and rollback
+
+Migration creates a new candidate instruction or adapter revision while
+retaining the prior frozen revision, trace, regression evidence, and holdout
+result. It does not overwrite the previous instruction. Rollback is the human
+adopter's explicit selection of the retained prior revision and withdrawal of
+the candidate from future assignments; already delivered outputs are not
+silently changed. Re-run this role when task contract, evidence corpus, tool,
+runtime binding, privacy boundary, authority, or workflow changes.
+
+This is a candidate reusable core, not a portability, quality, or adoption
+qualification.
+```
+<!-- END CORE A01 -->
+
+## Included P05
+
+Source: [reference/process-0.3/imports/prompts/P05-prompt-diagnosis.md](../reference/process-0.3/imports/prompts/P05-prompt-diagnosis.md). Byte source SHA-256: `65f2e7b6cbcd8c2124c11870475b8c28561ef1662d47c6b7aaccd0e88f7f7c59`.
+
+<!-- BEGIN CORE P05 -->
+```text
+# P05 · Improve the right layer
+
+Portable core v0.1.0. Inputs: locked task/rubric, exact prompt revision, artifacts, independently checked findings, runtime bindings and prior attempts.
+
+Separate outcome from cause. Test whether a bad score reflects a source error, missing input, context loss, tool defect, role ordering, overly broad instruction, poor model fit, contamination or an evaluator error. Give a concrete check for each plausible explanation; mark untested hypotheses. Repeated self-critique is not independent evidence.
+
+Choose one: no change, repair evaluator, improve input contract, change workflow/handoff, add a bounded specialist, change runtime route, revise a prompt, or collect more evidence. If revising, propose the smallest conditional change and remove overlapping guidance. Preserve old and new prompt versions.
+
+Use matched cases for diagnosis, then an untouched case for promotion evidence. Freeze success and non-regression criteria before the test; record cost, elapsed time, context visibility and actual model binding. Do not call reused examples holdouts. A new model or prompt needs new evidence. Return a candidate decision packet with the owner and rollback; do not auto-adopt.
+```
+<!-- END CORE P05 -->
+
+## Included P03
+
+Source: [reference/process-0.3/imports/prompts/P03-independent-verification.md](../reference/process-0.3/imports/prompts/P03-independent-verification.md). Byte source SHA-256: `3af0fa8e876d71c282ba0d063639d3e9cfb7f8b09467e4feb2fdda1b6e0340b7`.
+
+<!-- BEGIN CORE P03 -->
+```text
+# P03 · Verify the repair and challenge the evaluator
+
+Portable core v0.1.0. Inputs: task contract, original evidence, exact before/after artifacts and proposed validation. Read the artifacts before an author's self-rating if feasible; record actual visibility.
+
+Reproduce the relevant check independently. Confirm the repair addresses the actual failure and preserves the surrounding meaning and scope. Inspect a sibling path or alternate input that could exhibit the same cause. A clean checksum only confirms bytes. A stated test result is not execution evidence.
+
+For each material finding return `criterion | exact evidence | result | limitation | necessary next action`. Distinguish `fixed`, `not_fixed`, `not_evaluable` and `checker_error`. Name the reviewed revision and digest. Report whether the author and checker had shared context or other dependence; different names alone do not prove independence.
+
+Recommend acceptance, targeted rework or stop within budget. Do not promote a lesson, approve publication, change source facts or silently alter the acceptance standard.
+```
+<!-- END CORE P03 -->
+
+END RUN INSTRUCTIONS. Await the complete required packet and operator BEGIN RUN.
+
+END_PART

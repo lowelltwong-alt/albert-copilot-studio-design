@@ -1,0 +1,32 @@
+flowchart LR
+  %% Roles from ROLE-MAP; workflow SHA-256 28ccc6b39e4a845e9c712d2d7b6c3145d7af684b63ed042f53306fcbde428c97
+  classDef work fill:#eaf2ff,stroke:#315f96,color:#123047
+  classDef review fill:#fff4d9,stroke:#ad7515,color:#493500
+  classDef human fill:#e5f3e9,stroke:#387850,color:#143522
+  classDef stop fill:#fcebec,stroke:#aa4755,color:#59212c
+  RAW["Authorized source files"]:::work
+  ANALYST["Albert Case Analyst<br/>Source + typed graph"]:::work
+  HUMAN["Operator checks scope<br/>Saves and reopens VIEW"]:::human
+  VIEW["Permitted view + raw spans<br/>Actual grant and intended use"]:::work
+  WRITER["Albert Writer<br/>Plan → chapters → full assembly"]:::work
+  EVIDENCE["Albert Evidence Reviewer<br/>Complete raw-source check"]:::review
+  CRAFT["Albert Conversation Reviewer<br/>Full listening / practice check"]:::review
+  FILES["Operator-owned files<br/>Graph · scripts · reviews · revisions"]:::human
+  AUTHOR["Separate author-only ledger<br/>Not sent to Writer/Craft"]:::stop
+  CHILD["Optional Source Trace Helper<br/>Shares analyst parent context"]:::work
+  RAW --> ANALYST
+  ANALYST --> HUMAN
+  HUMAN --> VIEW
+  ANALYST --> AUTHOR
+  VIEW --> WRITER
+  VIEW --> EVIDENCE
+  RAW -->|"authorized evidence scope"| EVIDENCE
+  VIEW --> CRAFT
+  WRITER -->|"same frozen full assembly"| EVIDENCE
+  WRITER -->|"same frozen full assembly"| CRAFT
+  EVIDENCE --> FILES
+  CRAFT --> FILES
+  WRITER -->|"operator copies outputs"| FILES
+  FILES -.->|"reopen current packet"| HUMAN
+  ANALYST -.->|"optional TRACE / same scope"| CHILD
+  CHILD -.->|"bounded evidence packet"| ANALYST

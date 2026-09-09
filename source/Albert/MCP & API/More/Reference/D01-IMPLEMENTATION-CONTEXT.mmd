@@ -1,0 +1,22 @@
+flowchart TB
+  N_H01_H07["H01-H07: Human portal decisions outside LLM<br/>04-ADMIN-SCREENS.md"]
+  N_P00["P00: Parent router<br/>P00-parent.md"]
+  N_P01_P07["P01-P07: Scoped child roles<br/>10-CONFIGURATION-AND-PLACEMENT.md"]
+  N_MCP["MCP: MCP primary: Streamable HTTP<br/>03-MCP-AND-API.md"]
+  N_API["API: API-only: authenticated HTTPS<br/>03-MCP-AND-API.md"]
+  N_S04["S04: Same authoritative dispatcher<br/>02-FLOWS-AND-STATE.md"]
+  N_BLOB["BLOB: Proposed Azure Blob: immutable bodies<br/>11-CASE-STORAGE.md"]
+  N_SQL["SQL: Azure SQL: chunks, graph, conflicts, jobs<br/>11-CASE-STORAGE.md"]
+  N_K["K: Optional reviewed knowledge upload<br/>11-CASE-STORAGE.md"]
+  N_X["X: Tenant / connector behavior untested<br/>09-COPILOT-PLACEMENT.md"]
+  N_H01_H07 -->|decision / status| N_P00
+  N_P00 -->|scope| N_P01_P07
+  N_P01_P07 -->|primary| N_MCP
+  N_P01_P07 -->|operator selects| N_API
+  N_MCP -->|same envelope| N_S04
+  N_API -->|same dispatcher| N_S04
+  N_S04 -->|artifact body| N_BLOB
+  N_S04 -->|state + audit| N_SQL
+  N_K -->|optional retrieval| N_P00
+  N_P00 -->|cannot approve| N_X
+  N_H01_H07 -->|human portal API| N_S04

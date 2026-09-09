@@ -1,0 +1,723 @@
+{
+  "mode": "reference",
+  "status": "passed_selected_cases",
+  "production_qualified": false,
+  "scope": "Reference rules only; no backend, auth, tenant, provider or semantic quality tested.",
+  "catalog_sha256": "33451752ff2f47cb945bc58246481a086b26c37da02fb1e44935800f23777417",
+  "adapter_sha256": "773b26065eea9f2da9be7b9fa2e0a719c601a5f82dabde90680d0b0274af9342",
+  "results": [
+    {
+      "id": "AT01",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [],
+        "primary": null
+      },
+      "delta": []
+    },
+    {
+      "id": "AT02",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "case_access_denied"
+        ],
+        "primary": "case_access_denied"
+      },
+      "delta": [
+        "case_access_denied"
+      ]
+    },
+    {
+      "id": "AT03",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "grant_recipient_denied"
+        ],
+        "primary": "grant_recipient_denied"
+      },
+      "delta": [
+        "grant_recipient_denied"
+      ]
+    },
+    {
+      "id": "AT04",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "view_access_denied"
+        ],
+        "primary": "view_access_denied"
+      },
+      "delta": [
+        "view_access_denied"
+      ]
+    },
+    {
+      "id": "AT05",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "egress_denied"
+        ],
+        "primary": "egress_denied"
+      },
+      "delta": [
+        "egress_denied"
+      ]
+    },
+    {
+      "id": "AT06",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "source_digest_mismatch"
+        ],
+        "primary": "source_digest_mismatch"
+      },
+      "delta": [
+        "source_digest_mismatch"
+      ]
+    },
+    {
+      "id": "AT07",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "role_not_playable"
+        ],
+        "primary": "role_not_playable"
+      },
+      "delta": [
+        "role_not_playable"
+      ]
+    },
+    {
+      "id": "AT08",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "selected_text_mismatch"
+        ],
+        "primary": "selected_text_mismatch"
+      },
+      "delta": [
+        "selected_text_mismatch"
+      ]
+    },
+    {
+      "id": "AT09",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "cross_exhibit_chunk"
+        ],
+        "primary": "cross_exhibit_chunk"
+      },
+      "delta": [
+        "cross_exhibit_chunk"
+      ]
+    },
+    {
+      "id": "AT10",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "generation_success_bypass"
+        ],
+        "primary": "generation_success_bypass"
+      },
+      "delta": [
+        "generation_success_bypass"
+      ]
+    },
+    {
+      "id": "AT11",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "late_callback_quarantined"
+        ],
+        "primary": "late_callback_quarantined"
+      },
+      "delta": [
+        "late_callback_quarantined"
+      ]
+    },
+    {
+      "id": "AT12",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "idempotency_conflict"
+        ],
+        "primary": "idempotency_conflict"
+      },
+      "delta": [
+        "idempotency_conflict"
+      ]
+    },
+    {
+      "id": "AT13",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "checker_not_separate"
+        ],
+        "primary": "checker_not_separate"
+      },
+      "delta": [
+        "checker_not_separate"
+      ]
+    },
+    {
+      "id": "AT14",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "revision_not_counted"
+        ],
+        "primary": "revision_not_counted"
+      },
+      "delta": [
+        "revision_not_counted"
+      ]
+    },
+    {
+      "id": "AT15",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "packet_policy_unresolved"
+        ],
+        "primary": "packet_policy_unresolved"
+      },
+      "delta": [
+        "packet_policy_unresolved"
+      ]
+    },
+    {
+      "id": "AT16",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "podcast_threshold_failed"
+        ],
+        "primary": "podcast_threshold_failed"
+      },
+      "delta": [
+        "podcast_threshold_failed"
+      ]
+    },
+    {
+      "id": "AT17",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "serious_findings_present"
+        ],
+        "primary": "serious_findings_present"
+      },
+      "delta": [
+        "serious_findings_present"
+      ]
+    },
+    {
+      "id": "AT18",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "revision_budget_exhausted"
+        ],
+        "primary": "revision_budget_exhausted"
+      },
+      "delta": [
+        "revision_budget_exhausted"
+      ]
+    },
+    {
+      "id": "AT19",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "stale_approval"
+        ],
+        "primary": "stale_approval"
+      },
+      "delta": [
+        "stale_approval"
+      ]
+    },
+    {
+      "id": "AT20",
+      "order": "forward",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "human_review_required"
+        ],
+        "primary": "human_review_required"
+      },
+      "delta": [
+        "human_review_required"
+      ]
+    },
+    {
+      "id": "AT20",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "human_review_required"
+        ],
+        "primary": "human_review_required"
+      },
+      "delta": [
+        "human_review_required"
+      ]
+    },
+    {
+      "id": "AT19",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "stale_approval"
+        ],
+        "primary": "stale_approval"
+      },
+      "delta": [
+        "stale_approval"
+      ]
+    },
+    {
+      "id": "AT18",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "revision_budget_exhausted"
+        ],
+        "primary": "revision_budget_exhausted"
+      },
+      "delta": [
+        "revision_budget_exhausted"
+      ]
+    },
+    {
+      "id": "AT17",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "serious_findings_present"
+        ],
+        "primary": "serious_findings_present"
+      },
+      "delta": [
+        "serious_findings_present"
+      ]
+    },
+    {
+      "id": "AT16",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "podcast_threshold_failed"
+        ],
+        "primary": "podcast_threshold_failed"
+      },
+      "delta": [
+        "podcast_threshold_failed"
+      ]
+    },
+    {
+      "id": "AT15",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "packet_policy_unresolved"
+        ],
+        "primary": "packet_policy_unresolved"
+      },
+      "delta": [
+        "packet_policy_unresolved"
+      ]
+    },
+    {
+      "id": "AT14",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "revision_not_counted"
+        ],
+        "primary": "revision_not_counted"
+      },
+      "delta": [
+        "revision_not_counted"
+      ]
+    },
+    {
+      "id": "AT13",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "checker_not_separate"
+        ],
+        "primary": "checker_not_separate"
+      },
+      "delta": [
+        "checker_not_separate"
+      ]
+    },
+    {
+      "id": "AT12",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "idempotency_conflict"
+        ],
+        "primary": "idempotency_conflict"
+      },
+      "delta": [
+        "idempotency_conflict"
+      ]
+    },
+    {
+      "id": "AT11",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "late_callback_quarantined"
+        ],
+        "primary": "late_callback_quarantined"
+      },
+      "delta": [
+        "late_callback_quarantined"
+      ]
+    },
+    {
+      "id": "AT10",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "generation_success_bypass"
+        ],
+        "primary": "generation_success_bypass"
+      },
+      "delta": [
+        "generation_success_bypass"
+      ]
+    },
+    {
+      "id": "AT09",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "cross_exhibit_chunk"
+        ],
+        "primary": "cross_exhibit_chunk"
+      },
+      "delta": [
+        "cross_exhibit_chunk"
+      ]
+    },
+    {
+      "id": "AT08",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "selected_text_mismatch"
+        ],
+        "primary": "selected_text_mismatch"
+      },
+      "delta": [
+        "selected_text_mismatch"
+      ]
+    },
+    {
+      "id": "AT07",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "role_not_playable"
+        ],
+        "primary": "role_not_playable"
+      },
+      "delta": [
+        "role_not_playable"
+      ]
+    },
+    {
+      "id": "AT06",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "source_digest_mismatch"
+        ],
+        "primary": "source_digest_mismatch"
+      },
+      "delta": [
+        "source_digest_mismatch"
+      ]
+    },
+    {
+      "id": "AT05",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "egress_denied"
+        ],
+        "primary": "egress_denied"
+      },
+      "delta": [
+        "egress_denied"
+      ]
+    },
+    {
+      "id": "AT04",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "view_access_denied"
+        ],
+        "primary": "view_access_denied"
+      },
+      "delta": [
+        "view_access_denied"
+      ]
+    },
+    {
+      "id": "AT03",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "grant_recipient_denied"
+        ],
+        "primary": "grant_recipient_denied"
+      },
+      "delta": [
+        "grant_recipient_denied"
+      ]
+    },
+    {
+      "id": "AT02",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [
+          "case_access_denied"
+        ],
+        "primary": "case_access_denied"
+      },
+      "delta": [
+        "case_access_denied"
+      ]
+    },
+    {
+      "id": "AT01",
+      "order": "reverse",
+      "passed": true,
+      "clean": {
+        "findings": [],
+        "primary": null
+      },
+      "actual": {
+        "findings": [],
+        "primary": null
+      },
+      "delta": []
+    }
+  ],
+  "manual_cases_run": 0
+}

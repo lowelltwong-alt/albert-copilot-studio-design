@@ -1,0 +1,468 @@
+{
+  "format": "Visio 2003 XML Drawing (.vdx)",
+  "editable_nodes_and_connectors": true,
+  "xml_parsed": true,
+  "native_visio_open": "not tested; desktop application unavailable",
+  "pages": [
+    {
+      "page": "D01-WORKFLOW",
+      "nodes": 13,
+      "edges": 16,
+      "node_mapping": [
+        {
+          "node": "RUN01",
+          "shape_id": 1,
+          "text": "RUN-01 \u00b7 Graph\nAnalyst"
+        },
+        {
+          "node": "RUN02",
+          "shape_id": 2,
+          "text": "RUN-02 \u00b7 Plan\nWriter"
+        },
+        {
+          "node": "RUN03",
+          "shape_id": 3,
+          "text": "RUN-03 \u00b7 Plan Gate\nEvidence"
+        },
+        {
+          "node": "RUN04",
+          "shape_id": 4,
+          "text": "RUN-04 \u00b7 Write\nWriter"
+        },
+        {
+          "node": "RUN05",
+          "shape_id": 5,
+          "text": "RUN-05 \u00b7 Source Review\nEvidence"
+        },
+        {
+          "node": "RUN06",
+          "shape_id": 6,
+          "text": "RUN-06 \u00b7 Craft Review\nConversation"
+        },
+        {
+          "node": "RUN07",
+          "shape_id": 7,
+          "text": "RUN-07 \u00b7 Join\nEvidence"
+        },
+        {
+          "node": "RUN08",
+          "shape_id": 8,
+          "text": "RUN-08 \u00b7 Repair\nWriter"
+        },
+        {
+          "node": "RUN09",
+          "shape_id": 9,
+          "text": "RUN-09 \u00b7 Repair Evidence\nEvidence"
+        },
+        {
+          "node": "RUN10",
+          "shape_id": 10,
+          "text": "RUN-10 \u00b7 Export\nWriter"
+        },
+        {
+          "node": "RUN11",
+          "shape_id": 11,
+          "text": "RUN-11 \u00b7 Audit\nNon Author Reviewer"
+        },
+        {
+          "node": "HOLD",
+          "shape_id": 12,
+          "text": "HOLD\nKeep evidence and next input"
+        },
+        {
+          "node": "OWNER",
+          "shape_id": 13,
+          "text": "Human operator\nAccept exact internal-use candidate"
+        }
+      ],
+      "edge_mapping": [
+        {
+          "edge": "L_RUN01_RUN02_0",
+          "from": "RUN01",
+          "to": "RUN02",
+          "shape_id": 14
+        },
+        {
+          "edge": "L_RUN02_RUN03_0",
+          "from": "RUN02",
+          "to": "RUN03",
+          "shape_id": 15
+        },
+        {
+          "edge": "L_RUN03_RUN04_0",
+          "from": "RUN03",
+          "to": "RUN04",
+          "shape_id": 16
+        },
+        {
+          "edge": "L_RUN04_RUN05_0",
+          "from": "RUN04",
+          "to": "RUN05",
+          "shape_id": 17
+        },
+        {
+          "edge": "L_RUN04_RUN06_0",
+          "from": "RUN04",
+          "to": "RUN06",
+          "shape_id": 18
+        },
+        {
+          "edge": "L_RUN05_RUN07_0",
+          "from": "RUN05",
+          "to": "RUN07",
+          "shape_id": 19
+        },
+        {
+          "edge": "L_RUN06_RUN07_0",
+          "from": "RUN06",
+          "to": "RUN07",
+          "shape_id": 20
+        },
+        {
+          "edge": "L_RUN07_RUN08_0",
+          "from": "RUN07",
+          "to": "RUN08",
+          "shape_id": 21
+        },
+        {
+          "edge": "L_RUN08_RUN09_0",
+          "from": "RUN08",
+          "to": "RUN09",
+          "shape_id": 22
+        },
+        {
+          "edge": "L_RUN08_RUN06_0",
+          "from": "RUN08",
+          "to": "RUN06",
+          "shape_id": 23
+        },
+        {
+          "edge": "L_RUN09_RUN07_0",
+          "from": "RUN09",
+          "to": "RUN07",
+          "shape_id": 24
+        },
+        {
+          "edge": "L_RUN07_RUN11_0",
+          "from": "RUN07",
+          "to": "RUN11",
+          "shape_id": 25
+        },
+        {
+          "edge": "L_RUN07_HOLD_0",
+          "from": "RUN07",
+          "to": "HOLD",
+          "shape_id": 26
+        },
+        {
+          "edge": "L_RUN07_OWNER_0",
+          "from": "RUN07",
+          "to": "OWNER",
+          "shape_id": 27
+        },
+        {
+          "edge": "L_OWNER_RUN10_0",
+          "from": "OWNER",
+          "to": "RUN10",
+          "shape_id": 28
+        },
+        {
+          "edge": "L_RUN11_OWNER_0",
+          "from": "RUN11",
+          "to": "OWNER",
+          "shape_id": 29
+        }
+      ],
+      "source_svg_sha256": "c3faa145e21cb7b02acdadf944900231e250a2be05972fdc19064f81e06ebe72"
+    },
+    {
+      "page": "D02-SETUP",
+      "nodes": 10,
+      "edges": 16,
+      "node_mapping": [
+        {
+          "node": "RAW",
+          "shape_id": 1,
+          "text": "Authorized source files"
+        },
+        {
+          "node": "ANALYST",
+          "shape_id": 2,
+          "text": "Albert Case Analyst\nSource + typed graph"
+        },
+        {
+          "node": "HUMAN",
+          "shape_id": 3,
+          "text": "Operator checks scope\nSaves and reopens VIEW"
+        },
+        {
+          "node": "VIEW",
+          "shape_id": 4,
+          "text": "Permitted view + raw spans\nActual grant and intended use"
+        },
+        {
+          "node": "WRITER",
+          "shape_id": 5,
+          "text": "Albert Writer\nPlan \u2192 chapters \u2192 full assembly"
+        },
+        {
+          "node": "EVIDENCE",
+          "shape_id": 6,
+          "text": "Albert Evidence Reviewer\nComplete raw-source check"
+        },
+        {
+          "node": "CRAFT",
+          "shape_id": 7,
+          "text": "Albert Conversation Reviewer\nFull listening / practice check"
+        },
+        {
+          "node": "FILES",
+          "shape_id": 8,
+          "text": "Operator-owned files\nGraph \u00b7 scripts \u00b7 reviews \u00b7 revisions"
+        },
+        {
+          "node": "AUTHOR",
+          "shape_id": 9,
+          "text": "Separate author-only ledger\nNot sent to Writer/Craft"
+        },
+        {
+          "node": "CHILD",
+          "shape_id": 10,
+          "text": "Optional Source Trace Helper\nShares analyst parent context"
+        }
+      ],
+      "edge_mapping": [
+        {
+          "edge": "L_RAW_ANALYST_0",
+          "from": "RAW",
+          "to": "ANALYST",
+          "shape_id": 11
+        },
+        {
+          "edge": "L_ANALYST_HUMAN_0",
+          "from": "ANALYST",
+          "to": "HUMAN",
+          "shape_id": 12
+        },
+        {
+          "edge": "L_HUMAN_VIEW_0",
+          "from": "HUMAN",
+          "to": "VIEW",
+          "shape_id": 13
+        },
+        {
+          "edge": "L_ANALYST_AUTHOR_0",
+          "from": "ANALYST",
+          "to": "AUTHOR",
+          "shape_id": 14
+        },
+        {
+          "edge": "L_VIEW_WRITER_0",
+          "from": "VIEW",
+          "to": "WRITER",
+          "shape_id": 15
+        },
+        {
+          "edge": "L_VIEW_EVIDENCE_0",
+          "from": "VIEW",
+          "to": "EVIDENCE",
+          "shape_id": 16
+        },
+        {
+          "edge": "L_RAW_EVIDENCE_0",
+          "from": "RAW",
+          "to": "EVIDENCE",
+          "shape_id": 17
+        },
+        {
+          "edge": "L_VIEW_CRAFT_0",
+          "from": "VIEW",
+          "to": "CRAFT",
+          "shape_id": 18
+        },
+        {
+          "edge": "L_WRITER_EVIDENCE_0",
+          "from": "WRITER",
+          "to": "EVIDENCE",
+          "shape_id": 19
+        },
+        {
+          "edge": "L_WRITER_CRAFT_0",
+          "from": "WRITER",
+          "to": "CRAFT",
+          "shape_id": 20
+        },
+        {
+          "edge": "L_EVIDENCE_FILES_0",
+          "from": "EVIDENCE",
+          "to": "FILES",
+          "shape_id": 21
+        },
+        {
+          "edge": "L_CRAFT_FILES_0",
+          "from": "CRAFT",
+          "to": "FILES",
+          "shape_id": 22
+        },
+        {
+          "edge": "L_WRITER_FILES_0",
+          "from": "WRITER",
+          "to": "FILES",
+          "shape_id": 23
+        },
+        {
+          "edge": "L_FILES_HUMAN_0",
+          "from": "FILES",
+          "to": "HUMAN",
+          "shape_id": 24
+        },
+        {
+          "edge": "L_ANALYST_CHILD_0",
+          "from": "ANALYST",
+          "to": "CHILD",
+          "shape_id": 25
+        },
+        {
+          "edge": "L_CHILD_ANALYST_0",
+          "from": "CHILD",
+          "to": "ANALYST",
+          "shape_id": 26
+        }
+      ],
+      "source_svg_sha256": "de6de22ca4f8e9037b93a8da83d594bb6f4eb8127f351c27cc66055e865f7df6"
+    },
+    {
+      "page": "D03-GRAPH",
+      "nodes": 10,
+      "edges": 12,
+      "node_mapping": [
+        {
+          "node": "S",
+          "shape_id": 1,
+          "text": "SOURCE\nRaw file + revision"
+        },
+        {
+          "node": "SP",
+          "shape_id": 2,
+          "text": "SPAN\nExact anchors + qualifiers"
+        },
+        {
+          "node": "EX",
+          "shape_id": 3,
+          "text": "ITEM\nDistinct exhibit / attachment"
+        },
+        {
+          "node": "C1",
+          "shape_id": 4,
+          "text": "CLAIM A\nAttributed meaning + time"
+        },
+        {
+          "node": "C2",
+          "shape_id": 5,
+          "text": "CLAIM B\nDifferent attributed account"
+        },
+        {
+          "node": "CF",
+          "shape_id": 6,
+          "text": "CONFLICT\nQuestion; no truth winner"
+        },
+        {
+          "node": "PG",
+          "shape_id": 7,
+          "text": "OWNER GRANT\nUnit + use + witness + time"
+        },
+        {
+          "node": "AR",
+          "shape_id": 8,
+          "text": "ARTIFACT\nPlan / script / card / T06"
+        },
+        {
+          "node": "RV",
+          "shape_id": 9,
+          "text": "REVIEW + DECISION\nExact assembly + full read"
+        },
+        {
+          "node": "NX",
+          "shape_id": 10,
+          "text": "NEXT REVISION\nOld results retained / stale"
+        }
+      ],
+      "edge_mapping": [
+        {
+          "edge": "L_S_SP_0",
+          "from": "S",
+          "to": "SP",
+          "shape_id": 11
+        },
+        {
+          "edge": "L_SP_EX_0",
+          "from": "SP",
+          "to": "EX",
+          "shape_id": 12
+        },
+        {
+          "edge": "L_SP_C1_0",
+          "from": "SP",
+          "to": "C1",
+          "shape_id": 13
+        },
+        {
+          "edge": "L_CF_C1_0",
+          "from": "CF",
+          "to": "C1",
+          "shape_id": 14
+        },
+        {
+          "edge": "L_CF_C2_0",
+          "from": "CF",
+          "to": "C2",
+          "shape_id": 15
+        },
+        {
+          "edge": "L_PG_SP_0",
+          "from": "PG",
+          "to": "SP",
+          "shape_id": 16
+        },
+        {
+          "edge": "L_PG_C1_0",
+          "from": "PG",
+          "to": "C1",
+          "shape_id": 17
+        },
+        {
+          "edge": "L_AR_C1_0",
+          "from": "AR",
+          "to": "C1",
+          "shape_id": 18
+        },
+        {
+          "edge": "L_AR_PG_0",
+          "from": "AR",
+          "to": "PG",
+          "shape_id": 19
+        },
+        {
+          "edge": "L_AR_CF_0",
+          "from": "AR",
+          "to": "CF",
+          "shape_id": 20
+        },
+        {
+          "edge": "L_RV_AR_0",
+          "from": "RV",
+          "to": "AR",
+          "shape_id": 21
+        },
+        {
+          "edge": "L_AR_NX_0",
+          "from": "AR",
+          "to": "NX",
+          "shape_id": 22
+        }
+      ],
+      "source_svg_sha256": "ae0205f1e536264e12a710a6d751eaef3ffc00c3fcfe01d505de52b01df4d5b3"
+    }
+  ],
+  "vdx_sha256": "f0961f67cafd05b15f263b079dbc1c9d74ef521711f153c0864200217dd5196a"
+}

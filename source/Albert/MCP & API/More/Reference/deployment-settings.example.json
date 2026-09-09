@@ -1,0 +1,23 @@
+{
+  "EnvironmentVariables": [
+    {
+      "SchemaName": "albert_ApiBaseUrl",
+      "Value": "https://albert.example.invalid"
+    },
+    {
+      "SchemaName": "albert_McpUrl",
+      "Value": "https://albert.example.invalid/mcp"
+    },
+    {
+      "SchemaName": "albert_TenantId",
+      "Value": "REPLACE_FROM_TARGET_ENVIRONMENT"
+    }
+  ],
+  "ConnectionReferences": [
+    {
+      "LogicalName": "albert_ApprovedServiceConnection",
+      "ConnectionId": "REPLACE_FROM_ACTUAL_CONNECTION",
+      "ConnectorId": "REPLACE_FROM_EXPORTED_CONNECTOR"
+    }
+  ]
+}

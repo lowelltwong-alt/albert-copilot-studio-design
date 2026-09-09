@@ -1,0 +1,35 @@
+flowchart TD
+  %% Generated from workflow.json SHA-256 28ccc6b39e4a845e9c712d2d7b6c3145d7af684b63ed042f53306fcbde428c97
+  classDef work fill:#eaf2ff,stroke:#315f96,color:#123047
+  classDef review fill:#fff4d9,stroke:#ad7515,color:#493500
+  classDef human fill:#e5f3e9,stroke:#387850,color:#143522
+  classDef stop fill:#fcebec,stroke:#aa4755,color:#59212c
+  RUN01["RUN-01 · Graph<br/>Analyst"]:::work
+  RUN02["RUN-02 · Plan<br/>Writer"]:::work
+  RUN03["RUN-03 · Plan Gate<br/>Evidence"]:::review
+  RUN04["RUN-04 · Write<br/>Writer"]:::work
+  RUN05["RUN-05 · Source Review<br/>Evidence"]:::review
+  RUN06["RUN-06 · Craft Review<br/>Conversation"]:::review
+  RUN07["RUN-07 · Join<br/>Evidence"]:::review
+  RUN08["RUN-08 · Repair<br/>Writer"]:::work
+  RUN09["RUN-09 · Repair Evidence<br/>Evidence"]:::review
+  RUN10["RUN-10 · Export<br/>Writer"]:::work
+  RUN11["RUN-11 · Audit<br/>Non Author Reviewer"]:::review
+  RUN01 -->|"owner reviews source/view"| RUN02
+  RUN02 -->|"complete plan and graph"| RUN03
+  RUN03 -->|"plan checked; human continues"| RUN04
+  RUN04 -->|"freeze full assembly"| RUN05
+  RUN04 -->|"same frozen assembly"| RUN06
+  RUN05 -->|"evidence gate"| RUN07
+  RUN06 -->|"craft gate"| RUN07
+  RUN07 -->|"verified repair; only if none used"| RUN08
+  RUN08 -->|"new complete revision"| RUN09
+  RUN08 -->|"fresh craft review of new revision"| RUN06
+  RUN09 -->|"full source recheck"| RUN07
+  RUN07 -->|"triggered worker/reviewer issue"| RUN11
+  HOLD["HOLD<br/>Keep evidence and next input"]:::stop
+  RUN07 -->|"unresolved after one repair / missing gate"| HOLD
+  OWNER["Human operator<br/>Accept exact internal-use candidate"]:::human
+  RUN07 -->|"candidate recommendation"| OWNER
+  OWNER -->|"actual acceptance recorded"| RUN10
+  RUN11 -.->|"propose next tested revision; no auto adoption"| OWNER

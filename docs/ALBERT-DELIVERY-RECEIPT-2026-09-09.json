@@ -1,0 +1,25 @@
+{
+  "delivery": "Albert neutral packages and Digital Assets with MCP",
+  "prepared_on": "2026-09-09",
+  "packages": {
+    "Albert-MVP-Prompts-1.0.zip": {"sha256": "6102713cfd9495911dced23c43933c93a62bda02c1b86dc62d6949a8e992e97e", "bytes": 924332},
+    "Albert-MVP-Send-Ready-1.1.zip": {"sha256": "9c3a22c960256938d6dc92eaea0ce2df658643c0af3fd34c2d1eaa7e864d0d03", "bytes": 12974783},
+    "Albert-Upgrades-From-MVP-1.0.zip": {"sha256": "7393873c4ef2b2e55195ed64c5cc9fc2c47646b41f2d55ff9695629388383e92", "bytes": 1578779},
+    "Albert-No-MCP-or-API-1.0.zip": {"sha256": "47cdbaa48dd0d07316d12cc241f8f76b788ef6f76fff4060a06c08018c59cedc", "bytes": 251655},
+    "Albert-MCP-and-API-1.0.zip": {"sha256": "64dfe3363e89d88077ed05ff4d2485589f2b943fb4ec1cfcfb95fdad89eae787", "bytes": 421215},
+    "Albert-Digital-Assets-1.0.zip": {"sha256": "7b0a5d9c3a08eaa162d9cb80fdaf3bbd674ccdb6ac0f7d358567897f24d75ece", "bytes": 41017}
+  },
+  "checks": {
+    "mvp_and_upgrade_links": {"status": "pass", "links": 258},
+    "mvp_send_ready_case_fixture": {"status": "pass", "package": "Albert-MVP-Send-Ready-1.1.zip", "fixtures": 3, "original_pdfs": 3, "paired_ocr_markdown": 3, "zip_members": 207},
+    "additive_upgrade_bundle": {"status": "pass", "package": "Albert-Upgrades-From-MVP-1.0.zip", "source_archives": 4, "zip_members": 10, "mvp_rebuilt": false},
+    "digital_asset_runtime": {"status": "pass", "command": "python -B outputs/Albert-Digital-Assets-1.0/tests/test_runtime.py", "tests": 6},
+    "digital_asset_python_compile": {"status": "pass", "files": 4},
+    "digital_asset_http_mcp_api": {"status": "pass", "tests": 4, "scope": "task-local MCP/ASGI dependency environment; real initialize/list/call, API parity, auth, input bounds and network review denial"},
+    "archive_parity": {"status": "pass", "all_six_listed_zips": true, "ephemeral_test_dirs_excluded": true},
+    "visio": {"status": "structural_pass", "xml_and_connector_references": true, "native_open": "unverified; Visio desktop unavailable"}
+  },
+  "unverified": ["Azure deployment", "Copilot Studio tenant connection", "Foundry connection", "Entra/OAuth validation", "Teams publication", "model-picker availability", "audio generation", "gold-standard podcast quality"],
+  "licensing": "Albert-authored material is proposed CC BY 4.0 where rights permit; DAD-derived and third-party material remain separate, with the DAD restrictive draft pending owner decision.",
+  "external_effects": "No external message, tenant deployment, public GitHub publication, donor checkout mutation or global installation occurred."
+}

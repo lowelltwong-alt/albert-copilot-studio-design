@@ -1,0 +1,35 @@
+{
+  "renderer": "Mermaid 11.17.2; jsDelivr browser ES module; headless Edge",
+  "workflow_sha256": "28ccc6b39e4a845e9c712d2d7b6c3145d7af684b63ed042f53306fcbde428c97",
+  "generator_sha256": "eeabfa21c98516f321af8763c9af60ca52d49562d2097738549c275a23dda89b",
+  "files": [
+    {
+      "name": "D01-WORKFLOW",
+      "source_sha256": "da788299d5c2c7a95f9e242c737b4a5b8484587042d02d26e35468c7773c3871",
+      "svg_sha256": "c3faa145e21cb7b02acdadf944900231e250a2be05972fdc19064f81e06ebe72",
+      "png_sha256": "713f2b7b241cf35938824d33e15a32e1b643a6269af9d822cb222e31e039b9da",
+      "width": 1391,
+      "height": 1427,
+      "parsed": true
+    },
+    {
+      "name": "D02-SETUP",
+      "source_sha256": "1f4d2e9922647d16f3a0775e3ceb68fd044522b271bb95285d2bb7db75f09028",
+      "svg_sha256": "de6de22ca4f8e9037b93a8da83d594bb6f4eb8127f351c27cc66055e865f7df6",
+      "png_sha256": "5335e09484a7c043d59e901ce163bfdc0339a46419db8fa9cad91ee40ae3455e",
+      "width": 2653,
+      "height": 490,
+      "parsed": true
+    },
+    {
+      "name": "D03-GRAPH",
+      "source_sha256": "78cef06040d25a85d63385158c905bb1fb0e2c3a8305ee453b347a7a74684a05",
+      "svg_sha256": "ae0205f1e536264e12a710a6d751eaef3ffc00c3fcfe01d505de52b01df4d5b3",
+      "png_sha256": "d663aa3d24654227696bc6d4b21c654d655c2d0633ce6ca613d6b599819d2ccd",
+      "width": 2178,
+      "height": 474,
+      "parsed": true
+    }
+  ],
+  "naming_revision": "Recipient labels normalized; diagram source changes are comment hashes only. SVG void tags serialized as XML. Existing PNG preview pixels retained; no new native Visio rendering claimed."
+}

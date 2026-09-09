@@ -1,0 +1,541 @@
+{
+  "case_id": "LANTERN",
+  "witness": "MINA",
+  "revision": "R01",
+  "identity_mode": "manual_revision",
+  "sources": [
+    "S01",
+    "S02",
+    "S03"
+  ],
+  "spans": [
+    {
+      "id": "SP01",
+      "source": "S01",
+      "anchor": "S01:P01",
+      "text": "I arrived at Lantern Hall at about 1:50 p.m. I was helping set out chairs. I did not make a note of the time as I arrived."
+    },
+    {
+      "id": "SP02",
+      "source": "S01",
+      "anchor": "S01:P02",
+      "text": "A tall folding screen stood between the chair area and the east doorway. From the chair area I could not see the floor immediately inside that doorway."
+    },
+    {
+      "id": "SP03",
+      "source": "S01",
+      "anchor": "S01:P03",
+      "text": "I heard a clatter while I was moving my own small cart near the chairs. I did not see a cart or a person hit a speaker."
+    },
+    {
+      "id": "SP04",
+      "source": "S01",
+      "anchor": "S01:P04",
+      "text": "After the clatter, I walked around the screen and saw Owen beside the east doorway and a speaker on the floor. I cannot say from that observation how the speaker got there."
+    },
+    {
+      "id": "SP05",
+      "source": "S01",
+      "anchor": "S01:P05",
+      "text": "My best estimate is that the clatter was around 2:10 p.m. I looked at the wall clock after I had walked around the screen, not at the instant of the sound. I remember it being a little after two; I cannot give an exact minute."
+    },
+    {
+      "id": "SP06",
+      "source": "S01",
+      "anchor": "S01:P06",
+      "text": "I had been at a meeting scheduled to finish at 2:00 p.m., but I left it before it finished. I did not check when the meeting actually ended."
+    },
+    {
+      "id": "SP07",
+      "source": "S02",
+      "anchor": "S02:P01",
+      "text": "I reached the east doorway at about 2:15 p.m. The speaker was already on the floor when I arrived. I did not see it fall."
+    },
+    {
+      "id": "SP08",
+      "source": "S02",
+      "anchor": "S02:P02",
+      "text": "I remember checking my phone shortly before I reached the door, but I did not save a screenshot or make a note of the exact time."
+    },
+    {
+      "id": "SP09",
+      "source": "S03",
+      "anchor": "S03:A01",
+      "text": "Delivery record: Lantern Hall; two speakers; recorded delivery time 2:00 p.m.; condition box marked \"unchecked\". A signature field reads \"Lee\". The record does not identify Mina as a signer or witness to delivery."
+    },
+    {
+      "id": "SP10",
+      "source": "S03",
+      "anchor": "S03:A02",
+      "text": "The packet supplies no statement by Lee explaining the signature, inspection, or delivery-time entry. The document is available for discussion as a record; no witness in this packet authenticates it."
+    },
+    {
+      "id": "SP11",
+      "source": "S03",
+      "anchor": "S03:B01",
+      "text": "Printed meeting schedule: Lantern Hall planning meeting, 1:30 p.m. to 2:00 p.m."
+    },
+    {
+      "id": "SP12",
+      "source": "S03",
+      "anchor": "S03:B02",
+      "text": "This is a schedule, not a record of the meeting's actual finishing time."
+    }
+  ],
+  "claims": [
+    {
+      "id": "CL01",
+      "span": "SP01",
+      "text": "Mina says she arrived about 1:50 and did not note arrival time.",
+      "actor": "Mina",
+      "lane": "witness_observed"
+    },
+    {
+      "id": "CL02",
+      "span": "SP02",
+      "text": "Mina says the screen blocked her view of the floor inside the east doorway.",
+      "actor": "Mina",
+      "lane": "witness_observed"
+    },
+    {
+      "id": "CL03",
+      "span": "SP03",
+      "text": "Mina says she heard a clatter while moving her own small cart near chairs.",
+      "actor": "Mina",
+      "lane": "witness_observed"
+    },
+    {
+      "id": "CL04",
+      "span": "SP03",
+      "text": "Mina says she did not see a cart or person hit a speaker.",
+      "actor": "Mina",
+      "lane": "witness_observed"
+    },
+    {
+      "id": "CL05",
+      "span": "SP04",
+      "text": "Mina says she later walked around the screen and saw Owen near the doorway and a speaker on the floor.",
+      "actor": "Mina",
+      "lane": "witness_observed"
+    },
+    {
+      "id": "CL06",
+      "span": "SP04",
+      "text": "Mina says that later observation does not tell her how the speaker got there.",
+      "actor": "Mina",
+      "lane": "witness_observed"
+    },
+    {
+      "id": "CL07",
+      "span": "SP05",
+      "text": "Mina estimates the clatter around 2:10, checked the clock afterward and cannot give an exact minute.",
+      "actor": "Mina",
+      "lane": "witness_observed"
+    },
+    {
+      "id": "CL08",
+      "span": "SP06",
+      "text": "Mina says the meeting was scheduled to finish at 2:00; she left before it finished and did not check its actual end.",
+      "actor": "Mina",
+      "lane": "witness_observed"
+    },
+    {
+      "id": "CL09",
+      "span": "SP07",
+      "text": "Owen says he arrived about 2:15 and the speaker was already on the floor; he did not see it fall.",
+      "actor": "Owen",
+      "lane": "attributed_disputed"
+    },
+    {
+      "id": "CL10",
+      "span": "SP08",
+      "text": "Owen says he checked his phone before arriving but saved no screenshot or exact-time note.",
+      "actor": "Owen",
+      "lane": "attributed_disputed"
+    },
+    {
+      "id": "CL11",
+      "span": "SP09",
+      "text": "Attachment A records two speakers, 2:00 delivery time, condition unchecked and a Lee signature field; it does not identify Mina as signer or delivery witness.",
+      "actor": "Attachment A",
+      "lane": "witness_later_learned"
+    },
+    {
+      "id": "CL12",
+      "span": "SP10",
+      "text": "The supplied packet has no Lee statement explaining the entry and provides no authentication by a witness.",
+      "actor": "Packet scope",
+      "lane": "witness_later_learned"
+    },
+    {
+      "id": "CL13",
+      "span": "SP11",
+      "text": "Schedule insert B prints a 1:30 to 2:00 meeting slot.",
+      "actor": "Schedule insert B",
+      "lane": "witness_later_learned"
+    },
+    {
+      "id": "CL14",
+      "span": "SP12",
+      "text": "Schedule insert B is a plan, not evidence of the actual finishing time.",
+      "actor": "Schedule insert B",
+      "lane": "witness_later_learned"
+    }
+  ],
+  "items": {
+    "EX01": [
+      "SP09",
+      "SP10"
+    ],
+    "EX02": [
+      "SP11",
+      "SP12"
+    ]
+  },
+  "grants": {
+    "PG01": {
+      "unit": "span",
+      "use": "attributed discussion of Mina account and supported personal-knowledge limits",
+      "targets": [
+        "SP01",
+        "SP02",
+        "SP03",
+        "SP04",
+        "SP05",
+        "SP06"
+      ],
+      "approved": true
+    },
+    "PG02": {
+      "unit": "span",
+      "use": "attributed preparation discussion only; not Mina event-time memory or authentication",
+      "targets": [
+        "SP07",
+        "SP08",
+        "SP09",
+        "SP10",
+        "SP11",
+        "SP12"
+      ],
+      "approved": true
+    }
+  },
+  "conflicts": {
+    "CF01": {
+      "side_a": "CL07",
+      "side_b": "CL09",
+      "status": "unresolved",
+      "qualification": "Approximate times and sequence create a question to examine, not a demonstrated contradiction. Both accounts could be compatible."
+    }
+  },
+  "edges": [
+    {
+      "id": "E01",
+      "from": "S01",
+      "relation": "CONTAINS",
+      "to": "SP01",
+      "rev": "R01"
+    },
+    {
+      "id": "E02",
+      "from": "S01",
+      "relation": "CONTAINS",
+      "to": "SP02",
+      "rev": "R01"
+    },
+    {
+      "id": "E03",
+      "from": "S01",
+      "relation": "CONTAINS",
+      "to": "SP03",
+      "rev": "R01"
+    },
+    {
+      "id": "E04",
+      "from": "S01",
+      "relation": "CONTAINS",
+      "to": "SP04",
+      "rev": "R01"
+    },
+    {
+      "id": "E05",
+      "from": "S01",
+      "relation": "CONTAINS",
+      "to": "SP05",
+      "rev": "R01"
+    },
+    {
+      "id": "E06",
+      "from": "S01",
+      "relation": "CONTAINS",
+      "to": "SP06",
+      "rev": "R01"
+    },
+    {
+      "id": "E07",
+      "from": "S02",
+      "relation": "CONTAINS",
+      "to": "SP07",
+      "rev": "R01"
+    },
+    {
+      "id": "E08",
+      "from": "S02",
+      "relation": "CONTAINS",
+      "to": "SP08",
+      "rev": "R01"
+    },
+    {
+      "id": "E09",
+      "from": "S03",
+      "relation": "CONTAINS",
+      "to": "SP09",
+      "rev": "R01"
+    },
+    {
+      "id": "E10",
+      "from": "S03",
+      "relation": "CONTAINS",
+      "to": "SP10",
+      "rev": "R01"
+    },
+    {
+      "id": "E11",
+      "from": "S03",
+      "relation": "CONTAINS",
+      "to": "SP11",
+      "rev": "R01"
+    },
+    {
+      "id": "E12",
+      "from": "S03",
+      "relation": "CONTAINS",
+      "to": "SP12",
+      "rev": "R01"
+    },
+    {
+      "id": "E13",
+      "from": "SP01",
+      "relation": "ATTRIBUTES",
+      "to": "CL01",
+      "rev": "R01"
+    },
+    {
+      "id": "E14",
+      "from": "SP02",
+      "relation": "ATTRIBUTES",
+      "to": "CL02",
+      "rev": "R01"
+    },
+    {
+      "id": "E15",
+      "from": "SP03",
+      "relation": "ATTRIBUTES",
+      "to": "CL03",
+      "rev": "R01"
+    },
+    {
+      "id": "E16",
+      "from": "SP03",
+      "relation": "ATTRIBUTES",
+      "to": "CL04",
+      "rev": "R01"
+    },
+    {
+      "id": "E17",
+      "from": "SP04",
+      "relation": "ATTRIBUTES",
+      "to": "CL05",
+      "rev": "R01"
+    },
+    {
+      "id": "E18",
+      "from": "SP04",
+      "relation": "ATTRIBUTES",
+      "to": "CL06",
+      "rev": "R01"
+    },
+    {
+      "id": "E19",
+      "from": "SP05",
+      "relation": "ATTRIBUTES",
+      "to": "CL07",
+      "rev": "R01"
+    },
+    {
+      "id": "E20",
+      "from": "SP06",
+      "relation": "ATTRIBUTES",
+      "to": "CL08",
+      "rev": "R01"
+    },
+    {
+      "id": "E21",
+      "from": "SP07",
+      "relation": "ATTRIBUTES",
+      "to": "CL09",
+      "rev": "R01"
+    },
+    {
+      "id": "E22",
+      "from": "SP08",
+      "relation": "ATTRIBUTES",
+      "to": "CL10",
+      "rev": "R01"
+    },
+    {
+      "id": "E23",
+      "from": "SP09",
+      "relation": "ATTRIBUTES",
+      "to": "CL11",
+      "rev": "R01"
+    },
+    {
+      "id": "E24",
+      "from": "SP10",
+      "relation": "ATTRIBUTES",
+      "to": "CL12",
+      "rev": "R01"
+    },
+    {
+      "id": "E25",
+      "from": "SP11",
+      "relation": "ATTRIBUTES",
+      "to": "CL13",
+      "rev": "R01"
+    },
+    {
+      "id": "E26",
+      "from": "SP12",
+      "relation": "ATTRIBUTES",
+      "to": "CL14",
+      "rev": "R01"
+    },
+    {
+      "id": "E27",
+      "from": "SP09",
+      "relation": "IDENTIFIES_ITEM",
+      "to": "EX01",
+      "rev": "R01"
+    },
+    {
+      "id": "E28",
+      "from": "SP10",
+      "relation": "IDENTIFIES_ITEM",
+      "to": "EX01",
+      "rev": "R01"
+    },
+    {
+      "id": "E29",
+      "from": "SP11",
+      "relation": "IDENTIFIES_ITEM",
+      "to": "EX02",
+      "rev": "R01"
+    },
+    {
+      "id": "E30",
+      "from": "SP12",
+      "relation": "IDENTIFIES_ITEM",
+      "to": "EX02",
+      "rev": "R01"
+    },
+    {
+      "id": "E31",
+      "from": "CF01",
+      "relation": "HAS_SIDE_A",
+      "to": "CL07",
+      "rev": "R01"
+    },
+    {
+      "id": "E32",
+      "from": "CF01",
+      "relation": "HAS_SIDE_B",
+      "to": "CL09",
+      "rev": "R01"
+    },
+    {
+      "id": "E33",
+      "from": "PG01",
+      "relation": "PERMITS",
+      "to": "SP01",
+      "rev": "R01"
+    },
+    {
+      "id": "E34",
+      "from": "PG01",
+      "relation": "PERMITS",
+      "to": "SP02",
+      "rev": "R01"
+    },
+    {
+      "id": "E35",
+      "from": "PG01",
+      "relation": "PERMITS",
+      "to": "SP03",
+      "rev": "R01"
+    },
+    {
+      "id": "E36",
+      "from": "PG01",
+      "relation": "PERMITS",
+      "to": "SP04",
+      "rev": "R01"
+    },
+    {
+      "id": "E37",
+      "from": "PG01",
+      "relation": "PERMITS",
+      "to": "SP05",
+      "rev": "R01"
+    },
+    {
+      "id": "E38",
+      "from": "PG01",
+      "relation": "PERMITS",
+      "to": "SP06",
+      "rev": "R01"
+    },
+    {
+      "id": "E39",
+      "from": "PG02",
+      "relation": "PERMITS",
+      "to": "SP07",
+      "rev": "R01"
+    },
+    {
+      "id": "E40",
+      "from": "PG02",
+      "relation": "PERMITS",
+      "to": "SP08",
+      "rev": "R01"
+    },
+    {
+      "id": "E41",
+      "from": "PG02",
+      "relation": "PERMITS",
+      "to": "SP09",
+      "rev": "R01"
+    },
+    {
+      "id": "E42",
+      "from": "PG02",
+      "relation": "PERMITS",
+      "to": "SP10",
+      "rev": "R01"
+    },
+    {
+      "id": "E43",
+      "from": "PG02",
+      "relation": "PERMITS",
+      "to": "SP11",
+      "rev": "R01"
+    },
+    {
+      "id": "E44",
+      "from": "PG02",
+      "relation": "PERMITS",
+      "to": "SP12",
+      "rev": "R01"
+    }
+  ]
+}

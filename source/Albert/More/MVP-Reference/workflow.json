@@ -1,0 +1,379 @@
+{
+  "schema": "albert.innovation.workflow.v1",
+  "version": "1.0",
+  "artifact_class": "runtime_adapter",
+  "identity_mode": "manual_revision",
+  "inherited_process": "0.3.0",
+  "inherited_core": "0.2.0",
+  "status": "local candidate; tenant untested",
+  "nodes": [
+    {
+      "id": "RUN-01",
+      "role": "ANALYST",
+      "file": "prompts/RUN-01-GRAPH.md",
+      "core_nodes": [
+        "NODE.INTAKE",
+        "NODE.SOURCE",
+        "NODE.WITNESS",
+        "NODE.CLAIMS"
+      ],
+      "inputs": "SOURCE, operator scope/permissions, case/witness/use, GRAPH template, state packet",
+      "outputs": "W05-GRAPH, W05-VIEW, W05-AUTHOR, STATE",
+      "modules": [
+        {
+          "id": "P07",
+          "file": "reference/process-0.3/P07-source-consumer-handoff.md",
+          "sha256": "cd6a644ab7c0039dabe919d9acab415cab7a2c5b9ddfe1d9606f14c02f77e1c2"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-01-part-01.txt",
+        "paste/RUN-01-part-02.txt"
+      ]
+    },
+    {
+      "id": "RUN-02",
+      "role": "WRITER",
+      "file": "prompts/RUN-02-PLAN.md",
+      "core_nodes": [
+        "NODE.PLAN",
+        "NODE.LESSON_LOOKUP"
+      ],
+      "inputs": "owner-reviewed W05-VIEW and permitted source spans, GRAPH permitted projection, method source, style-function brief, mode/duration, PACKET",
+      "outputs": "W08-PLAN, draft KC10, planned T06",
+      "modules": [
+        {
+          "id": "P06",
+          "file": "reference/process-0.3/imports/prompts/P06-conversational-podcast-writer.md",
+          "sha256": "3a0ec59da4f836d8baa50d6d33caa8b605b255957b7c93c8b961bb64554b6512"
+        },
+        {
+          "id": "T06",
+          "file": "reference/process-0.3/T06-pressure-payoff-review.md",
+          "sha256": "11b8b7ee3b95591d49007b471d14b05c62633785476998624dc210b5804c5499"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-02-part-01.txt",
+        "paste/RUN-02-part-02.txt",
+        "paste/RUN-02-part-03.txt"
+      ]
+    },
+    {
+      "id": "RUN-03",
+      "role": "EVIDENCE",
+      "file": "prompts/RUN-03-PLAN-GATE.md",
+      "core_nodes": [
+        "NODE.PLAN_REVIEW"
+      ],
+      "inputs": "complete W08-PLAN/draft KC10/planned T06, W05-GRAPH/VIEW, actual raw spans and owner scope; for graph-first review the plan fields may be explicitly not_started",
+      "outputs": "W06-PLAN (graph/view result and, when present, plan result)",
+      "modules": [
+        {
+          "id": "P01",
+          "file": "reference/process-0.3/imports/prompts/P01-evidence-check.md",
+          "sha256": "0397684e17a87940296d1412829d7d9f147233081355a4a77448815fe959c457"
+        },
+        {
+          "id": "P07",
+          "file": "reference/process-0.3/P07-source-consumer-handoff.md",
+          "sha256": "cd6a644ab7c0039dabe919d9acab415cab7a2c5b9ddfe1d9606f14c02f77e1c2"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-03-part-01.txt",
+        "paste/RUN-03-part-02.txt"
+      ]
+    },
+    {
+      "id": "RUN-04",
+      "role": "WRITER",
+      "file": "prompts/RUN-04-WRITE.md",
+      "core_nodes": [
+        "NODE.DRAFT"
+      ],
+      "inputs": "complete reviewed PLAN, W06-PLAN, current VIEW/permitted raw spans, method/style brief, planned T06, operator acceptance of plan, chapter request",
+      "outputs": "W08-SCRIPT, W08-CLAIMS, KC10, as-built T06; chapter files first if needed",
+      "modules": [
+        {
+          "id": "P06",
+          "file": "reference/process-0.3/imports/prompts/P06-conversational-podcast-writer.md",
+          "sha256": "3a0ec59da4f836d8baa50d6d33caa8b605b255957b7c93c8b961bb64554b6512"
+        },
+        {
+          "id": "T06",
+          "file": "reference/process-0.3/T06-pressure-payoff-review.md",
+          "sha256": "11b8b7ee3b95591d49007b471d14b05c62633785476998624dc210b5804c5499"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-04-part-01.txt",
+        "paste/RUN-04-part-02.txt",
+        "paste/RUN-04-part-03.txt"
+      ]
+    },
+    {
+      "id": "RUN-05",
+      "role": "EVIDENCE",
+      "file": "prompts/RUN-05-SOURCE-REVIEW.md",
+      "core_nodes": [
+        "NODE.SOURCE_REVIEW"
+      ],
+      "inputs": "full frozen SCRIPT, CLAIMS, KC10, as-built T06, PLAN, current VIEW/GRAPH, actual permitted raw passages and required internal source access, STATE",
+      "outputs": "W06-SOURCE",
+      "modules": [
+        {
+          "id": "P01",
+          "file": "reference/process-0.3/imports/prompts/P01-evidence-check.md",
+          "sha256": "0397684e17a87940296d1412829d7d9f147233081355a4a77448815fe959c457"
+        },
+        {
+          "id": "P07",
+          "file": "reference/process-0.3/P07-source-consumer-handoff.md",
+          "sha256": "cd6a644ab7c0039dabe919d9acab415cab7a2c5b9ddfe1d9606f14c02f77e1c2"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-05-part-01.txt",
+        "paste/RUN-05-part-02.txt"
+      ]
+    },
+    {
+      "id": "RUN-06",
+      "role": "CONVERSATION",
+      "file": "prompts/RUN-06-CRAFT-REVIEW.md",
+      "core_nodes": [
+        "NODE.CRAFT_REVIEW"
+      ],
+      "inputs": "same full frozen SCRIPT, CLAIMS, KC10, as-built T06, PLAN and permitted VIEW/source passages; style-function brief; original benchmark only if authorized and provided",
+      "outputs": "W06-CRAFT",
+      "modules": [
+        {
+          "id": "A02",
+          "file": "reference/process-0.3/imports/agents/A02-podcast-conversation-reviewer.md",
+          "sha256": "f3f7cb2871b92d1d6da84b1f6b2355cef94d65780864ebc0e746809a572dbb21"
+        },
+        {
+          "id": "T06",
+          "file": "reference/process-0.3/T06-pressure-payoff-review.md",
+          "sha256": "11b8b7ee3b95591d49007b471d14b05c62633785476998624dc210b5804c5499"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-06-part-01.txt",
+        "paste/RUN-06-part-02.txt",
+        "paste/RUN-06-part-03.txt"
+      ]
+    },
+    {
+      "id": "RUN-07",
+      "role": "EVIDENCE",
+      "file": "prompts/RUN-07-JOIN.md",
+      "core_nodes": [
+        "NODE.QUALITY_GATE",
+        "NODE.HOLD"
+      ],
+      "inputs": "complete current assembly identities, both current reviews, T06, STATE and operator read confirmations; any unresolved disagreement",
+      "outputs": "W07-DECISION (recommendation for human)",
+      "modules": [
+        {
+          "id": "P09",
+          "file": "reference/process-0.3/P09-review-join-stop.md",
+          "sha256": "d7aa81ea6a02cdb85e23682f4bac822b6c257dde960dc208f30d005645d7132e"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-07-part-01.txt",
+        "paste/RUN-07-part-02.txt"
+      ]
+    },
+    {
+      "id": "RUN-08",
+      "role": "WRITER",
+      "file": "prompts/RUN-08-REPAIR.md",
+      "core_nodes": [
+        "NODE.REPAIR"
+      ],
+      "inputs": "exact complete before assembly, current raw/view, verified findings and join recommendation, prior source/craft reports, unchanged chapters and current STATE",
+      "outputs": "new-revision full SCRIPT, CLAIMS, KC10, T06, CHANGE-RECEIPT",
+      "modules": [
+        {
+          "id": "P02",
+          "file": "reference/process-0.3/imports/prompts/P02-repair-plan.md",
+          "sha256": "82fd8b47e0cdcc8bf38ab646d8fffd267637729b654885a45e9a2f6430048e79"
+        },
+        {
+          "id": "P06",
+          "file": "reference/process-0.3/imports/prompts/P06-conversational-podcast-writer.md",
+          "sha256": "3a0ec59da4f836d8baa50d6d33caa8b605b255957b7c93c8b961bb64554b6512"
+        },
+        {
+          "id": "P08",
+          "file": "reference/process-0.3/P08-preserve-depth-edit.md",
+          "sha256": "2ed96e03d77907463ad9cbda4d7d31de5a913032c979c2e63a424129eb3b8e9b"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-08-part-01.txt",
+        "paste/RUN-08-part-02.txt",
+        "paste/RUN-08-part-03.txt"
+      ]
+    },
+    {
+      "id": "RUN-09",
+      "role": "EVIDENCE",
+      "file": "prompts/RUN-09-REPAIR-EVIDENCE.md",
+      "core_nodes": [
+        "NODE.FINAL_REVIEW"
+      ],
+      "inputs": "complete before and after assemblies, verified original findings, CHANGE-RECEIPT, current raw/view and exact STATE identities",
+      "outputs": "W06-SOURCE on the new revision, per-finding verification",
+      "modules": [
+        {
+          "id": "P01",
+          "file": "reference/process-0.3/imports/prompts/P01-evidence-check.md",
+          "sha256": "0397684e17a87940296d1412829d7d9f147233081355a4a77448815fe959c457"
+        },
+        {
+          "id": "P03",
+          "file": "reference/process-0.3/imports/prompts/P03-independent-verification.md",
+          "sha256": "3af0fa8e876d71c282ba0d063639d3e9cfb7f8b09467e4feb2fdda1b6e0340b7"
+        },
+        {
+          "id": "P07",
+          "file": "reference/process-0.3/P07-source-consumer-handoff.md",
+          "sha256": "cd6a644ab7c0039dabe919d9acab415cab7a2c5b9ddfe1d9606f14c02f77e1c2"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-09-part-01.txt",
+        "paste/RUN-09-part-02.txt"
+      ]
+    },
+    {
+      "id": "RUN-10",
+      "role": "WRITER",
+      "file": "prompts/RUN-10-EXPORT.md",
+      "core_nodes": [
+        "NODE.EXPORT"
+      ],
+      "inputs": "human acceptance of exact manual_reviewed_candidate or actual hash-verified assembly, current SCRIPT/CLAIMS/KC10/T06/STATE/decision, intended internal audience",
+      "outputs": "W09-SPEAKERS.txt, W09-SPOKEN.txt, W09-TIMING.md, copy of permitted KC10/CLAIMS",
+      "modules": [
+        {
+          "id": "P09",
+          "file": "reference/process-0.3/P09-review-join-stop.md",
+          "sha256": "d7aa81ea6a02cdb85e23682f4bac822b6c257dde960dc208f30d005645d7132e"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-10-part-01.txt",
+        "paste/RUN-10-part-02.txt"
+      ]
+    },
+    {
+      "id": "RUN-11",
+      "role": "NON_AUTHOR_REVIEWER",
+      "file": "prompts/RUN-11-AUDIT.md",
+      "core_nodes": [
+        "NODE.A01_AUDIT",
+        "NODE.LEDGER",
+        "NODE.DECISION",
+        "NODE.REVISION"
+      ],
+      "inputs": "specific suspected worker/reviewer failure, exact instructions and inputs, actual output and reviews, source evidence within authorized scope, experiment record",
+      "outputs": "A01-AUDIT, generic lesson candidate, proposed test or no-change",
+      "modules": [
+        {
+          "id": "A01",
+          "file": "reference/process-0.3/imports/agents/A01-subagent-improver.md",
+          "sha256": "c96597ada92c9b853d1c486c6758881919c68c949795b953af1b134481f554fc"
+        },
+        {
+          "id": "P05",
+          "file": "reference/process-0.3/imports/prompts/P05-prompt-diagnosis.md",
+          "sha256": "65f2e7b6cbcd8c2124c11870475b8c28561ef1662d47c6b7aaccd0e88f7f7c59"
+        },
+        {
+          "id": "P03",
+          "file": "reference/process-0.3/imports/prompts/P03-independent-verification.md",
+          "sha256": "3af0fa8e876d71c282ba0d063639d3e9cfb7f8b09467e4feb2fdda1b6e0340b7"
+        }
+      ],
+      "paste_parts": [
+        "paste/RUN-11-part-01.txt",
+        "paste/RUN-11-part-02.txt",
+        "paste/RUN-11-part-03.txt"
+      ]
+    }
+  ],
+  "edges": [
+    [
+      "RUN-01",
+      "RUN-02",
+      "owner reviews source/view"
+    ],
+    [
+      "RUN-02",
+      "RUN-03",
+      "complete plan and graph"
+    ],
+    [
+      "RUN-03",
+      "RUN-04",
+      "plan checked; human continues"
+    ],
+    [
+      "RUN-04",
+      "RUN-05",
+      "freeze full assembly"
+    ],
+    [
+      "RUN-04",
+      "RUN-06",
+      "same frozen assembly"
+    ],
+    [
+      "RUN-05",
+      "RUN-07",
+      "evidence gate"
+    ],
+    [
+      "RUN-06",
+      "RUN-07",
+      "craft gate"
+    ],
+    [
+      "RUN-07",
+      "RUN-08",
+      "verified repair; only if none used"
+    ],
+    [
+      "RUN-08",
+      "RUN-09",
+      "new complete revision"
+    ],
+    [
+      "RUN-08",
+      "RUN-06",
+      "fresh craft review of new revision"
+    ],
+    [
+      "RUN-09",
+      "RUN-07",
+      "full source recheck"
+    ],
+    [
+      "RUN-07",
+      "RUN-10",
+      "both gates and human acceptance"
+    ],
+    [
+      "RUN-07",
+      "RUN-11",
+      "triggered worker/reviewer issue"
+    ]
+  ],
+  "stop": "after one ordinary repair, unresolved means HOLD; no automatic RUN-08 replay",
+  "maintainer": "edit this exact new manifest through reviewed identity-bound revision; regenerate placement/diagrams and rerun affected checks"
+}

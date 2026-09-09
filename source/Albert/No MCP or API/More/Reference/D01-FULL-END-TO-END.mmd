@@ -1,0 +1,33 @@
+flowchart TB
+  N_START["START: Approved passages + current ledger<br/>01-SETUP-AND-RUN-SEQUENCE.md"]
+  N_C01["C01: Intake<br/>C01-intake.md"]
+  N_C02["C02: Exhibit review<br/>C02-source-exhibit-review.md"]
+  N_C03["C03: Evidence ledger<br/>C03-evidence-ledger.md"]
+  N_C04["C04: Case / witness profile<br/>C04-case-witness-profile.md"]
+  N_C05["C05: Full packet A0<br/>C05-full-witness-packet.md"]
+  N_C06P["C06P: Packet independent review<br/>C06-independent-review.md"]
+  N_C07P["C07P: Packet revision A1…A5<br/>C07-material-revision.md"]
+  N_C08["C08: Chaptered script A0 (8k–12k)<br/>C08-full-chaptered-script.md"]
+  N_C06S["C06S: Script independent review<br/>C06-independent-review.md"]
+  N_C07S["C07S: Script revision A1…A5<br/>C07-material-revision.md"]
+  N_C09["C09: Pair consistency / final package<br/>C09-pair-consistency-final-package.md"]
+  N_SAVE["SAVE: Human approves exact pair; save<br/>03-OPERATOR-LEDGER-TEMPLATE.md"]
+  N_C10["C10: Optional truthful rehearsal<br/>C10-truthful-rehearsal.md"]
+  N_STOP["STOP: Unresolved / hard gate / fifth<br/>01-SETUP-AND-RUN-SEQUENCE.md"]
+  N_START -->|supply| N_C01
+  N_C01 -->|review| N_C02
+  N_C02 -->|approved spans| N_C03
+  N_C03 -->|ledger| N_C04
+  N_C04 -->|profile| N_C05
+  N_C05 -->|freeze| N_C06P
+  N_C06P -->|findings| N_C07P
+  N_C07P -->|recheck min 2 / max 5| N_C06P
+  N_C06P -->|packet gate| N_C08
+  N_C08 -->|freeze| N_C06S
+  N_C06S -->|findings| N_C07S
+  N_C07S -->|recheck min 2 / max 5| N_C06S
+  N_C06S -->|script gate| N_C09
+  N_C09 -->|exact pair| N_SAVE
+  N_SAVE -->|optional| N_C10
+  N_C07P -->|cap| N_STOP
+  N_C07S -->|cap| N_STOP

@@ -1,0 +1,31 @@
+flowchart TB
+  N_P04["P04: Packet writer<br/>P04-packet-writer.md"]
+  N_E0P["E0P: Packet A0 frozen<br/>08-QUALITY-CONTRACT.md"]
+  N_P06P["P06P: Packet independent evaluation<br/>P06-independent-evaluator.md"]
+  N_F06["F06: Packet quality gate<br/>02-FLOWS-AND-STATE.md"]
+  N_RPKT["RPKT: Packet revision A1…A5<br/>P04-packet-writer.md"]
+  N_P05["P05: Script writer after packet gate<br/>P05-script-writer.md"]
+  N_E0S["E0S: Script A0 frozen<br/>08-QUALITY-CONTRACT.md"]
+  N_P06S["P06S: Script independent evaluation<br/>P06-independent-evaluator.md"]
+  N_F07["F07: Script quality gate<br/>02-FLOWS-AND-STATE.md"]
+  N_RSCR["RSCR: Script revision A1…A5<br/>P05-script-writer.md"]
+  N_F08["F08: Exact pair consistency<br/>02-FLOWS-AND-STATE.md"]
+  N_H05["H05: Human approves exact scope<br/>04-ADMIN-SCREENS.md"]
+  N_SAVE["SAVE: Saved output + audit transition<br/>11-CASE-STORAGE.md"]
+  N_STOP["STOP: Unresolved / fifth / hard gate<br/>08-QUALITY-CONTRACT.md"]
+  N_P04 -->|write| N_E0P
+  N_E0P -->|assign| N_P06P
+  N_P06P -->|findings| N_F06
+  N_F06 -->|needs rework| N_RPKT
+  N_RPKT -->|recheck min 2 / max 5| N_P06P
+  N_F06 -->|packet gate passes| N_P05
+  N_P05 -->|write| N_E0S
+  N_E0S -->|assign| N_P06S
+  N_P06S -->|findings| N_F07
+  N_F07 -->|needs rework| N_RSCR
+  N_RSCR -->|recheck min 2 / max 5| N_P06S
+  N_F07 -->|script gate passes| N_F08
+  N_F08 -->|exact pair| N_H05
+  N_H05 -->|approved| N_SAVE
+  N_RPKT -->|cap| N_STOP
+  N_RSCR -->|cap| N_STOP

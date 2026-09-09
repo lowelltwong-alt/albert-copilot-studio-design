@@ -1,0 +1,28 @@
+flowchart LR
+  %% Graph contract projection; workflow SHA-256 28ccc6b39e4a845e9c712d2d7b6c3145d7af684b63ed042f53306fcbde428c97
+  classDef work fill:#eaf2ff,stroke:#315f96,color:#123047
+  classDef review fill:#fff4d9,stroke:#ad7515,color:#493500
+  classDef human fill:#e5f3e9,stroke:#387850,color:#143522
+  classDef stop fill:#fcebec,stroke:#aa4755,color:#59212c
+  S["SOURCE<br/>Raw file + revision"]:::work
+  SP["SPAN<br/>Exact anchors + qualifiers"]:::work
+  EX["ITEM<br/>Distinct exhibit / attachment"]:::work
+  C1["CLAIM A<br/>Attributed meaning + time"]:::work
+  C2["CLAIM B<br/>Different attributed account"]:::work
+  CF["CONFLICT<br/>Question; no truth winner"]:::review
+  PG["OWNER GRANT<br/>Unit + use + witness + time"]:::human
+  AR["ARTIFACT<br/>Plan / script / card / T06"]:::work
+  RV["REVIEW + DECISION<br/>Exact assembly + full read"]:::review
+  NX["NEXT REVISION<br/>Old results retained / stale"]:::stop
+  S -->|"CONTAINS exactly one parent"| SP
+  SP -->|"IDENTIFIES_ITEM"| EX
+  SP -->|"ATTRIBUTES"| C1
+  CF -->|"HAS_SIDE_A"| C1
+  CF -->|"HAS_SIDE_B; distinct"| C2
+  PG -->|"PERMITS span unit"| SP
+  PG -->|"or proposition unit"| C1
+  AR -->|"USES permitted claims / sources"| C1
+  AR -->|"USES applicable grant"| PG
+  AR -->|"USES both permitted endpoints"| CF
+  RV -->|"ASSESSES exact revision"| AR
+  AR -.->|"changed dependency marks descendants stale"| NX

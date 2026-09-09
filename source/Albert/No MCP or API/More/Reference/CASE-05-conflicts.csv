@@ -1,0 +1,1 @@
+case_id,conflict_id,conflict_revision,left_node_id,right_node_id,conflict_type,left_chunk_ids,right_chunk_ids,explanation,resolution_status,permitted_witness_ids,review_status
