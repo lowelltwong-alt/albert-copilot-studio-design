@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1900" height="1265"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#465d76"/></marker></defs><rect width="100%" height="100%" fill="#f8fafc"/><text x="35" y="40" font-family="Segoe UI" font-size="29" font-weight="700" fill="#17304c">Full prompt workflow • evidence, revision and final approval</text><text x="35" y="70" font-family="Segoe UI" font-size="16" fill="#455e78">Legend: yellow human • blue prompt • green flow • purple service/storage • red stop. Proposed design; not executable BPMN or deployment proof.</text>
+<polyline points="330,205 400,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="338.0" y="180" width="54" height="20" fill="white"/><text x="365.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">supply</text>
+<polyline points="700,205 770,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="708.0" y="180" width="54" height="20" fill="white"/><text x="735.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">review</text>
+<polyline points="1070,205 1140,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1059.5" y="180" width="91.0" height="20" fill="white"/><text x="1105.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">approved spans</text>
+<polyline points="1440,205 1510,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1448.0" y="180" width="54" height="20" fill="white"/><text x="1475.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">ledger</text>
+<polyline points="1660,261 1660,359 8,359 8,505 30,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="807.0" y="334" width="54" height="20" fill="white"/><text x="834.0" y="349" text-anchor="middle" font-family="Segoe UI" font-size="13">profile</text>
+<polyline points="330,505 400,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="338.0" y="480" width="54" height="20" fill="white"/><text x="365.0" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13">freeze</text>
+<polyline points="700,505 770,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="708.0" y="480" width="54" height="20" fill="white"/><text x="735.0" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13">findings</text>
+<polyline points="920,449 920,397 550,397 550,449" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="666.75" y="372" width="136.5" height="20" fill="white"/><text x="735.0" y="387" text-anchor="middle" font-family="Segoe UI" font-size="13">recheck min 2 / max 5</text>
+<polyline points="550,561 550,668 8,668 8,805 30,805" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="243.25" y="643" width="71.5" height="20" fill="white"/><text x="279.0" y="658" text-anchor="middle" font-family="Segoe UI" font-size="13">packet gate</text>
+<polyline points="330,805 400,805" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="338.0" y="780" width="54" height="20" fill="white"/><text x="365.0" y="795" text-anchor="middle" font-family="Segoe UI" font-size="13">freeze</text>
+<polyline points="700,805 770,805" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="708.0" y="780" width="54" height="20" fill="white"/><text x="735.0" y="795" text-anchor="middle" font-family="Segoe UI" font-size="13">findings</text>
+<polyline points="920,749 920,689 550,689 550,749" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="666.75" y="664" width="136.5" height="20" fill="white"/><text x="735.0" y="679" text-anchor="middle" font-family="Segoe UI" font-size="13">recheck min 2 / max 5</text>
+<polyline points="550,861 550,950 8,950 8,1105 30,1105" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="243.25" y="925" width="71.5" height="20" fill="white"/><text x="279.0" y="940" text-anchor="middle" font-family="Segoe UI" font-size="13">script gate</text>
+<polyline points="330,1105 400,1105" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="332.5" y="1080" width="65.0" height="20" fill="white"/><text x="365.0" y="1095" text-anchor="middle" font-family="Segoe UI" font-size="13">exact pair</text>
+<polyline points="700,1105 770,1105" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="708.0" y="1080" width="54" height="20" fill="white"/><text x="735.0" y="1095" text-anchor="middle" font-family="Segoe UI" font-size="13">optional</text>
+<polyline points="920,561 920,650 1488,650 1488,805 1510,805" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1177.0" y="625" width="54" height="20" fill="white"/><text x="1204.0" y="640" text-anchor="middle" font-family="Segoe UI" font-size="13">cap</text>
+<polyline points="920,861 920,913 1660,913 1660,861" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1263.0" y="888" width="54" height="20" fill="white"/><text x="1290.0" y="903" text-anchor="middle" font-family="Segoe UI" font-size="13">cap</text>
+<a xlink:href="01-SETUP-AND-RUN-SEQUENCE.md"><rect x="30" y="149" width="300" height="112" rx="12" fill="#fff0d2" stroke="#8197ad"/>
+<text x="180" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">START</text>
+<text x="180" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Approved passages + current</text>
+<text x="180" y="210" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">ledger</text>
+<text x="180" y="228" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">01-SETUP-AND-RUN-SEQUENCE.md</text>
+</a>
+<a xlink:href="C01-intake.md"><rect x="400" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="550" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C01</text>
+<text x="550" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Intake</text>
+<text x="550" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C01-intake.md</text>
+</a>
+<a xlink:href="C02-source-exhibit-review.md"><rect x="770" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="920" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C02</text>
+<text x="920" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Exhibit review</text>
+<text x="920" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C02-source-exhibit-review.md</text>
+</a>
+<a xlink:href="C03-evidence-ledger.md"><rect x="1140" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="1290" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C03</text>
+<text x="1290" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Evidence ledger</text>
+<text x="1290" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C03-evidence-ledger.md</text>
+</a>
+<a xlink:href="C04-case-witness-profile.md"><rect x="1510" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="1660" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C04</text>
+<text x="1660" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Case / witness profile</text>
+<text x="1660" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C04-case-witness-profile.md</text>
+</a>
+<a xlink:href="C05-full-witness-packet.md"><rect x="30" y="449" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="180" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C05</text>
+<text x="180" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Full packet A0</text>
+<text x="180" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C05-full-witness-packet.md</text>
+</a>
+<a xlink:href="C06-independent-review.md"><rect x="400" y="449" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="550" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C06P</text>
+<text x="550" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Packet independent review</text>
+<text x="550" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C06-independent-review.md</text>
+</a>
+<a xlink:href="C07-material-revision.md"><rect x="770" y="449" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="920" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C07P</text>
+<text x="920" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Packet revision A1…A5</text>
+<text x="920" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C07-material-revision.md</text>
+</a>
+<a xlink:href="C08-full-chaptered-script.md"><rect x="30" y="749" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="180" y="774" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C08</text>
+<text x="180" y="792" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Chaptered script A0 (8k–12k)</text>
+<text x="180" y="810" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C08-full-chaptered-script.md</text>
+</a>
+<a xlink:href="C06-independent-review.md"><rect x="400" y="749" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="550" y="774" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C06S</text>
+<text x="550" y="792" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Script independent review</text>
+<text x="550" y="810" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C06-independent-review.md</text>
+</a>
+<a xlink:href="C07-material-revision.md"><rect x="770" y="749" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="920" y="774" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C07S</text>
+<text x="920" y="792" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Script revision A1…A5</text>
+<text x="920" y="810" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C07-material-revision.md</text>
+</a>
+<a xlink:href="C09-pair-consistency-final-package.md"><rect x="30" y="1049" width="300" height="112" rx="12" fill="#dcf4ec" stroke="#8197ad"/>
+<text x="180" y="1074" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C09</text>
+<text x="180" y="1092" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Pair consistency / final</text>
+<text x="180" y="1110" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">package</text>
+<text x="180" y="1128" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C09-pair-consistency-final-package.md</text>
+</a>
+<a xlink:href="03-OPERATOR-LEDGER-TEMPLATE.md"><rect x="400" y="1049" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="550" y="1074" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">SAVE</text>
+<text x="550" y="1092" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Human approves exact pair; save</text>
+<text x="550" y="1110" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">03-OPERATOR-LEDGER-TEMPLATE.md</text>
+</a>
+<a xlink:href="C10-truthful-rehearsal.md"><rect x="770" y="1049" width="300" height="112" rx="12" fill="#eef2f6" stroke="#8197ad"/>
+<text x="920" y="1074" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">C10</text>
+<text x="920" y="1092" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Optional truthful rehearsal</text>
+<text x="920" y="1110" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">C10-truthful-rehearsal.md</text>
+</a>
+<a xlink:href="01-SETUP-AND-RUN-SEQUENCE.md"><rect x="1510" y="749" width="300" height="112" rx="12" fill="#ffe1e1" stroke="#8197ad"/>
+<text x="1660" y="774" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">STOP</text>
+<text x="1660" y="792" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Unresolved / hard gate / fifth</text>
+<text x="1660" y="810" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">01-SETUP-AND-RUN-SEQUENCE.md</text>
+</a>
+</svg>

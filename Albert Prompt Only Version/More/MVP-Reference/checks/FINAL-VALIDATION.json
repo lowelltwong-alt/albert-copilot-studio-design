@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "local functional packaging/graph checks; no semantic-source, model, tenant or formal DAD assurance qualification",
+  "graph": "demo\\WORKED-GRAPH.md",
+  "graph_sha256": "5edb0e2f320eb3ff11492e1e7c87e5f0f31675fbf460dff4270a7ec8a59fe05a",
+  "links_checked": 159,
+  "findings": []
+}

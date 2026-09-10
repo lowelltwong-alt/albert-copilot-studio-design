@@ -1,0 +1,41 @@
+LOAD_RUN RUN-06 PART 3/3. Acknowledge only; do not execute until BEGIN RUN.
+BEGIN_PART
+ts authorized case workspace, never generic asset catalog/DAD. Revision changes require matched and new-case checks; retain previous role and reviews for rollback. Consumers: episode editor, independent source checker, A01 and episode owner.
+```
+<!-- END CORE A02 -->
+
+## Included T06
+
+Source: [reference/process-0.3/T06-pressure-payoff-review.md](../More/MVP-Reference/reference/process-0.3/T06-pressure-payoff-review.md). Byte source SHA-256: `11b8b7ee3b95591d49007b471d14b05c62633785476998624dc210b5804c5499`.
+
+<!-- BEGIN CORE T06 -->
+```text
+# T06 · Pressure payoffs and actual review evidence
+
+Use with P06, A02 and P07. This is a small visible planning/review record, not hidden reasoning and not a script for the hosts to read.
+
+Save as `CASE-WITNESS-T06-REV.md`, with planned and as-built sections. Bind the as-built section to the exact script, claims map, card and source/view paths and SHA-256 digests it covers. The planned section records source/view identities before drafting; it is not a completed assembly review. P09 rejects an as-built record whose identities differ from either current review.
+
+Before drafting, select the priority tensions supported by the permitted view. Complete one row per meaningful pressure point, not every sentence:
+
+`Priority | permitted IDs/spans | adverse fact or qualification | what one host introduces | what the cohost changes | resulting direct/cross/redirect follow-up | response opportunity and feedback | later retrieval / KC ID | planned words / pause seconds`
+
+Preserve the PC01–PC08 navigation IDs and exactly ten distinct supported anchors, or an explicit source-depth shortfall. Give the episode a developing listening journey. The same source limit can reappear when a harder application earns it; a repeated slogan does not earn another minute. Longer explanations may be useful. Do not reduce conversational craft to turn length, question count or mandatory banter. Neither host impersonates the witness.
+
+Before independent review, the writer saves the complete assembly and records an as-built coverage delta: retained payoffs, omitted payoffs and why, new material requiring verification, actual spoken words, intentional pause seconds and estimated speech-only and combined duration. Do not call a planned word budget an actual measurement or infer quality from duration. A rich-case target remains 30–40 minutes when supported; diagnose missing permitted evidence or underdeveloped explanation before accepting a thin draft. Never fill the clock with repetition or silence.
+
+For review, replace planned promises with actual script spans. Quote a short exchange and identify what the second host changes and what follows from it. Deleting that host should lose understanding, not merely remove a label. Look for real explanation, pressure, qualified response opportunity and later retrieval. Do not score an author's assertion that an exchange is 'consequential' as evidence that it is.
+
+Audit practice triples in the saved output:
+
+`Chapter | complete prompt before pause | task appropriate to response space | source-bounded feedback afterward | taught earlier | delayed versus immediate recall`
+
+A reflection pause may have another purpose; label it accurately. Do not describe a prompt delivered after silence as completed recall, reveal all answers immediately before an 'unhinted' attempt, or tell an unseen listener they answered correctly. Keep production cues outside speech. Review repeated exercises and long silences for whether this still sounds like an engaging podcast.
+
+Card check: ten distinct IDs, supported takeaway, exact limit, associated question and chapter. Check every card clause, including negative descriptions and notes about excluded items. A forbidden detail must not return as a false claim that the source lacks it.
+```
+<!-- END CORE T06 -->
+
+END RUN INSTRUCTIONS. Await the complete required packet and operator BEGIN RUN.
+
+END_PART

@@ -1,6 +1,7 @@
 # Generated working material and disposable dependency/runtime caches
 outputs/
 work/
+public-release/
 *.tmp
 *.bak
 *.log

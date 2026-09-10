@@ -1,0 +1,32 @@
+{
+  "renderer": "Mermaid 11.17.2; jsDelivr browser ES module; headless Edge",
+  "files": [
+    {
+      "name": "D00-MVP-WIRING",
+      "source_sha256": "0f2d2ea466fa45ada63e89706cf0a08d4d128c89ad4157032f4a636793b888d2",
+      "svg_sha256": "3d6f4f9f2d85f544d346d6aabd1f619c45dbac8030281b8c176c9517a335744f",
+      "png_sha256": "7f0cc508bf24db684ef0959d2d020f0d49e267f1e338bfbf30cf2a72d4b71231",
+      "width": 1010,
+      "height": 1240,
+      "parsed": true
+    },
+    {
+      "name": "D00-MANUAL-WIRING",
+      "source_sha256": "9524ff37adf740e578a624fb2958f674cc66af54e05af4161781fb34fce37961",
+      "svg_sha256": "f797e22c01ec976953ee030004f2dd1eb6f99a8791e4274716316cf6910102e3",
+      "png_sha256": "9de0ccc1a4101726aed7a898763ef6a766fecfb5f907efcdd741f34188f608a1",
+      "width": 616,
+      "height": 743,
+      "parsed": true
+    },
+    {
+      "name": "D00-CONNECTED-WIRING",
+      "source_sha256": "94d48e5c182be9ed38fc60319c85886ca173ee1576ed82ad4318acbacde5a5ef",
+      "svg_sha256": "7e18972a578c8e9510e7e5683aa313d3a267adab062d44da0c70ac4cc7eb351f",
+      "png_sha256": "c9ab4060a011149ecd13b9cdb625805f2675ee4d4be59b5d9afe33ac7088c50f",
+      "width": 866,
+      "height": 842,
+      "parsed": true
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "edition": "PROMPT-FULL",
+  "revision": "2.0",
+  "namespace": "C",
+  "nodes": [
+    {
+      "node_id": "C00",
+      "prompt_file": "00-ALL-IN-ONE-PROMPT.md",
+      "placement": "Parent Instructions",
+      "trigger": "route only; paste stage procedure next",
+      "inputs": "case manifest + next stage",
+      "outputs": "current stage and checkpoint",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C01",
+      "prompt_file": "C01-intake.md",
+      "placement": "Stage message or Intake Instructions",
+      "trigger": "H01 rights/scope",
+      "inputs": "CASE-00-manifest.md + original source descriptions",
+      "outputs": "CASE-00-manifest.md",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C02",
+      "prompt_file": "C02-source-exhibit-review.md",
+      "placement": "Stage message or Source Review Instructions",
+      "trigger": "H02 source/span review",
+      "inputs": "source originals + exact transcribed passages",
+      "outputs": "CASE-01-source-register.csv; CASE-02-chunks.csv",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C03",
+      "prompt_file": "C03-evidence-ledger.md",
+      "placement": "Stage message or Evidence Ledger Instructions",
+      "trigger": "review evidence relationships",
+      "inputs": "reviewed CASE-02-chunks.csv",
+      "outputs": "CASE-03-graph-nodes.csv; CASE-04-graph-edges.csv; CASE-05-conflicts.csv",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C04",
+      "prompt_file": "C04-case-witness-profile.md",
+      "placement": "Stage message or Profile Instructions",
+      "trigger": "H03 scope and knowledge limits",
+      "inputs": "current ledgers + rules + exact relevant spans",
+      "outputs": "CASE-06-witness-profile.md",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C05",
+      "prompt_file": "C05-full-witness-packet.md",
+      "placement": "Stage message or Packet Author Instructions",
+      "trigger": "packet baseline",
+      "inputs": "approved profile + scoped ledgers + exact spans",
+      "outputs": "CASE-PACKET-A{n}.md",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C06",
+      "prompt_file": "C06-independent-review.md",
+      "placement": "Fresh reviewer conversation or human review",
+      "trigger": "H04 evidence and score review",
+      "inputs": "one exact packet/script + sources + rubric + prior findings",
+      "outputs": "CASE-{PACKET-or-PODCAST}-E{n}.md",
+      "model_role": "checker",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C07",
+      "prompt_file": "C07-material-revision.md",
+      "placement": "Stage message or Revision Instructions",
+      "trigger": "apply substantive findings",
+      "inputs": "frozen A{n} + E{n} + approved findings + source spans",
+      "outputs": "CASE-{PACKET-or-PODCAST}-A{n+1}.md; review log",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C08",
+      "prompt_file": "C08-full-chaptered-script.md",
+      "placement": "Stage message or Script Author Instructions",
+      "trigger": "podcast chapters + independent review loop",
+      "inputs": "current reviewed packet + ledgers + exact spans + chapter plan",
+      "outputs": "CASE-PODCAST-PC{01..08}-A{n}.md; CASE-PODCAST-A{n}.md",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C09",
+      "prompt_file": "C09-pair-consistency-final-package.md",
+      "placement": "Stage message or Consistency Instructions",
+      "trigger": "H05 exact text + H07 manual package",
+      "inputs": "current exact packet/script + E{n} + ledgers",
+      "outputs": "CASE-09-final-review.md; CASE-FINAL-PACKAGE-INDEX.md",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    },
+    {
+      "node_id": "C10",
+      "prompt_file": "C10-truthful-rehearsal.md",
+      "placement": "Stage message or Rehearsal Instructions",
+      "trigger": "optional truthful practice",
+      "inputs": "approved materials + permitted practice question",
+      "outputs": "CASE-PRACTICE-NOTES.md",
+      "model_role": "author",
+      "required_config_ids": [
+        "CFG01",
+        "CFG02",
+        "CFG03",
+        "CFG04",
+        "CFG09"
+      ],
+      "status": "specified_not_tenant_tested"
+    }
+  ],
+  "execution": "Specification and manual configuration map; not an importable Copilot solution."
+}

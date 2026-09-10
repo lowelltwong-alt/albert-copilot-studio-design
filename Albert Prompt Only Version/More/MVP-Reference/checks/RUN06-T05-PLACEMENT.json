@@ -1,0 +1,20 @@
+{
+  "operation": "map retained T05 score headings explicitly to current runtime rubric",
+  "files": [
+    {
+      "file": "paste\\RUN-06-part-01.txt",
+      "before_sha256": "4bead70cbbd1a0b460f44024c3e103f94da7fdf4b73659bbca590fb771824106",
+      "after_sha256": "578df9fa5f6f4d9ecc01125c3ea76701a31a0ab4a8c3825fa7247ff2b464d7ac"
+    },
+    {
+      "file": "paste\\RUN-06-part-02.txt",
+      "before_sha256": "0a8c91f952cd5b38ee1f44f1380c49c1ad3247162f8d500204a1310caf580997",
+      "after_sha256": "f4212a1928b0070e7eb6325beef7638dd9022762f233aaec7abb9c99b784ac61"
+    },
+    {
+      "file": "paste\\RUN-06-part-03.txt",
+      "before_sha256": "9e1d87bc452f80cf08097d6200513a4c44156e2ac8715a1370e592918156d0e9",
+      "after_sha256": "17c934a574498de8f16e64b3c40b5154c392c3fa94a3dadd9b5d4ec788e53fb7"
+    }
+  ]
+}

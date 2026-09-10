@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1900" height="665"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#465d76"/></marker></defs><rect width="100%" height="100%" fill="#f8fafc"/><text x="35" y="40" font-family="Segoe UI" font-size="29" font-weight="700" fill="#17304c">Connected implementation • placement and authority boundary</text><text x="35" y="70" font-family="Segoe UI" font-size="16" fill="#455e78">Legend: yellow human • blue prompt • green flow • purple service/storage • red stop. Proposed design; not executable BPMN or deployment proof.</text>
+<polyline points="330,205 400,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="309.75" y="180" width="110.5" height="20" fill="white"/><text x="365.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">decision / status</text>
+<polyline points="700,205 770,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="708.0" y="180" width="54" height="20" fill="white"/><text x="735.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">scope</text>
+<polyline points="1070,205 1140,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1078.0" y="180" width="54" height="20" fill="white"/><text x="1105.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">primary</text>
+<polyline points="920,261 920,305 1660,305 1660,261" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1238.0" y="280" width="104.0" height="20" fill="white"/><text x="1290.0" y="295" text-anchor="middle" font-family="Segoe UI" font-size="13">operator selects</text>
+<polyline points="1290,261 1290,359 8,359 8,505 30,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="606.75" y="334" width="84.5" height="20" fill="white"/><text x="649.0" y="349" text-anchor="middle" font-family="Segoe UI" font-size="13">same envelope</text>
+<polyline points="1660,261 1660,368 8,368 8,505 30,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="785.25" y="343" width="97.5" height="20" fill="white"/><text x="834.0" y="358" text-anchor="middle" font-family="Segoe UI" font-size="13">same dispatcher</text>
+<polyline points="330,505 400,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="322.75" y="480" width="84.5" height="20" fill="white"/><text x="365.0" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13">artifact body</text>
+<polyline points="180,561 180,613 920,613 920,561" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="507.75" y="588" width="84.5" height="20" fill="white"/><text x="550.0" y="603" text-anchor="middle" font-family="Segoe UI" font-size="13">state + audit</text>
+<polyline points="1290,449 1290,342 378,342 378,205 400,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="775.5" y="317" width="117.0" height="20" fill="white"/><text x="834.0" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13">optional retrieval</text>
+<polyline points="550,261 550,350 1488,350 1488,505 1510,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="973.5" y="325" width="91.0" height="20" fill="white"/><text x="1019.0" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13">cannot approve</text>
+<polyline points="180,261 180,449" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="188.0" y="342.0" width="104.0" height="20" fill="white"/><text x="240" y="357.0" text-anchor="middle" font-family="Segoe UI" font-size="13">human portal API</text>
+<a xlink:href="04-ADMIN-SCREENS.md"><rect x="30" y="149" width="300" height="112" rx="12" fill="#fff0d2" stroke="#8197ad"/>
+<text x="180" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">H01-H07</text>
+<text x="180" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Human portal decisions outside</text>
+<text x="180" y="210" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">LLM</text>
+<text x="180" y="228" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">04-ADMIN-SCREENS.md</text>
+</a>
+<a xlink:href="P00-parent.md"><rect x="400" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="550" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">P00</text>
+<text x="550" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Parent router</text>
+<text x="550" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">P00-parent.md</text>
+</a>
+<a xlink:href="10-CONFIGURATION-AND-PLACEMENT.md"><rect x="770" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="920" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">P01-P07</text>
+<text x="920" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Scoped child roles</text>
+<text x="920" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">10-CONFIGURATION-AND-PLACEMENT.md</text>
+</a>
+<a xlink:href="03-MCP-AND-API.md"><rect x="1140" y="149" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="1290" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">MCP</text>
+<text x="1290" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">MCP primary: Streamable HTTP</text>
+<text x="1290" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">03-MCP-AND-API.md</text>
+</a>
+<a xlink:href="03-MCP-AND-API.md"><rect x="1510" y="149" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="1660" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">API</text>
+<text x="1660" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">API-only: authenticated HTTPS</text>
+<text x="1660" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">03-MCP-AND-API.md</text>
+</a>
+<a xlink:href="02-FLOWS-AND-STATE.md"><rect x="30" y="449" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="180" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">S04</text>
+<text x="180" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Same authoritative dispatcher</text>
+<text x="180" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">02-FLOWS-AND-STATE.md</text>
+</a>
+<a xlink:href="11-CASE-STORAGE.md"><rect x="400" y="449" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="550" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">BLOB</text>
+<text x="550" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Proposed Azure Blob: immutable</text>
+<text x="550" y="510" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">bodies</text>
+<text x="550" y="528" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">11-CASE-STORAGE.md</text>
+</a>
+<a xlink:href="11-CASE-STORAGE.md"><rect x="770" y="449" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="920" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">SQL</text>
+<text x="920" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Azure SQL: chunks, graph,</text>
+<text x="920" y="510" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">conflicts, jobs</text>
+<text x="920" y="528" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">11-CASE-STORAGE.md</text>
+</a>
+<a xlink:href="11-CASE-STORAGE.md"><rect x="1140" y="449" width="300" height="112" rx="12" fill="#eef2f6" stroke="#8197ad"/>
+<text x="1290" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">K</text>
+<text x="1290" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Optional reviewed knowledge</text>
+<text x="1290" y="510" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">upload</text>
+<text x="1290" y="528" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">11-CASE-STORAGE.md</text>
+</a>
+<a xlink:href="09-COPILOT-PLACEMENT.md"><rect x="1510" y="449" width="300" height="112" rx="12" fill="#ffe1e1" stroke="#8197ad"/>
+<text x="1660" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">X</text>
+<text x="1660" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Tenant / connector behavior</text>
+<text x="1660" y="510" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">untested</text>
+<text x="1660" y="528" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">09-COPILOT-PLACEMENT.md</text>
+</a>
+</svg>

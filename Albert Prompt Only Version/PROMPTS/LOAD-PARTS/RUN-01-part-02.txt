@@ -1,0 +1,9 @@
+LOAD_RUN RUN-01 PART 2/2. Acknowledge only; do not execute until BEGIN RUN.
+BEGIN_PART
+d saved output. Reviewers receive the complete current script/map/card and sources; a repair verifier additionally receives the exact previous artifact and finding. Writers receive verified actions, with numerical grades withheld during a masked development comparison. Save/reopen files at every handoff; chat context is not durable storage. Source/author-only material stays in the authorized case folder, outside the generic asset catalog.
+```
+<!-- END CORE P07 -->
+
+END RUN INSTRUCTIONS. Await the complete required packet and operator BEGIN RUN.
+
+END_PART

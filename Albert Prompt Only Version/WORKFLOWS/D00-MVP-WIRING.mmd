@@ -1,0 +1,19 @@
+flowchart TD
+ S["Standard Copilot Studio · unpublished agents"]
+ A["Case Analyst · GPT-5.5<br/>Instructions: ROLE-ANALYST<br/>Test chat: RUN-01"]
+ O["Operator saves and reviews source/view"]
+ W["Writer · Claude Sonnet 4.6<br/>Instructions: ROLE-WRITER<br/>Test chat: RUN-02 / 04 / 08 / 10"]
+ E["Evidence Reviewer · GPT-5.5<br/>Instructions: ROLE-EVIDENCE<br/>Test chat: RUN-03 / 05 / 07 / 09"]
+ C["Conversation Reviewer · GPT-5.5<br/>Instructions: ROLE-CONVERSATION<br/>Test chat: RUN-06"]
+ G["Joined source + craft reports<br/>Human accept / one repair / HOLD"]
+ F["Saved Markdown packets<br/>Copy exact complete inputs between roles"]
+ S --> A
+ A --> O
+ O --> W
+ W -->|plan before writing; full draft afterward| E
+ W -->|same full draft| C
+ E --> G
+ C --> G
+ G -->|one verified repair if justified| W
+ G -->|accepted internal candidate| F
+ F -.->|saved state for next stage| O

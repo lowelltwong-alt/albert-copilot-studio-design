@@ -1,0 +1,119 @@
+{
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "H03 \u2022 Review witness settings",
+      "weight": "Bolder",
+      "size": "Large",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "SYNTHETIC TEMPLATE \u2014 replace display values from a verified service response. This card cannot authorize source changes.",
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Witness",
+          "value": "synthetic_witness_01"
+        },
+        {
+          "title": "Calling side",
+          "value": "Side A"
+        },
+        {
+          "title": "Neutrality",
+          "value": "Mixed / evidence review required"
+        },
+        {
+          "title": "Knowledge",
+          "value": "Firsthand observations only; approved view controls details"
+        },
+        {
+          "title": "Source facts / rulings",
+          "value": "Read-only"
+        }
+      ]
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "demeanor",
+      "label": "Performance demeanor",
+      "value": "natural",
+      "choices": [
+        {
+          "title": "Natural",
+          "value": "natural"
+        },
+        {
+          "title": "Reserved",
+          "value": "reserved"
+        },
+        {
+          "title": "Confident",
+          "value": "confident"
+        }
+      ]
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "challenge_level",
+      "label": "Practice challenge",
+      "value": "standard",
+      "choices": [
+        {
+          "title": "Gentle",
+          "value": "gentle"
+        },
+        {
+          "title": "Standard",
+          "value": "standard"
+        },
+        {
+          "title": "Demanding",
+          "value": "demanding"
+        }
+      ]
+    },
+    {
+      "type": "Input.Text",
+      "id": "reason",
+      "label": "Reason for this settings decision",
+      "isMultiline": true,
+      "isRequired": true,
+      "errorMessage": "Explain the decision."
+    },
+    {
+      "type": "TextBlock",
+      "text": "Affiliations, incentives, knowledge and factual qualifications remain source-bound. Open the full review UI for evidence, uncertainty and original pages.",
+      "wrap": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit settings for validation",
+      "data": {
+        "action": "review_witness_settings",
+        "case_id": "synthetic_demo",
+        "witness_id": "synthetic_witness_01",
+        "expected_revision": "witness:v1",
+        "decision_nonce": "TEMPLATE_NOT_A_VALID_NONCE"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Request source review",
+      "data": {
+        "action": "request_source_review",
+        "case_id": "synthetic_demo",
+        "decision_nonce": "TEMPLATE_NOT_A_VALID_NONCE"
+      }
+    }
+  ]
+}

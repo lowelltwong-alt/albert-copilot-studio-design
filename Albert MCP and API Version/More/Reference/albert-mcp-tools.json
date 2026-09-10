@@ -1,0 +1,866 @@
+{
+  "tools": [
+    {
+      "name": "StartJob",
+      "description": "Start a bounded approved job; returns its handle without waiting for generation.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "caseId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "caseRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "graphRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "graphSnapshotSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "witnessViewRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "witnessViewSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "policyRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "accessPolicySha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "caseId",
+              "caseRevision",
+              "sourceRevision",
+              "sourceSha256",
+              "graphRevision",
+              "graphSnapshotSha256",
+              "witnessViewRevision",
+              "witnessViewSha256",
+              "policyRevision",
+              "accessPolicySha256"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "intake",
+              "source_review",
+              "chunk",
+              "graph_profile",
+              "witness_view",
+              "packet",
+              "script",
+              "consistency",
+              "export",
+              "study"
+            ]
+          },
+          "inputArtifactIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "maxItems": 50
+          },
+          "movementApprovalId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "budgetApprovalId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "kind",
+          "inputArtifactIds",
+          "movementApprovalId",
+          "budgetApprovalId"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "x-albert-api-operation": "StartJob",
+      "x-albert-required-scope": "write"
+    },
+    {
+      "name": "GetJob",
+      "description": "Read authoritative job state. A notification is only a hint to read this state.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "readOperationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "canonicalRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "caseId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "jobId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "readOperationId",
+          "canonicalRequestDigest",
+          "caseId",
+          "jobId"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "x-albert-api-operation": "GetJob",
+      "x-albert-required-scope": "read"
+    },
+    {
+      "name": "CancelJob",
+      "description": "Request cancellation using the current state version. Repeated matching requests are idempotent.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "caseId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "caseRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "graphRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "graphSnapshotSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "witnessViewRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "witnessViewSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "policyRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "accessPolicySha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "caseId",
+              "caseRevision",
+              "sourceRevision",
+              "sourceSha256",
+              "graphRevision",
+              "graphSnapshotSha256",
+              "witnessViewRevision",
+              "witnessViewSha256",
+              "policyRevision",
+              "accessPolicySha256"
+            ]
+          },
+          "jobId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "expectedStateVersion": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "jobId",
+          "expectedStateVersion",
+          "reason"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "x-albert-api-operation": "CancelJob",
+      "x-albert-required-scope": "write"
+    },
+    {
+      "name": "LookupOperation",
+      "description": "Reconcile a lost response by caller-supplied operation ID under the same verified identity.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "readOperationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "canonicalRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "caseId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "operationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "expectedRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "readOperationId",
+          "canonicalRequestDigest",
+          "caseId",
+          "operationId",
+          "expectedRequestDigest"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "x-albert-api-operation": "LookupOperation",
+      "x-albert-required-scope": "read"
+    },
+    {
+      "name": "ReadGraph",
+      "description": "Read a bounded permitted witness view and attributed source spans. Does not browse arbitrary URLs.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "readOperationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "canonicalRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "binding": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "caseId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "caseRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "graphRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "graphSnapshotSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "witnessViewRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "witnessViewSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "policyRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "accessPolicySha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "caseId",
+              "caseRevision",
+              "sourceRevision",
+              "sourceSha256",
+              "graphRevision",
+              "graphSnapshotSha256",
+              "witnessViewRevision",
+              "witnessViewSha256",
+              "policyRevision",
+              "accessPolicySha256"
+            ]
+          },
+          "viewGrantId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "queryKind": {
+            "type": "string",
+            "enum": [
+              "witness_knowledge_at_time",
+              "conflicts_and_corroboration",
+              "issue_proof_matrix",
+              "exhibit_foundation",
+              "impeachment_rehabilitation",
+              "direct_cross_goals",
+              "opened_door_risks",
+              "artifact_dependencies"
+            ]
+          },
+          "subjectId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "atTime": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "depth": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50
+          },
+          "cursor": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 2000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "readOperationId",
+          "canonicalRequestDigest",
+          "binding",
+          "viewGrantId",
+          "queryKind",
+          "subjectId",
+          "atTime",
+          "depth",
+          "limit",
+          "cursor"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "x-albert-api-operation": "ReadGraph",
+      "x-albert-required-scope": "read"
+    },
+    {
+      "name": "ReadArtifact",
+      "description": "Read one permitted section of the exact bound artifact. Rechecks current access and staleness.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "readOperationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "canonicalRequestDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "binding": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "caseId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "caseRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "graphRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "graphSnapshotSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "witnessViewRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "witnessViewSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "policyRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "accessPolicySha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "caseId",
+              "caseRevision",
+              "sourceRevision",
+              "sourceSha256",
+              "graphRevision",
+              "graphSnapshotSha256",
+              "witnessViewRevision",
+              "witnessViewSha256",
+              "policyRevision",
+              "accessPolicySha256"
+            ]
+          },
+          "artifactId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "viewGrantId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "sectionId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "readOperationId",
+          "canonicalRequestDigest",
+          "binding",
+          "artifactId",
+          "viewGrantId",
+          "sectionId"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "x-albert-api-operation": "ReadArtifact",
+      "x-albert-required-scope": "read"
+    },
+    {
+      "name": "SaveCandidate",
+      "description": "Persist a writer candidate under a service-issued assignment; does not approve or score it.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "caseId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "caseRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "graphRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "graphSnapshotSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "witnessViewRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "witnessViewSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "policyRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "accessPolicySha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "caseId",
+              "caseRevision",
+              "sourceRevision",
+              "sourceSha256",
+              "graphRevision",
+              "graphSnapshotSha256",
+              "witnessViewRevision",
+              "witnessViewSha256",
+              "policyRevision",
+              "accessPolicySha256"
+            ]
+          },
+          "seriesId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "candidateKind": {
+            "type": "string",
+            "enum": [
+              "source_review_proposal",
+              "case_profile_proposal",
+              "witness_settings_proposal",
+              "witness_packet",
+              "podcast_script",
+              "coach_annex"
+            ]
+          },
+          "parentArtifactId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "assignmentId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "grantId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "candidateText": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100000
+          },
+          "sourceAnchorIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "maxItems": 500
+          },
+          "targetFindingIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "maxItems": 100
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "seriesId",
+          "candidateKind",
+          "parentArtifactId",
+          "assignmentId",
+          "grantId",
+          "candidateText",
+          "sourceAnchorIds",
+          "targetFindingIds"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "x-albert-api-operation": "SaveCandidate",
+      "x-albert-required-scope": "write"
+    },
+    {
+      "name": "RequestEvaluation",
+      "description": "Enqueue evaluation; a service-assigned P06 checker receives controlled worker context.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "commandAuthorizationToken": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "binding": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "caseId": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "caseRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "sourceSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "graphRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "graphSnapshotSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "witnessViewRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "witnessViewSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "policyRevision": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "accessPolicySha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "caseId",
+              "caseRevision",
+              "sourceRevision",
+              "sourceSha256",
+              "graphRevision",
+              "graphSnapshotSha256",
+              "witnessViewRevision",
+              "witnessViewSha256",
+              "policyRevision",
+              "accessPolicySha256"
+            ]
+          },
+          "artifactId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "seriesId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "witnessGrantId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "commandAuthorizationToken",
+          "binding",
+          "artifactId",
+          "seriesId",
+          "witnessGrantId"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "x-albert-api-operation": "RequestEvaluation",
+      "x-albert-required-scope": "write"
+    }
+  ]
+}

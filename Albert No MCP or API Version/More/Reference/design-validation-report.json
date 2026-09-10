@@ -1,0 +1,394 @@
+{
+  "revision": "2.0",
+  "status": "passed_selected_design_checks",
+  "checks": [
+    {
+      "check": "Innovation-prompt-only-MVP-v2 all JSON parse",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 exact unique prompt placement",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 configuration shape",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D01-MVP-END-TO-END file refs",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D01-MVP-END-TO-END graph endpoints",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D01-MVP-END-TO-END XML sources",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D01-MVP-END-TO-END export set",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D01-MVP-END-TO-END legal Mermaid identifiers",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D02-MVP-SETUP-PLACEMENT file refs",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D02-MVP-SETUP-PLACEMENT graph endpoints",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D02-MVP-SETUP-PLACEMENT XML sources",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D02-MVP-SETUP-PLACEMENT export set",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 D02-MVP-SETUP-PLACEMENT legal Mermaid identifiers",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 no workstation paths/internal parent ID",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 storage and podcast guides present",
+      "passed": true
+    },
+    {
+      "check": "Innovation-prompt-only-MVP-v2 local Markdown links",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 all JSON parse",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 exact unique prompt placement",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 configuration shape",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D01-IMPLEMENTATION-CONTEXT file refs",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D01-IMPLEMENTATION-CONTEXT graph endpoints",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D01-IMPLEMENTATION-CONTEXT XML sources",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D01-IMPLEMENTATION-CONTEXT export set",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D01-IMPLEMENTATION-CONTEXT legal Mermaid identifiers",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D02-IMPLEMENTATION-FLOWS file refs",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D02-IMPLEMENTATION-FLOWS graph endpoints",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D02-IMPLEMENTATION-FLOWS XML sources",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D02-IMPLEMENTATION-FLOWS export set",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D02-IMPLEMENTATION-FLOWS legal Mermaid identifiers",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D03-IMPLEMENTATION-QUALITY file refs",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D03-IMPLEMENTATION-QUALITY graph endpoints",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D03-IMPLEMENTATION-QUALITY XML sources",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D03-IMPLEMENTATION-QUALITY export set",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 D03-IMPLEMENTATION-QUALITY legal Mermaid identifiers",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 no workstation paths/internal parent ID",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 storage and podcast guides present",
+      "passed": true
+    },
+    {
+      "check": "Innovation-implementation-v2 local Markdown links",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 all JSON parse",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 exact unique prompt placement",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 configuration shape",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D01-FULL-END-TO-END file refs",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D01-FULL-END-TO-END graph endpoints",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D01-FULL-END-TO-END XML sources",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D01-FULL-END-TO-END export set",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D01-FULL-END-TO-END legal Mermaid identifiers",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D02-FULL-SETUP-PLACEMENT file refs",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D02-FULL-SETUP-PLACEMENT graph endpoints",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D02-FULL-SETUP-PLACEMENT XML sources",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D02-FULL-SETUP-PLACEMENT export set",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 D02-FULL-SETUP-PLACEMENT legal Mermaid identifiers",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 no workstation paths/internal parent ID",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 storage and podcast guides present",
+      "passed": true
+    },
+    {
+      "check": "Innovation-full-prompt-workflow-v2 local Markdown links",
+      "passed": true
+    },
+    {
+      "check": "domain JSON Schema meta-validation",
+      "passed": true
+    },
+    {
+      "check": "domain references resolve",
+      "passed": true
+    },
+    {
+      "check": "transport JSON Schema meta-validation",
+      "passed": true
+    },
+    {
+      "check": "transport references resolve",
+      "passed": true
+    },
+    {
+      "check": "OpenAPI references resolve",
+      "passed": true
+    },
+    {
+      "check": "OpenAPI no incompatible JSON Schema conditional/null keywords",
+      "passed": true
+    },
+    {
+      "check": "Swagger references resolve",
+      "passed": true
+    },
+    {
+      "check": "Swagger no incompatible JSON Schema conditional/null keywords",
+      "passed": true
+    },
+    {
+      "check": "OpenAPI version",
+      "passed": true
+    },
+    {
+      "check": "Swagger API dialect",
+      "passed": true
+    },
+    {
+      "check": "9 canonical operations / 8 agent operations",
+      "passed": true
+    },
+    {
+      "check": "MCP Swagger protocol",
+      "passed": true
+    },
+    {
+      "check": "example hosts are non-live placeholders",
+      "passed": true
+    },
+    {
+      "check": "StartJob trusted envelope",
+      "passed": true
+    },
+    {
+      "check": "StartJob side-effect hint",
+      "passed": true
+    },
+    {
+      "check": "GetJob trusted envelope",
+      "passed": true
+    },
+    {
+      "check": "GetJob side-effect hint",
+      "passed": true
+    },
+    {
+      "check": "CancelJob trusted envelope",
+      "passed": true
+    },
+    {
+      "check": "CancelJob side-effect hint",
+      "passed": true
+    },
+    {
+      "check": "LookupOperation trusted envelope",
+      "passed": true
+    },
+    {
+      "check": "LookupOperation side-effect hint",
+      "passed": true
+    },
+    {
+      "check": "ReadGraph trusted envelope",
+      "passed": true
+    },
+    {
+      "check": "ReadGraph side-effect hint",
+      "passed": true
+    },
+    {
+      "check": "ReadArtifact trusted envelope",
+      "passed": true
+    },
+    {
+      "check": "ReadArtifact side-effect hint",
+      "passed": true
+    },
+    {
+      "check": "SaveCandidate trusted envelope",
+      "passed": true
+    },
+    {
+      "check": "SaveCandidate side-effect hint",
+      "passed": true
+    },
+    {
+      "check": "RequestEvaluation trusted envelope",
+      "passed": true
+    },
+    {
+      "check": "RequestEvaluation side-effect hint",
+      "passed": true
+    },
+    {
+      "check": "full temporal graph vocabulary",
+      "passed": true
+    },
+    {
+      "check": "proposal and annex persistence representable",
+      "passed": true
+    },
+    {
+      "check": "decision export condition artifact_pair approve job-export",
+      "passed": true
+    },
+    {
+      "check": "decision export condition artifact_pair approve None",
+      "passed": true
+    },
+    {
+      "check": "decision export condition artifact_pair reject None",
+      "passed": true
+    },
+    {
+      "check": "decision export condition artifact_pair reject job-export",
+      "passed": true
+    },
+    {
+      "check": "decision export condition data_movement_approval approve None",
+      "passed": true
+    },
+    {
+      "check": "decision export condition data_movement_approval approve job-export",
+      "passed": true
+    },
+    {
+      "check": "28 complete backlog tickets",
+      "passed": true
+    },
+    {
+      "check": "backlog dependencies and acceptance IDs resolve",
+      "passed": true
+    },
+    {
+      "check": "40 reference cases passed without product qualification",
+      "passed": true
+    },
+    {
+      "check": "packaged runner syntax",
+      "passed": true
+    },
+    {
+      "check": "manual full case ledgers present",
+      "passed": true
+    }
+  ],
+  "count": 95,
+  "failed": [],
+  "limits": [
+    "Not a complete OpenAPI validator or tenant import test",
+    "Mermaid/draw.io source syntax/structure checked; application import not tested",
+    "No real service, provider, source case, model output or semantic quality evaluated",
+    "No certification of portability, security, gold quality or learning"
+  ]
+}

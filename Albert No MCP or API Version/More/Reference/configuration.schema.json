@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Albert human configuration worksheet, not runtime activation",
+  "type": "object",
+  "required": [
+    "edition",
+    "revision",
+    "harness",
+    "channel",
+    "tenantId",
+    "environmentId",
+    "region",
+    "models",
+    "knowledgeMode",
+    "sharePointRequired",
+    "customApiRequired",
+    "mcpRequired",
+    "transportProfile",
+    "caseStore",
+    "automaticWriteBack",
+    "mcpUrl",
+    "apiUrl",
+    "connectionReference",
+    "trustedEnvelopeProvider",
+    "sourceCloudApproval",
+    "modelAvailability"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "edition": {
+      "enum": [
+        "MVP",
+        "CONNECTED",
+        "PROMPT-FULL"
+      ]
+    },
+    "revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "harness": {
+      "const": "standard"
+    },
+    "channel": {
+      "const": "Teams"
+    },
+    "tenantId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "environmentId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "region": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "models": {
+      "type": "object",
+      "required": [
+        "author",
+        "checker",
+        "optionalAuthor",
+        "otherUserReportedLabels"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "author": {
+          "type": "string"
+        },
+        "checker": {
+          "type": "string"
+        },
+        "optionalAuthor": {
+          "type": "string"
+        },
+        "otherUserReportedLabels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "knowledgeMode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sharePointRequired": {
+      "type": "boolean"
+    },
+    "customApiRequired": {
+      "type": "boolean"
+    },
+    "mcpRequired": {
+      "type": "boolean"
+    },
+    "transportProfile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "caseStore": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "automaticWriteBack": {
+      "type": "boolean"
+    },
+    "mcpUrl": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "apiUrl": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "connectionReference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "trustedEnvelopeProvider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceCloudApproval": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "modelAvailability": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

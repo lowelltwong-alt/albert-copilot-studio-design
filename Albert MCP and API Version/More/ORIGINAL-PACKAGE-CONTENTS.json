@@ -1,0 +1,321 @@
+{
+  "package": "Albert-MCP-and-API-1.0",
+  "status": "presentation package; local checks only",
+  "files": {
+    "LICENSE-DAD-DERIVED.md": {
+      "sha256": "8aa6ea357cfa0746f12ab2de38630528fd826c2857cd25f4cd63e5754e587508",
+      "bytes": 385
+    },
+    "LICENSE.md": {
+      "sha256": "98b830ca9b970b2d7280b0eb1b0a1f87e23bfe15fe5e61c64635f766e3d0ec13",
+      "bytes": 450
+    },
+    "More/README.md": {
+      "sha256": "a1089a32834c4453aa9e0437eaf06a1c8dd9787395421f7fb9838b25cd29114e",
+      "bytes": 554
+    },
+    "More/Reference/00-Innovation-START-HERE.md": {
+      "sha256": "acde31ca8664b88c6fbe7eb7a1856d093204e33512cc7f5f7fd7d09efd11f80f",
+      "bytes": 3650
+    },
+    "More/Reference/01-IMPLEMENTATION-BACKLOG.json": {
+      "sha256": "93a0b3f56508582c69810f60b71e937bed7adddcc3959757da88506a9c55c4a1",
+      "bytes": 25645
+    },
+    "More/Reference/01-IMPLEMENTATION-BACKLOG.md": {
+      "sha256": "91ad07deff3d52e091638a6595fed844ecaf4ecf3c617b438ff0ed55c3c9c464",
+      "bytes": 17298
+    },
+    "More/Reference/02-FLOWS-AND-STATE.md": {
+      "sha256": "91f6d838c0040658b61d7046fc0feb72c19dcd0d07b638df1f13933fbbb285d0",
+      "bytes": 14012
+    },
+    "More/Reference/03-MCP-AND-API.md": {
+      "sha256": "6b0c897bc91ff7b73d216e9cea740be0e9efad8bb2324ad628cd148a8bd22cdc",
+      "bytes": 12917
+    },
+    "More/Reference/04-ADMIN-SCREENS.md": {
+      "sha256": "b78894e749221fdfb2a8d077ab71a75dba2ca8ead449287edbe6288d4c594296",
+      "bytes": 7256
+    },
+    "More/Reference/05-ACCEPTANCE-PLAN.md": {
+      "sha256": "d0424bce83eb24bea6de26bfcfa7a911497a45c439bbbcb706cadc52ca1d5e98",
+      "bytes": 9323
+    },
+    "More/Reference/06-PILOT-AND-OPERATIONS.md": {
+      "sha256": "02b23c0ad81900b8e3857af2a6f3de20e5b67d2fa396239d1c443445a3cd8eb5",
+      "bytes": 6225
+    },
+    "More/Reference/06-contracts.schema.json": {
+      "sha256": "2745b86cde30b405fa2cfa7e0cce6e5a394b5696aae5961489e6839685fa0739",
+      "bytes": 86992
+    },
+    "More/Reference/07-REUSE-AND-DECISIONS.md": {
+      "sha256": "e5ac919e43b3be2ff6fb9e63057a10032f89fd624c80a73abb2317cd5fd72ec2",
+      "bytes": 4050
+    },
+    "More/Reference/07-tactics.json": {
+      "sha256": "e75f6d1ffb5af2c2f42c71caec0fc21f9456d99bd563bce6d3df249717be2895",
+      "bytes": 9924
+    },
+    "More/Reference/08-QUALITY-CONTRACT.md": {
+      "sha256": "467d28ae060f8ad1c72e824006922b767f4ff4c68b87de6dcfa81ff1798f8bb3",
+      "bytes": 5751
+    },
+    "More/Reference/09-COPILOT-PLACEMENT.md": {
+      "sha256": "c91e24ac0eac5f7f95d6db51664922a57b1a98477399d44435577f61fd0b5103",
+      "bytes": 5332
+    },
+    "More/Reference/10-CONFIGURATION-AND-PLACEMENT.md": {
+      "sha256": "1c5e87feadf320f9c365eca14e6a323d0a8f2787030dbaa6c4a1db89dad0970d",
+      "bytes": 7106
+    },
+    "More/Reference/11-CASE-STORAGE.md": {
+      "sha256": "2f38025b42fe1cfc8ccea356b98227d183153a0a63f82cd7d35523174892730f",
+      "bytes": 5055
+    },
+    "More/Reference/12-PODCAST-QUALITY.md": {
+      "sha256": "e1dd73ae4b43a833cc8afb052be41b956d12e49f6309667ba4832939f0ff8b16",
+      "bytes": 3980
+    },
+    "More/Reference/13-DECISIONS-AND-RELEASE.md": {
+      "sha256": "c969619db7ed198035a91adc7ec462c77a7a25bca5c7be679992a33b882711d0",
+      "bytes": 4039
+    },
+    "More/Reference/90-DIAGRAM-GUIDE.md": {
+      "sha256": "deaecb141796be4ccf78ec144cbadb5fefb5fb488d8b89243a8469ffd2db5e15",
+      "bytes": 2628
+    },
+    "More/Reference/D01-IMPLEMENTATION-CONTEXT.drawio": {
+      "sha256": "010f5cac57159f49de99ad0d32df11fa551b17e0c5d89486be011f17134cb5a1",
+      "bytes": 5631
+    },
+    "More/Reference/D01-IMPLEMENTATION-CONTEXT.mmd": {
+      "sha256": "6596babcbf4bd89f1b51f21a8ef676d49cba0c0d1affe039a1f1505a329d49e9",
+      "bytes": 1145
+    },
+    "More/Reference/D01-IMPLEMENTATION-CONTEXT.png": {
+      "sha256": "325bc1632e9da9e63b1d8b30150dfb2369a4129231051b94ebda6b2367aaafa2",
+      "bytes": 66182
+    },
+    "More/Reference/D01-IMPLEMENTATION-CONTEXT.svg": {
+      "sha256": "53c416a063667b11f55f11bbfc1ece69952050f07c843248c9c52f5a571bb32c",
+      "bytes": 10025
+    },
+    "More/Reference/D02-IMPLEMENTATION-FLOWS.drawio": {
+      "sha256": "c373dfb9a0b4324e0f6998d8aca557551210b78c4c33ca37fa2706bb0613c556",
+      "bytes": 5932
+    },
+    "More/Reference/D02-IMPLEMENTATION-FLOWS.mmd": {
+      "sha256": "371839b066edd7466cfff5ed0066e50479a34cc521593b29566494b4b03f48fb",
+      "bytes": 1273
+    },
+    "More/Reference/D02-IMPLEMENTATION-FLOWS.png": {
+      "sha256": "c559f3cbad2a835fb3eda74404f2a3a2df0363b1bc98b1b03bc8f895d7a00660",
+      "bytes": 75606
+    },
+    "More/Reference/D02-IMPLEMENTATION-FLOWS.svg": {
+      "sha256": "c9cfeeaca471bd43379b419457a6dcf10694823e9efd50f4b57b777ece8be9be",
+      "bytes": 10026
+    },
+    "More/Reference/D03-IMPLEMENTATION-QUALITY.drawio": {
+      "sha256": "3fba5adb4e085527e894f55005f6e87e17cb6d4591df8c12cf52df21bf5f1a72",
+      "bytes": 7827
+    },
+    "More/Reference/D03-IMPLEMENTATION-QUALITY.mmd": {
+      "sha256": "6eeedfc9964c71d9887de7f2af4a7d643cdf3373f8f47c4952e43d10ad17ec12",
+      "bytes": 1492
+    },
+    "More/Reference/D03-IMPLEMENTATION-QUALITY.png": {
+      "sha256": "941a1c07fe03df30240fa643984b81b490bc0a1842bfad2fe5712e8453c810d2",
+      "bytes": 85667
+    },
+    "More/Reference/D03-IMPLEMENTATION-QUALITY.svg": {
+      "sha256": "a24627876646da1d33d496b2bc93370b7f457948f4f8cb1904527dc54b0e1f48",
+      "bytes": 12922
+    },
+    "More/Reference/H03-witness-review-card.json": {
+      "sha256": "24eb56b52903b42b09e73dece2b16af398c0bdec3a43547405850f0dbc9377bf",
+      "bytes": 3059
+    },
+    "More/Reference/NOTICE.md": {
+      "sha256": "bdc299dbc4a1d011afef142729a4d892c0f4f15e5dcdbdeaf8767734c2e55a01",
+      "bytes": 717
+    },
+    "More/Reference/P00-parent.md": {
+      "sha256": "3d59b6518ea63b349836851aed9bf928c43eeb72bf032f1c4eac6b1b9000e8e2",
+      "bytes": 4877
+    },
+    "More/Reference/P01-source-review.md": {
+      "sha256": "a1c399d79f9459452e328ed45651fa2c0596a55954966841766b0234f69fb7d8",
+      "bytes": 4501
+    },
+    "More/Reference/P02-case-profile.md": {
+      "sha256": "a545df6ea602c0948990af4cdd857bb82d0f58c7a35868eb5da7676bc6016d92",
+      "bytes": 4429
+    },
+    "More/Reference/P03-witness-planner.md": {
+      "sha256": "c0dc4c06507a97a01a6ae6bd1799ab5a1cbd5a31a80cadfbb1f82ef43390c0f5",
+      "bytes": 4557
+    },
+    "More/Reference/P04-packet-writer.md": {
+      "sha256": "67d0bbef29f855561d080172486ab7cf4b74691ee30b40074a470bd808091d1f",
+      "bytes": 4982
+    },
+    "More/Reference/P05-script-writer.md": {
+      "sha256": "2815a5755a61034a865dfc409ad8519a8c9caa27b11ede702a84d3ae880b4256",
+      "bytes": 4966
+    },
+    "More/Reference/P06-independent-evaluator.md": {
+      "sha256": "9dc6eb68f6a20a6efac2345ebe3a999f1529a481cbc28ab9a4e12b76d210b9ad",
+      "bytes": 4912
+    },
+    "More/Reference/P07-truthful-rehearsal.md": {
+      "sha256": "13750bdf819032cc4ececa34b11c9abf3a0bd1c4af118b29de67f1dea483e3b4",
+      "bytes": 4336
+    },
+    "More/Reference/VERIFICATION.md": {
+      "sha256": "dd71f9a5bfb47e94503371769312b986b25be40a9bb1d60cfa61f8d1a36dbf2a",
+      "bytes": 3666
+    },
+    "More/Reference/acceptance-catalog.json": {
+      "sha256": "33451752ff2f47cb945bc58246481a086b26c37da02fb1e44935800f23777417",
+      "bytes": 59142
+    },
+    "More/Reference/acceptance-runner.py": {
+      "sha256": "d3ca6054c780827755b379e1c1f4be24ae67be759c2668f5737affd1b1b5186a",
+      "bytes": 2808
+    },
+    "More/Reference/albert-api.openapi.json": {
+      "sha256": "4437620354def148407f38d00c2ab2f9dfeab4cfa537dad21dfbe7c46f35ff19",
+      "bytes": 57679
+    },
+    "More/Reference/albert-mcp-tools.json": {
+      "sha256": "47e86db783e97aa97cc54e1bc8e1f073b912a25fec164075804195901c1c2e4c",
+      "bytes": 25317
+    },
+    "More/Reference/albert-transport.schema.json": {
+      "sha256": "6603a359be0c384633715dcd9bbbcec8891c5ae798939c92685b77ad32641fe8",
+      "bytes": 24259
+    },
+    "More/Reference/configuration.example.json": {
+      "sha256": "ce19a3e8788e6108a33c04fd41b9ef32ce967adffcfd57497e81f891b36263cd",
+      "bytes": 988
+    },
+    "More/Reference/configuration.schema.json": {
+      "sha256": "c0a9373fa60b1006982d9ed3f0d5fd83ef13f7748023638b2f4a86c5697f3187",
+      "bytes": 2932
+    },
+    "More/Reference/copilot-api-connector.swagger.json": {
+      "sha256": "ba696dbc98fb43cdab386f3805d0e72a914688a73ef78b15cee12a212fd4b7e9",
+      "bytes": 43807
+    },
+    "More/Reference/copilot-mcp-connector.swagger.json": {
+      "sha256": "4f49cee6aa116fdeb0a56ea6b46222dd6bc0686aa6a3a49a02e74b8dc072ac63",
+      "bytes": 1183
+    },
+    "More/Reference/deployment-settings.example.json": {
+      "sha256": "79aff583013a30d7d1bf4f859f6d7cfb78974d3ddd1930e4af2de5b77a2010d8",
+      "bytes": 576
+    },
+    "More/Reference/design-validation-report.json": {
+      "sha256": "e98fdcd64cbba22c173c6d19ada179be02fef5e16fdf2e07c2e9ab3503f927c1",
+      "bytes": 10804
+    },
+    "More/Reference/diagram-model.json": {
+      "sha256": "053ba17eddc6bfd7e6f5005f516a7c8140d1be7e286fb44123882cedbe57c842",
+      "bytes": 14708
+    },
+    "More/Reference/manifest.json": {
+      "sha256": "fda4c4f4b53cd92abc5b87cc97e2876310b36663b37ea9b815fc17759d4f2124",
+      "bytes": 9122
+    },
+    "More/Reference/reference-test-report.json": {
+      "sha256": "ad4e5d137156a269424cd0402a0a069bd44d9744c6f6360d23080fcac571c393",
+      "bytes": 14860
+    },
+    "More/Reference/reference_rules.py": {
+      "sha256": "773b26065eea9f2da9be7b9fa2e0a719c601a5f82dabde90680d0b0274af9342",
+      "bytes": 2664
+    },
+    "More/Reference/workflow-map.json": {
+      "sha256": "325bd1a8ed197123b6d3f60b1a771811d42c435ab94a1aa96e71051a99c5298d",
+      "bytes": 4853
+    },
+    "More/SERVER-STATUS.md": {
+      "sha256": "f2358095f1aa3162e83ca2a24a05694f009cbc6db8119194d4c6c266a2c4d277",
+      "bytes": 588
+    },
+    "PRESENTATION-NOTE.md": {
+      "sha256": "8fa9eea10b490672edbb573682441b1abad7aa1995c7a229fd22c1ad23b35468",
+      "bytes": 306
+    },
+    "PROMPTS/P00-parent.md": {
+      "sha256": "b12052b9fb42ee1510412fb667a30bc494b83f5024171c33e09ef51bcc3890e2",
+      "bytes": 4842
+    },
+    "PROMPTS/P01-source-review.md": {
+      "sha256": "9648abf753c2574c28b4f6b6cf20da63a4cf8379b4dd273be3d05a853ce8960b",
+      "bytes": 4468
+    },
+    "PROMPTS/P02-case-profile.md": {
+      "sha256": "ab7ccf17af8bed9a66b7badc03be25c8381a2db58ff7feacc3abed0ee9f20370",
+      "bytes": 4396
+    },
+    "PROMPTS/P03-witness-planner.md": {
+      "sha256": "b66cf896e81e66c40608bc3e4e3edfe4114c6f179bbf615ea40b4aefd112c95c",
+      "bytes": 4524
+    },
+    "PROMPTS/P04-packet-writer.md": {
+      "sha256": "0bbe86259f3a79cc21cc0884dc175699124287c20c20e3170383fae1309ac9f2",
+      "bytes": 4947
+    },
+    "PROMPTS/P05-script-writer.md": {
+      "sha256": "521f4452eb0206068b1a76d42086a688361cec24884d75bd337365c2a74a0cf5",
+      "bytes": 4931
+    },
+    "PROMPTS/P06-independent-evaluator.md": {
+      "sha256": "4021d71367dd25b6df64bee2ab909323969bbcf9d1e913cce2f43641118b06ad",
+      "bytes": 4877
+    },
+    "PROMPTS/P07-truthful-rehearsal.md": {
+      "sha256": "7f31dd3d5892664c754eeafc4358ee96eb9fa27435ce65123b5477f2b2e5a0c6",
+      "bytes": 4303
+    },
+    "START-HERE.md": {
+      "sha256": "e18084ca8f2d5ac6dc7a0867547526987a8b66d18705f9fa904da551a727a37b",
+      "bytes": 1981
+    },
+    "WORKFLOWS/Albert-MCP-and-API-Visio.vdx": {
+      "sha256": "8aa5b6a6fcf8826c3296850b96d9dda99d8f74e000f36c4e8d630fbf6dfff08b",
+      "bytes": 15581
+    },
+    "WORKFLOWS/D00-CONNECTED-WIRING.mmd": {
+      "sha256": "94d48e5c182be9ed38fc60319c85886ca173ee1576ed82ad4318acbacde5a5ef",
+      "bytes": 751
+    },
+    "WORKFLOWS/D00-CONNECTED-WIRING.png": {
+      "sha256": "c9ab4060a011149ecd13b9cdb625805f2675ee4d4be59b5d9afe33ac7088c50f",
+      "bytes": 47017
+    },
+    "WORKFLOWS/D00-CONNECTED-WIRING.svg": {
+      "sha256": "7e18972a578c8e9510e7e5683aa313d3a267adab062d44da0c70ac4cc7eb351f",
+      "bytes": 24038
+    },
+    "WORKFLOWS/README.md": {
+      "sha256": "7b3b55a78d7ad3be710a100cbf99754415ef1e346e9041a437e3725cca9229c5",
+      "bytes": 1107
+    },
+    "WORKFLOWS/VISIO-EXPORT-RECEIPT.json": {
+      "sha256": "22414f50da95466544fc66c4391f5122a55eb6af0327c2fe65eeacd1677721fd",
+      "bytes": 3026
+    }
+  },
+  "excludes": [
+    "CONTENTS.json",
+    "__pycache__",
+    "tests/tmp*"
+  ],
+  "native_visio_open": "unverified; desktop Visio unavailable",
+  "tenant_execution": "unverified"
+}

@@ -1,0 +1,94 @@
+LOAD_RUN RUN-11 PART 2/3. Acknowledge only; do not execute until BEGIN RUN.
+BEGIN_PART
+put comparison.
+
+## Required comparison method
+
+Make an instruction-by-instruction trace. Classify every material instruction
+as `mandatory`, `prohibited`, or `preference`; retain the exact instruction or
+a bounded, location-addressable excerpt. Map it to the observed exact output
+or evidence, then state exactly one status: `met`, `violated`, `missing`, or
+`not_assessable`. `not_assessable` identifies the unavailable evidence and does
+not become a pass.
+
+Evaluate two distinct dimensions:
+
+| Dimension | Question |
+| --- | --- |
+| Task quality | Did the output satisfy the locked task/rubric? |
+| Instruction compliance | Did the output follow the worker's material instructions? |
+
+Do not use a low task-quality score as proof of non-compliance, or a compliant
+output as proof that the task was high quality. Run the independent repair and
+evaluator challenge through [P03](../prompts/P03-independent-verification.md).
+For a recurring, independently supported failure, use
+[P05](../prompts/P05-prompt-diagnosis.md) to test competing causes. A score is
+evidence to investigate, not a causal conclusion.
+
+Consider at least these causal layers before proposing a change: source/input
+contract, context/data visibility, worker instruction, tool, runtime/effort
+route, workflow ordering or handoff, grader/evaluation harness, reviewer, and
+downstream-specialist fit. State the discriminating check for each plausible
+layer and label untested hypotheses. Preserve a simple worker when the cause is
+elsewhere.
+
+An output violating a clear instruction establishes noncompliance, not an
+instruction defect. Before selecting `revise_instruction`, identify an actual
+ambiguity, omission, contradiction, or independently demonstrated causal
+instruction change. If the rule already clearly forbids the failure, do not
+append its paraphrase as a repair. Prefer `collect_more_evidence`, with a bounded
+retry or an appropriate objective output check as a candidate next experiment.
+Changing the current output and improving the reusable instruction are different
+decisions. Do not infer that emitting a command proves it was executed.
+
+Report a first check as observed compliant/noncompliant; use P03's `fixed` only
+for an actual repair compared with its preimage. A local text replay is useful
+evidence but is not a separately executed worker or an independent evaluator
+audit. Conditional branches absent from the supplied attempt are
+`not_assessable` and do not fail the branch that actually applied.
+
+### Tiny synthetic example
+
+The worker's frozen instruction says, “Return exactly two cited findings.” Its
+actual output has two cited findings, and the rubric accepts both citations.
+The grader marks it failed because the grader incorrectly requires three
+findings. The trace records the worker's mandatory requirement as `met` and
+task quality as `met`; the evaluator finding is `checker_error` / grader defect.
+The candidate repair targets the grader rubric, not the compliant worker prompt.
+
+## Outputs
+
+Return one bounded packet containing:
+
+- source artifact IDs, exact revisions/digests, visibility, and tool receipts;
+- the instruction trace and separate task-quality/compliance verdicts;
+- P03 evidence, grader-integrity observations, and limitations;
+- competing causal layers, checks, observations, and a disposition;
+- either `no_change`, `collect_more_evidence`, `repair_evaluator`,
+  `improve_input_contract`, `change_workflow_or_handoff`,
+  `compose_specialist`, `change_runtime_route`, or `revise_instruction`;
+- at most one smallest proposed repair, its owner, success/non-regression
+  criteria, regression and untouched-holdout plan, migration and rollback; and
+- an adoption state: `candidate_only`, `blocked`, `deferred`, or
+  `human_adopted` only when a named human supplies a decision receipt.
+
+Keep lessons privacy-safe: stable IDs, revisions/digests, categorical outcomes,
+and bounded evidence references. Exclude secrets, client payloads, private
+source rows, raw conversations, long logs, and hidden reasoning.
+
+## Authority, tools, and stop conditions
+
+A01 has read-only analysis authority. The worker owns its output; the checker
+owns the independent check; the evaluator owns its audit; only the named human
+adopter may approve a revision, runtime change, promotion, or rollback.
+
+Manual review prompts and supplied artifacts are the default interface. A host
+agent is an optional runtime adapter that may perform the same bounded roles
+only with explicit tool/effect permissions and recorded actual binding. MCP may
+retrieve named, read-only artifacts and their metadata; it must not select a
+role, alter instructions, execute a repair, write records, or make adoption
+decisions.
+
+Stop and return `blocked` or `not_assessable` when evidence is unavailable,
+privacy/authority i
+END_PART

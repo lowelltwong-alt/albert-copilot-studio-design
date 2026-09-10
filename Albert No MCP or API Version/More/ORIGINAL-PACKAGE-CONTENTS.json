@@ -1,0 +1,293 @@
+{
+  "package": "Albert-No-MCP-or-API-1.0",
+  "status": "presentation package; local checks only",
+  "files": {
+    "LICENSE-DAD-DERIVED.md": {
+      "sha256": "8aa6ea357cfa0746f12ab2de38630528fd826c2857cd25f4cd63e5754e587508",
+      "bytes": 385
+    },
+    "LICENSE.md": {
+      "sha256": "98b830ca9b970b2d7280b0eb1b0a1f87e23bfe15fe5e61c64635f766e3d0ec13",
+      "bytes": 450
+    },
+    "More/README.md": {
+      "sha256": "a1089a32834c4453aa9e0437eaf06a1c8dd9787395421f7fb9838b25cd29114e",
+      "bytes": 554
+    },
+    "More/Reference/00-ALL-IN-ONE-PROMPT.md": {
+      "sha256": "61d739f5150187783140b52b554aa83db1f41e350fa1cd261e2baec8c7d319f4",
+      "bytes": 2121
+    },
+    "More/Reference/00-START-HERE.md": {
+      "sha256": "d80f0bf451ea7cfa7469e91e562211036cd5da4c581fd84e15eb0e33aa3c770a",
+      "bytes": 1990
+    },
+    "More/Reference/01-SETUP-AND-RUN-SEQUENCE.md": {
+      "sha256": "4fd10b0f53d854761021948c542164e2aed4d8c7689e4b3121ea5835b055c3d1",
+      "bytes": 2444
+    },
+    "More/Reference/02-MODELS.md": {
+      "sha256": "bf48d3a3c79a285149201f61122659a578bc500454a8e24876c87adb3e1e76f3",
+      "bytes": 1200
+    },
+    "More/Reference/03-OPERATOR-LEDGER-TEMPLATE.md": {
+      "sha256": "230d5d65e07f60386b8c618782b2119a738a53fc21bb22fb84b27ddd8abcd854",
+      "bytes": 1341
+    },
+    "More/Reference/03-SYNTHETIC-WALKTHROUGH.md": {
+      "sha256": "eb930090af88bb59ece543fc5af7a0c7f103dc30c5144944c553e2168904802e",
+      "bytes": 2079
+    },
+    "More/Reference/04-FULL-ACCEPTANCE-CHECKLIST.md": {
+      "sha256": "c43d8ee48bffd9944f7063e59da76198cc2a4e96ddb3f2028df1957ff8c02973",
+      "bytes": 1820
+    },
+    "More/Reference/10-CONFIGURATION-AND-PLACEMENT.md": {
+      "sha256": "e848ea73f2374e141e6e964fc2543ecd8388078f1503a72c1e706c8d759e863c",
+      "bytes": 7923
+    },
+    "More/Reference/11-CASE-STORAGE.md": {
+      "sha256": "b01a220985a2ffbadcd87555c05ae9add18947e02c0c7a46169ea87e6399649f",
+      "bytes": 4161
+    },
+    "More/Reference/12-PODCAST-QUALITY.md": {
+      "sha256": "e1dd73ae4b43a833cc8afb052be41b956d12e49f6309667ba4832939f0ff8b16",
+      "bytes": 3980
+    },
+    "More/Reference/90-DIAGRAM-GUIDE.md": {
+      "sha256": "43290fa91e6c63520a4202c4719659986b6718ef6786b280fb4504d34d8e58fa",
+      "bytes": 2351
+    },
+    "More/Reference/C01-intake.md": {
+      "sha256": "02909c0d82c928616396a9e517e6e374696eb478d856ca889cc0bc557df9b911",
+      "bytes": 833
+    },
+    "More/Reference/C02-source-exhibit-review.md": {
+      "sha256": "f428aaedaf3d97e9e62d7b2c09e49e088c16210e32c5a16a3b9120ad33556b8a",
+      "bytes": 901
+    },
+    "More/Reference/C03-evidence-ledger.md": {
+      "sha256": "0dcc7c51c556cf2222996d2a2f4af76925602080c6cab7c0825a8dd7fd0bdba5",
+      "bytes": 916
+    },
+    "More/Reference/C04-case-witness-profile.md": {
+      "sha256": "980570f7a832a4be4960b2eb685a800a444e2978d29fb1a7da970ea139072329",
+      "bytes": 880
+    },
+    "More/Reference/C05-full-witness-packet.md": {
+      "sha256": "b5d73179cf20173505b5a3e399fbb71b586f7c7f07d40cf02cce5272f2f94a78",
+      "bytes": 993
+    },
+    "More/Reference/C06-independent-review.md": {
+      "sha256": "4a04947a32ea314f4a24370eced5f026e06c86752611079a0df2f0c9c0dba64c",
+      "bytes": 1060
+    },
+    "More/Reference/C07-material-revision.md": {
+      "sha256": "0d35a7f1a36a6b13925ed3b028e995ebda3aa0369236248ac542560f1196776c",
+      "bytes": 1056
+    },
+    "More/Reference/C08-full-chaptered-script.md": {
+      "sha256": "6d00c68e1737b6960f34f3fc9fcb796f922b70c17a670745ac9cb2495e349816",
+      "bytes": 1295
+    },
+    "More/Reference/C09-pair-consistency-final-package.md": {
+      "sha256": "c41b390be16c59309a42cbda34ed491a2f506666673ad88170152782a5e9b219",
+      "bytes": 1087
+    },
+    "More/Reference/C10-truthful-rehearsal.md": {
+      "sha256": "be4493f03a1e3bca52ea8d647399e5a5f5bbb08e59d4711d64a0c2ceb9606f93",
+      "bytes": 899
+    },
+    "More/Reference/CASE-00-manifest.md": {
+      "sha256": "2817f28bc934507588b6f5e0d624cdd367e8dd8c1c7234edc8191e5ad3c56fa3",
+      "bytes": 738
+    },
+    "More/Reference/CASE-01-source-register.csv": {
+      "sha256": "a0732ebe926fb2bc21934335f09d7ad9a4d36cba2ee23e9cb4340bf5f1ae0d4f",
+      "bytes": 120
+    },
+    "More/Reference/CASE-02-chunks.csv": {
+      "sha256": "6765f1a31aee4aee6e9bd413884bada48db6d2240a09e665208626a135b5f153",
+      "bytes": 154
+    },
+    "More/Reference/CASE-03-graph-nodes.csv": {
+      "sha256": "1ba172e309cdcfdb46825c2abfa315201b255e2ae923dd764f95a41d04678586",
+      "bytes": 148
+    },
+    "More/Reference/CASE-04-graph-edges.csv": {
+      "sha256": "94f63afab1033ae68289c815a7a2adaa898bb41fddd960b4a3579b0be8834caf",
+      "bytes": 125
+    },
+    "More/Reference/CASE-05-conflicts.csv": {
+      "sha256": "b5b46a4c376b856264965b46e0a7896e192674f02e1348ab81e5148e347afb92",
+      "bytes": 177
+    },
+    "More/Reference/CASE-06-witness-profile.md": {
+      "sha256": "df89d907b768ba4daa237321b50002809b3f042bf1b0031620082f087f447a0e",
+      "bytes": 554
+    },
+    "More/Reference/CASE-07-packet-review-log.csv": {
+      "sha256": "8801fd010768f4818a31eff1d71361235efe7c6c42b05a05edeb1c7aef74c303",
+      "bytes": 168
+    },
+    "More/Reference/CASE-08-podcast-review-log.csv": {
+      "sha256": "cd49d81ad936e6a6ec364619515c04d888eb5172786bcfbb1a9056e2dc50cf71",
+      "bytes": 179
+    },
+    "More/Reference/CASE-09-final-review.md": {
+      "sha256": "9b95f6009c746845ab39c082db8d47edb6b3700b92a3c55721f8d4328893b3bc",
+      "bytes": 844
+    },
+    "More/Reference/CASE-WORKSPACE-TEMPLATE.md": {
+      "sha256": "89929a76e3909f239ab0ae015160754a7a29bb4b920850a8cca8f5692f59af51",
+      "bytes": 974
+    },
+    "More/Reference/D01-FULL-END-TO-END.drawio": {
+      "sha256": "d5c94de659b8aec37ee21e09e0103357f1b5bb39c9e9cf66eb663ea5a5470d5e",
+      "bytes": 8392
+    },
+    "More/Reference/D01-FULL-END-TO-END.mmd": {
+      "sha256": "74bb96a057bc7de526fd724bf8b2059b9097e97465bb638f8a1cbce671d3f1d0",
+      "bytes": 1648
+    },
+    "More/Reference/D01-FULL-END-TO-END.png": {
+      "sha256": "7e283789109b89eb4c698bffc2fb4f902161a16cef658172bd55bc8ad37749f0",
+      "bytes": 90924
+    },
+    "More/Reference/D01-FULL-END-TO-END.svg": {
+      "sha256": "0abb83f56bea0b83c67120f0d2b18943f729f2a4680dff6643368fcf6f23e74e",
+      "bytes": 14099
+    },
+    "More/Reference/D02-FULL-SETUP-PLACEMENT.drawio": {
+      "sha256": "8d17630ff5c4876e1200270b9c213f055138cb294656142b86451cb7bf6eb4cb",
+      "bytes": 4410
+    },
+    "More/Reference/D02-FULL-SETUP-PLACEMENT.mmd": {
+      "sha256": "7a10623e3aeffaa52d67682bbb60916b3bc61072a9811c2b2991a0459f06b4d3",
+      "bytes": 894
+    },
+    "More/Reference/D02-FULL-SETUP-PLACEMENT.png": {
+      "sha256": "230cd9e937d4fd7b97b90c17f03f720204253b1e22142ab978e8d9f1a501bcd6",
+      "bytes": 58772
+    },
+    "More/Reference/D02-FULL-SETUP-PLACEMENT.svg": {
+      "sha256": "4c8e014b6d73bb54ae665584185787cbbbda215c04aa2a52135c8b46dd6832ab",
+      "bytes": 7849
+    },
+    "More/Reference/NOTICE.md": {
+      "sha256": "60ef16411a032a3bc5cecb7861a3f4b3ca74ad7571efe2ab647d2df8a42a62ce",
+      "bytes": 710
+    },
+    "More/Reference/VERIFICATION.md": {
+      "sha256": "dd71f9a5bfb47e94503371769312b986b25be40a9bb1d60cfa61f8d1a36dbf2a",
+      "bytes": 3666
+    },
+    "More/Reference/configuration.example.json": {
+      "sha256": "d88f400cb97f3c35e19af5918cb969c52cea5083242808d0f633d95565568d6b",
+      "bytes": 955
+    },
+    "More/Reference/configuration.schema.json": {
+      "sha256": "c0a9373fa60b1006982d9ed3f0d5fd83ef13f7748023638b2f4a86c5697f3187",
+      "bytes": 2932
+    },
+    "More/Reference/design-validation-report.json": {
+      "sha256": "e98fdcd64cbba22c173c6d19ada179be02fef5e16fdf2e07c2e9ab3503f927c1",
+      "bytes": 10804
+    },
+    "More/Reference/diagram-model.json": {
+      "sha256": "2b42ca6f223d07475e1605d2512b4f45bc49844aa8a25c0388f744de2456cdec",
+      "bytes": 9529
+    },
+    "More/Reference/manifest.json": {
+      "sha256": "9fb56489b8bc732ef01c2bd670e3c9072a750ae1ec0c79746685845d3cd08597",
+      "bytes": 7638
+    },
+    "More/Reference/workflow-map.json": {
+      "sha256": "efa93ff31bf9feb962789d2ca85384f5d0108b2a01d34552ea7d6d3bdfefad81",
+      "bytes": 6135
+    },
+    "PRESENTATION-NOTE.md": {
+      "sha256": "8fa9eea10b490672edbb573682441b1abad7aa1995c7a229fd22c1ad23b35468",
+      "bytes": 306
+    },
+    "PROMPTS/00-ALL-IN-ONE-PROMPT.md": {
+      "sha256": "d4f60e8361d7bf3263a984cc2b8a29b18d5af73de939762eb035f2b326b9132b",
+      "bytes": 2111
+    },
+    "PROMPTS/C01-intake.md": {
+      "sha256": "b058d28f105adef5ff28959205c5d7242cfe9c3377708ba01c54b8f939a1030d",
+      "bytes": 824
+    },
+    "PROMPTS/C02-source-exhibit-review.md": {
+      "sha256": "bc7ef592c59785739e198211f3cbb4a7fdead4ebe2b4e7240ca3f634259c2b94",
+      "bytes": 892
+    },
+    "PROMPTS/C03-evidence-ledger.md": {
+      "sha256": "bdcdb89e4b445c99bcd6dbe7cb5ec8a56b533f161bd06df5c7ecb3d0e1343b2c",
+      "bytes": 907
+    },
+    "PROMPTS/C04-case-witness-profile.md": {
+      "sha256": "f9a6c620738bd9614ae7633539399f9f5d1690ae0a84ca1b24afdac3c973ea00",
+      "bytes": 871
+    },
+    "PROMPTS/C05-full-witness-packet.md": {
+      "sha256": "1cb0e416bc9583b65f4af2e07531f2dbd180d011ddc5580d551c046fa219708b",
+      "bytes": 984
+    },
+    "PROMPTS/C06-independent-review.md": {
+      "sha256": "76a09e281cc4af6d4edbf44625d4144f72fe674e658ec4534c6f9c3d1d39c828",
+      "bytes": 1051
+    },
+    "PROMPTS/C07-material-revision.md": {
+      "sha256": "26aa704982407ea4380a0a0549ca792571278f1063026f6f2297f8533b165737",
+      "bytes": 1047
+    },
+    "PROMPTS/C08-full-chaptered-script.md": {
+      "sha256": "e9bed5d0932a59f930158cffbcaf36f74d8297b6acd086ab94b8e0bb89b4a421",
+      "bytes": 1286
+    },
+    "PROMPTS/C09-pair-consistency-final-package.md": {
+      "sha256": "e7e696e60167f45b5ed8ce1002bbbe468aad8cf44b4e4b5a3f661478fae8834c",
+      "bytes": 1078
+    },
+    "PROMPTS/C10-truthful-rehearsal.md": {
+      "sha256": "a3c858873357d3b852a165256bf3ec508f8304ef8ab7dbd5514333d48b69e33a",
+      "bytes": 890
+    },
+    "START-HERE.md": {
+      "sha256": "385fe318d7ca21df1653123ea6a446e2c0202237f7ea0a2ab97495b16a63d069",
+      "bytes": 1952
+    },
+    "WORKFLOWS/Albert-No-MCP-or-API-Visio.vdx": {
+      "sha256": "51de3ecaa68dbd421c29327e9b0673d40b0eff416e8a27fa81ef5ec4830da102",
+      "bytes": 16494
+    },
+    "WORKFLOWS/D00-MANUAL-WIRING.mmd": {
+      "sha256": "9524ff37adf740e578a624fb2958f674cc66af54e05af4161781fb34fce37961",
+      "bytes": 604
+    },
+    "WORKFLOWS/D00-MANUAL-WIRING.png": {
+      "sha256": "9de0ccc1a4101726aed7a898763ef6a766fecfb5f907efcdd741f34188f608a1",
+      "bytes": 43290
+    },
+    "WORKFLOWS/D00-MANUAL-WIRING.svg": {
+      "sha256": "f797e22c01ec976953ee030004f2dd1eb6f99a8791e4274716316cf6910102e3",
+      "bytes": 24856
+    },
+    "WORKFLOWS/README.md": {
+      "sha256": "06a9879bb13de70d199f11031ad1b38e732c0329ba83bd19171fb3ab60d615d9",
+      "bytes": 1097
+    },
+    "WORKFLOWS/VISIO-EXPORT-RECEIPT.json": {
+      "sha256": "ee86aee73f3eef723ad22ec3ebcc09e04f9673b080556e58627456e2893a5969",
+      "bytes": 2737
+    }
+  },
+  "excludes": [
+    "CONTENTS.json",
+    "__pycache__",
+    "tests/tmp*"
+  ],
+  "native_visio_open": "unverified; desktop Visio unavailable",
+  "tenant_execution": "unverified"
+}

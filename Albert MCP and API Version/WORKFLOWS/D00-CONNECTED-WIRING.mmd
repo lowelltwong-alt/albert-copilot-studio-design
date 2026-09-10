@@ -1,0 +1,18 @@
+flowchart TD
+ S["Studio parent · proposed GPT-5.5<br/>Instructions: P00-parent"]
+ W["Assigned scoped workers<br/>P01 source · P02 profile · P03 plan<br/>P04 packet · P05 script · P07 rehearsal"]
+ M["MCP primary<br/>Authenticated Streamable HTTP"]
+ A["HTTPS API alternative<br/>Same authenticated operation contract"]
+ D["Authoritative dispatcher + operation ledger<br/>Full Albert backend must be implemented"]
+ E["Separate assigned evaluator · P06<br/>Current frozen inputs / no self-assignment"]
+ H["Human portal decision<br/>RecordHumanDecision is not an agent tool"]
+ B["Proposed durable source/artifact store<br/>Chunks / claims / grants / conflicts / jobs"]
+ S --> W
+ W --> M
+ W --> A
+ M --> D
+ A --> D
+ D --> E
+ E --> D
+ H --> D
+ D --> B

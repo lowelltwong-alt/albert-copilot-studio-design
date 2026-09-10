@@ -1,0 +1,129 @@
+{
+  "package": "Albert-Digital-Assets-1.0",
+  "status": "presentation package; local checks only",
+  "files": {
+    ".dockerignore": {
+      "sha256": "124eab5af1e5ef0e61ac8107d9b66955d707817e87fa18fb6cfe97c8e839e6c5",
+      "bytes": 49
+    },
+    ".gitignore": {
+      "sha256": "570637a6b887f1c20f8ff60807a78912dee400da4e0e92dfeb54e4d2db4b1107",
+      "bytes": 48
+    },
+    "AI_FRONT_DOOR.md": {
+      "sha256": "c3483997b7af0653e27d46a5e82be158fed25477e8e2af597494312d7be6c0a0",
+      "bytes": 6724
+    },
+    "DATA-MODEL.md": {
+      "sha256": "e45c4af88e26bde963cbaa4f9664f9f41e6f0a1cbf571388057c50a80cf91a63",
+      "bytes": 1571
+    },
+    "Dockerfile": {
+      "sha256": "a6abb760dba6fc97ae73c1f2dfb7705acb791b19b9022835caabdc83ed13f314",
+      "bytes": 340
+    },
+    "LEARNING-LOOP.md": {
+      "sha256": "06529be391624d44967de3adebcbb3589067ef599312ad83fd1ed0708f6a49e4",
+      "bytes": 2265
+    },
+    "LICENSE-DAD-DERIVED.md": {
+      "sha256": "30f20bb6f3a635dd54840993f14aa2b4c94bb3882b56f4c5c377ab28f6df67bb",
+      "bytes": 1295
+    },
+    "LICENSE.md": {
+      "sha256": "b1424bd1eb3d1dafbf99b9b7d79eab1df8002d1cda97d0d10fe7b01a5b4be2da",
+      "bytes": 1174
+    },
+    "MCP-API.md": {
+      "sha256": "f9bdb8dac6838e9d962b39474032432976ce71437452062eb28be3e7ca74ce3f",
+      "bytes": 2567
+    },
+    "PROVENANCE.md": {
+      "sha256": "4febe2d5ee6975c168b9d6ba7b9440bb5eb933363d2acf9992bcccfb980b91c2",
+      "bytes": 1401
+    },
+    "README.md": {
+      "sha256": "de8e63560016b9cd02ff92878fc901aaa632717ab6e022e82b2250847c3abb5a",
+      "bytes": 1282
+    },
+    "RUNTIME-CONTRACT.md": {
+      "sha256": "162f8adc48353773abe20eb0f9c3a03a5f1b8154dba9a523733b6074688ef4c2",
+      "bytes": 2673
+    },
+    "assets/adversarial-harness.md": {
+      "sha256": "3bbe0a73ba4a684605427dc15da92c281d66a4042d68de2e07efc9b445cb76b8",
+      "bytes": 468
+    },
+    "assets/lesson-intake-contract.md": {
+      "sha256": "0cf09e8fef477584600b97bc0c5c999eb3aa157becab5d161d13b6531bf7b12d",
+      "bytes": 1108
+    },
+    "assets/lifecycle-check.md": {
+      "sha256": "16c0100f896358173a5c0f650df93ed052a9fb6deace696d211de48222522e87",
+      "bytes": 459
+    },
+    "assets/multiagent-review-workflow.md": {
+      "sha256": "e83c44e4f73834cf4a0155bb4cec4097374be3e82028246a089317c97f608b3c",
+      "bytes": 547
+    },
+    "assets/toolkit-reference-cards.md": {
+      "sha256": "9726e198da870d418c1d3da2e43c204df2d91db10dd5f6b6369ba1ff7d20a7a8",
+      "bytes": 568
+    },
+    "azure/README.md": {
+      "sha256": "7851518afd8a414d9e3a92259cfe6e0dac0409c7f67aaeeaa51e3f346bccd392",
+      "bytes": 3967
+    },
+    "azure/containerapp.bicep": {
+      "sha256": "1366e3e2c816b93b850ea22865713c68b0f5f7ee1301e9372d4d231e2d27f093",
+      "bytes": 2387
+    },
+    "azure/parameters.example.json": {
+      "sha256": "6612fa50ad59180bc848ad3f92b0c58c76813513c00f3f7c1e79f6adbb29dcdf",
+      "bytes": 817
+    },
+    "catalog.json": {
+      "sha256": "3bc7f197af719ebc731834ec3d719317fc02d929dfd1e79d1ce82b9b6fd69c12",
+      "bytes": 10307
+    },
+    "mcp_stdio.py": {
+      "sha256": "01f1a467c61249ba2a3c3e4d039e1dc28108bda79327d5030f8a55b842341707",
+      "bytes": 2243
+    },
+    "network_adapter.py": {
+      "sha256": "7d0f8557ca4727dbaab28a14c32e79ce7d9b8aa315994b2490caa7287fecc4cf",
+      "bytes": 8161
+    },
+    "requirements.txt": {
+      "sha256": "1d74ebdfc6d97c2904b2d173e3d2331bebe0b3887b24c7974e2417c8c31b2b04",
+      "bytes": 28
+    },
+    "runtime.py": {
+      "sha256": "fcc2fc2227c3c39540e1ee2426de1575eaed0e313debc3efa608f4eef8884e1e",
+      "bytes": 25470
+    },
+    "server.py": {
+      "sha256": "2425b2d62439fc2abc590cd9855d01f8060d5f0b5ed392dcf0f5de82e0192a77",
+      "bytes": 4229
+    },
+    "state/.gitkeep": {
+      "sha256": "d3e90820484ee724f9622a782dbf970702b4d9963cbe13f70ec32d7e6231ecf8",
+      "bytes": 74
+    },
+    "tests/test_network.py": {
+      "sha256": "5f15533479866123ad7df9238c030542d0f855abecc7aa613dda1ceef1a112be",
+      "bytes": 5879
+    },
+    "tests/test_runtime.py": {
+      "sha256": "fa464e9475f606c8e8256b078b02b337e78a49519bd9d7d1a322110d329fe81f",
+      "bytes": 6497
+    }
+  },
+  "excludes": [
+    "CONTENTS.json",
+    "__pycache__",
+    "tests/tmp*"
+  ],
+  "native_visio_open": "unverified; desktop Visio unavailable",
+  "tenant_execution": "unverified"
+}

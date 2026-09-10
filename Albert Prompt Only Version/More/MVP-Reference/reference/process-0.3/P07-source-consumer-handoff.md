@@ -1,0 +1,17 @@
+# P07 · Prepare an exact source and consumer handoff
+
+Provider-neutral process core 0.3.0 candidate. Use with unchanged P06/P01. Inputs: authorized task, selected witness, raw sources, current knowledge view, reference-function notes, intended consumer/use and current saved artifacts. Output: `CASE-WITNESS-W05-HANDOFF-REV.md`. This prompt does not grant permission, change a frozen view, or adjudicate truth.
+
+Record the assigned read scope separately from learner disclosure. Select source sections by their own start/end identifiers; a later selected document is not the end of an earlier one. Supply physically scoped source files where useful. Keep broad authorized writer research separate from learner artifacts. A file reference is not an instruction to open unassigned material. A current-stage limit is not a new prohibition on an already authorized later internal stage; internal use and live delivery are separate fields.
+
+For each material planned proposition record:
+
+`ID | raw span | attributed meaning and qualifier | who knows it and when | permission unit | exact grant/exclusion | learner allowed | planned use`
+
+Resolve the actual permission unit from the existing authority: an enumerated proposition, an expressly selected source span, or another explicitly defined scope. A paragraph citation alone does not enlarge a proposition grant. Conversely, an abbreviated summary does not silently narrow an express selected-span grant. A supported omitted detail may be added only within the actual existing grant; otherwise hold it for the source owner. Availability, truth support and permission are three separate checks. Do not silently broaden or narrow the view to make a draft pass. Unused, excluded, unknown and absent-from-source are different states.
+
+Use the original wording to check meaning, rather than trusting a graph label. Preserve both attributed endpoints of conflicts. A question about whether something happened does not establish that it happened; distinguish inquiry from an embedded assertion. Source silence does not establish what a person remembers or observed. A suggestion for this source-limited practice is not a rule about what counsel may ask. The existing no-invented-testimony and no-new-legal-rules constraints remain controlling.
+
+Before each role starts, record exact required files/revisions, what was actually read in full, missing/truncated inputs, actual model/runtime and context exposure. Missing required input makes the dependent check not assessed until completed; a plausible guessed filename or author assurance is insufficient. If restricted context was opened, stop the affected clean-context attempt and restart it with appropriately scoped input. Preserve the failed attempt; do not claim a fresh context after exposure.
+
+The handoff names its consumer and expected saved output. Reviewers receive the complete current script/map/card and sources; a repair verifier additionally receives the exact previous artifact and finding. Writers receive verified actions, with numerical grades withheld during a masked development comparison. Save/reopen files at every handoff; chat context is not durable storage. Source/author-only material stays in the authorized case folder, outside the generic asset catalog.

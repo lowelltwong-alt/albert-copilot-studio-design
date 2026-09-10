@@ -1,0 +1,47 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Albert MCP \u2014 candidate v2",
+    "version": "2.0.0",
+    "description": "Replace host and OAuth registration before importing. Streamable HTTP only. No tenant test has been performed."
+  },
+  "host": "albert.example.invalid",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "oauth2": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.microsoftonline.com/REPLACE_TENANT/oauth2/v2.0/authorize",
+      "tokenUrl": "https://login.microsoftonline.com/REPLACE_TENANT/oauth2/v2.0/token",
+      "scopes": {
+        "read": "Read permitted Albert data",
+        "write": "Create approved jobs and candidates"
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth2": [
+        "read",
+        "write"
+      ]
+    }
+  ],
+  "paths": {
+    "/mcp": {
+      "post": {
+        "summary": "Invoke Albert MCP",
+        "operationId": "InvokeMCP",
+        "x-ms-agentic-protocol": "mcp-streamable-1.0",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}

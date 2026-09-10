@@ -1,0 +1,615 @@
+{
+  "version": 4,
+  "pages": [
+    {
+      "name": "D01-IMPLEMENTATION-CONTEXT",
+      "title": "Connected implementation \u2022 placement and authority boundary",
+      "nodes": [
+        {
+          "id": "H01-H07",
+          "label": "Human portal decisions outside LLM",
+          "file_ref": "04-ADMIN-SCREENS.md",
+          "kind": "H",
+          "x": 180,
+          "y": 205,
+          "node_ids": [
+            "H01",
+            "H07"
+          ]
+        },
+        {
+          "id": "P00",
+          "label": "Parent router",
+          "file_ref": "P00-parent.md",
+          "kind": "P",
+          "x": 550,
+          "y": 205,
+          "node_ids": [
+            "P00"
+          ]
+        },
+        {
+          "id": "P01-P07",
+          "label": "Scoped child roles",
+          "file_ref": "10-CONFIGURATION-AND-PLACEMENT.md",
+          "kind": "P",
+          "x": 920,
+          "y": 205,
+          "node_ids": [
+            "P01",
+            "P07"
+          ]
+        },
+        {
+          "id": "MCP",
+          "label": "MCP primary: Streamable HTTP",
+          "file_ref": "03-MCP-AND-API.md",
+          "kind": "S",
+          "x": 1290,
+          "y": 205,
+          "node_ids": [
+            "MCP"
+          ]
+        },
+        {
+          "id": "API",
+          "label": "API-only: authenticated HTTPS",
+          "file_ref": "03-MCP-AND-API.md",
+          "kind": "S",
+          "x": 1660,
+          "y": 205,
+          "node_ids": [
+            "API"
+          ]
+        },
+        {
+          "id": "S04",
+          "label": "Same authoritative dispatcher",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "S",
+          "x": 180,
+          "y": 505,
+          "node_ids": [
+            "S04"
+          ]
+        },
+        {
+          "id": "BLOB",
+          "label": "Proposed Azure Blob: immutable bodies",
+          "file_ref": "11-CASE-STORAGE.md",
+          "kind": "S",
+          "x": 550,
+          "y": 505,
+          "node_ids": [
+            "BLOB"
+          ]
+        },
+        {
+          "id": "SQL",
+          "label": "Azure SQL: chunks, graph, conflicts, jobs",
+          "file_ref": "11-CASE-STORAGE.md",
+          "kind": "S",
+          "x": 920,
+          "y": 505,
+          "node_ids": [
+            "SQL"
+          ]
+        },
+        {
+          "id": "K",
+          "label": "Optional reviewed knowledge upload",
+          "file_ref": "11-CASE-STORAGE.md",
+          "kind": "N",
+          "x": 1290,
+          "y": 505,
+          "node_ids": [
+            "K"
+          ]
+        },
+        {
+          "id": "X",
+          "label": "Tenant / connector behavior untested",
+          "file_ref": "09-COPILOT-PLACEMENT.md",
+          "kind": "X",
+          "x": 1660,
+          "y": 505,
+          "node_ids": [
+            "X"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "H01-H07",
+          "target": "P00",
+          "label": "decision / status"
+        },
+        {
+          "source": "P00",
+          "target": "P01-P07",
+          "label": "scope"
+        },
+        {
+          "source": "P01-P07",
+          "target": "MCP",
+          "label": "primary"
+        },
+        {
+          "source": "P01-P07",
+          "target": "API",
+          "label": "operator selects"
+        },
+        {
+          "source": "MCP",
+          "target": "S04",
+          "label": "same envelope"
+        },
+        {
+          "source": "API",
+          "target": "S04",
+          "label": "same dispatcher"
+        },
+        {
+          "source": "S04",
+          "target": "BLOB",
+          "label": "artifact body"
+        },
+        {
+          "source": "S04",
+          "target": "SQL",
+          "label": "state + audit"
+        },
+        {
+          "source": "K",
+          "target": "P00",
+          "label": "optional retrieval"
+        },
+        {
+          "source": "P00",
+          "target": "X",
+          "label": "cannot approve"
+        },
+        {
+          "source": "H01-H07",
+          "target": "S04",
+          "label": "human portal API"
+        }
+      ]
+    },
+    {
+      "name": "D02-IMPLEMENTATION-FLOWS",
+      "title": "Connected implementation \u2022 F01\u2013F10, P/H/S alignment",
+      "nodes": [
+        {
+          "id": "H01-H03",
+          "label": "Human intake, boundary, profile",
+          "file_ref": "04-ADMIN-SCREENS.md",
+          "kind": "H",
+          "x": 180,
+          "y": 205,
+          "node_ids": [
+            "H01",
+            "H03"
+          ]
+        },
+        {
+          "id": "P00-P03",
+          "label": "Parent / source / profile roles",
+          "file_ref": "10-CONFIGURATION-AND-PLACEMENT.md",
+          "kind": "P",
+          "x": 550,
+          "y": 205,
+          "node_ids": [
+            "P00",
+            "P03"
+          ]
+        },
+        {
+          "id": "F01-F05",
+          "label": "Intake \u2192 witness view",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "F",
+          "x": 920,
+          "y": 205,
+          "node_ids": [
+            "F01",
+            "F05"
+          ]
+        },
+        {
+          "id": "S01-S03",
+          "label": "Layout, chunks, graph / grants",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "S",
+          "x": 1290,
+          "y": 205,
+          "node_ids": [
+            "S01",
+            "S03"
+          ]
+        },
+        {
+          "id": "H04",
+          "label": "Human exact rework decision",
+          "file_ref": "04-ADMIN-SCREENS.md",
+          "kind": "H",
+          "x": 1660,
+          "y": 205,
+          "node_ids": [
+            "H04"
+          ]
+        },
+        {
+          "id": "P04-P06",
+          "label": "Packet / script / evaluator",
+          "file_ref": "10-CONFIGURATION-AND-PLACEMENT.md",
+          "kind": "P",
+          "x": 180,
+          "y": 505,
+          "node_ids": [
+            "P04",
+            "P06"
+          ]
+        },
+        {
+          "id": "F06-F08",
+          "label": "Quality, pair, export",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "F",
+          "x": 550,
+          "y": 505,
+          "node_ids": [
+            "F06",
+            "F08"
+          ]
+        },
+        {
+          "id": "S04-S05",
+          "label": "Jobs, artifacts, decision ledger",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "S",
+          "x": 920,
+          "y": 505,
+          "node_ids": [
+            "S04",
+            "S05"
+          ]
+        },
+        {
+          "id": "H05-H07",
+          "label": "Approve, custody, delivery",
+          "file_ref": "04-ADMIN-SCREENS.md",
+          "kind": "H",
+          "x": 1290,
+          "y": 505,
+          "node_ids": [
+            "H05",
+            "H07"
+          ]
+        },
+        {
+          "id": "F09-F10",
+          "label": "Status/cancel + custody",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "F",
+          "x": 1660,
+          "y": 505,
+          "node_ids": [
+            "F09",
+            "F10"
+          ]
+        },
+        {
+          "id": "END",
+          "label": "Saved approved exact scope",
+          "file_ref": "11-CASE-STORAGE.md",
+          "kind": "S",
+          "x": 180,
+          "y": 805,
+          "node_ids": [
+            "END"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "H01-H03",
+          "target": "P00-P03",
+          "label": "decisions"
+        },
+        {
+          "source": "P00-P03",
+          "target": "F01-F05",
+          "label": "candidates"
+        },
+        {
+          "source": "F01-F05",
+          "target": "S01-S03",
+          "label": "refs"
+        },
+        {
+          "source": "S01-S03",
+          "target": "P04-P06",
+          "label": "grants"
+        },
+        {
+          "source": "P04-P06",
+          "target": "F06-F08",
+          "label": "artifacts"
+        },
+        {
+          "source": "F06-F08",
+          "target": "H04",
+          "label": "rework"
+        },
+        {
+          "source": "H04",
+          "target": "P04-P06",
+          "label": "accepted plan"
+        },
+        {
+          "source": "F06-F08",
+          "target": "S04-S05",
+          "label": "state"
+        },
+        {
+          "source": "S04-S05",
+          "target": "H05-H07",
+          "label": "review"
+        },
+        {
+          "source": "H05-H07",
+          "target": "F09-F10",
+          "label": "decision"
+        },
+        {
+          "source": "F09-F10",
+          "target": "END",
+          "label": "delivery"
+        }
+      ]
+    },
+    {
+      "name": "D03-IMPLEMENTATION-QUALITY",
+      "title": "Connected implementation \u2022 separate packet and script revision loops",
+      "nodes": [
+        {
+          "id": "P04",
+          "label": "Packet writer",
+          "file_ref": "P04-packet-writer.md",
+          "kind": "P",
+          "x": 180,
+          "y": 205,
+          "node_ids": [
+            "P04"
+          ]
+        },
+        {
+          "id": "E0P",
+          "label": "Packet A0 frozen",
+          "file_ref": "08-QUALITY-CONTRACT.md",
+          "kind": "S",
+          "x": 550,
+          "y": 205,
+          "node_ids": [
+            "E0P"
+          ]
+        },
+        {
+          "id": "P06P",
+          "label": "Packet independent evaluation",
+          "file_ref": "P06-independent-evaluator.md",
+          "kind": "P",
+          "x": 920,
+          "y": 205,
+          "node_ids": [
+            "P06P"
+          ]
+        },
+        {
+          "id": "F06",
+          "label": "Packet quality gate",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "F",
+          "x": 1290,
+          "y": 205,
+          "node_ids": [
+            "F06"
+          ]
+        },
+        {
+          "id": "RPKT",
+          "label": "Packet revision A1\u2026A5",
+          "file_ref": "P04-packet-writer.md",
+          "kind": "P",
+          "x": 1660,
+          "y": 205,
+          "node_ids": [
+            "RPKT"
+          ]
+        },
+        {
+          "id": "P05",
+          "label": "Script writer after packet gate",
+          "file_ref": "P05-script-writer.md",
+          "kind": "P",
+          "x": 180,
+          "y": 505,
+          "node_ids": [
+            "P05"
+          ]
+        },
+        {
+          "id": "E0S",
+          "label": "Script A0 frozen",
+          "file_ref": "08-QUALITY-CONTRACT.md",
+          "kind": "S",
+          "x": 550,
+          "y": 505,
+          "node_ids": [
+            "E0S"
+          ]
+        },
+        {
+          "id": "P06S",
+          "label": "Script independent evaluation",
+          "file_ref": "P06-independent-evaluator.md",
+          "kind": "P",
+          "x": 920,
+          "y": 505,
+          "node_ids": [
+            "P06S"
+          ]
+        },
+        {
+          "id": "F07",
+          "label": "Script quality gate",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "F",
+          "x": 1290,
+          "y": 505,
+          "node_ids": [
+            "F07"
+          ]
+        },
+        {
+          "id": "RSCR",
+          "label": "Script revision A1\u2026A5",
+          "file_ref": "P05-script-writer.md",
+          "kind": "P",
+          "x": 1660,
+          "y": 505,
+          "node_ids": [
+            "RSCR"
+          ]
+        },
+        {
+          "id": "F08",
+          "label": "Exact pair consistency",
+          "file_ref": "02-FLOWS-AND-STATE.md",
+          "kind": "F",
+          "x": 180,
+          "y": 805,
+          "node_ids": [
+            "F08"
+          ]
+        },
+        {
+          "id": "H05",
+          "label": "Human approves exact scope",
+          "file_ref": "04-ADMIN-SCREENS.md",
+          "kind": "H",
+          "x": 550,
+          "y": 805,
+          "node_ids": [
+            "H05"
+          ]
+        },
+        {
+          "id": "SAVE",
+          "label": "Saved output + audit transition",
+          "file_ref": "11-CASE-STORAGE.md",
+          "kind": "S",
+          "x": 920,
+          "y": 805,
+          "node_ids": [
+            "SAVE"
+          ]
+        },
+        {
+          "id": "STOP",
+          "label": "Unresolved / fifth / hard gate",
+          "file_ref": "08-QUALITY-CONTRACT.md",
+          "kind": "X",
+          "x": 1290,
+          "y": 805,
+          "node_ids": [
+            "STOP"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "P04",
+          "target": "E0P",
+          "label": "write"
+        },
+        {
+          "source": "E0P",
+          "target": "P06P",
+          "label": "assign"
+        },
+        {
+          "source": "P06P",
+          "target": "F06",
+          "label": "findings"
+        },
+        {
+          "source": "F06",
+          "target": "RPKT",
+          "label": "needs rework"
+        },
+        {
+          "source": "RPKT",
+          "target": "P06P",
+          "label": "recheck min 2 / max 5"
+        },
+        {
+          "source": "F06",
+          "target": "P05",
+          "label": "packet gate passes"
+        },
+        {
+          "source": "P05",
+          "target": "E0S",
+          "label": "write"
+        },
+        {
+          "source": "E0S",
+          "target": "P06S",
+          "label": "assign"
+        },
+        {
+          "source": "P06S",
+          "target": "F07",
+          "label": "findings"
+        },
+        {
+          "source": "F07",
+          "target": "RSCR",
+          "label": "needs rework"
+        },
+        {
+          "source": "RSCR",
+          "target": "P06S",
+          "label": "recheck min 2 / max 5"
+        },
+        {
+          "source": "F07",
+          "target": "F08",
+          "label": "script gate passes"
+        },
+        {
+          "source": "F08",
+          "target": "H05",
+          "label": "exact pair"
+        },
+        {
+          "source": "H05",
+          "target": "SAVE",
+          "label": "approved"
+        },
+        {
+          "source": "RPKT",
+          "target": "STOP",
+          "label": "cap"
+        },
+        {
+          "source": "RSCR",
+          "target": "STOP",
+          "label": "cap"
+        }
+      ]
+    }
+  ]
+}

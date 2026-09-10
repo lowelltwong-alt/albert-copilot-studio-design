@@ -1,0 +1,108 @@
+{
+  "format": "Visio 2003 XML Drawing (.vdx)",
+  "editable_nodes_and_connectors": true,
+  "xml_parsed": true,
+  "native_visio_open": "not tested; desktop application unavailable",
+  "pages": [
+    {
+      "page": "D00-MANUAL-WIRING",
+      "nodes": 7,
+      "edges": 9,
+      "node_mapping": [
+        {
+          "node": "S",
+          "shape_id": 1,
+          "text": "One unpublished Studio agent \u00b7 proposed GPT-5.5\nInstructions: 00-ALL-IN-ONE-PROMPT"
+        },
+        {
+          "node": "I",
+          "shape_id": 2,
+          "text": "Test chat: C01 intake \u2192 C02 source/exhibits \u2192 C03 ledger"
+        },
+        {
+          "node": "P",
+          "shape_id": 3,
+          "text": "C04 profile \u2192 C05 witness packet"
+        },
+        {
+          "node": "R",
+          "shape_id": 4,
+          "text": "Separate review context: C06\nC07 only for verified repair"
+        },
+        {
+          "node": "W",
+          "shape_id": 5,
+          "text": "C08 full chaptered script"
+        },
+        {
+          "node": "Q",
+          "shape_id": 6,
+          "text": "C09 pair consistency \u2192 C10 truthful rehearsal"
+        },
+        {
+          "node": "H",
+          "shape_id": 7,
+          "text": "Human saves, reopens and accepts each handoff\nNo API / MCP / automatic file storage"
+        }
+      ],
+      "edge_mapping": [
+        {
+          "edge": "L_S_I_0",
+          "from": "S",
+          "to": "I",
+          "shape_id": 8
+        },
+        {
+          "edge": "L_I_P_0",
+          "from": "I",
+          "to": "P",
+          "shape_id": 9
+        },
+        {
+          "edge": "L_P_R_0",
+          "from": "P",
+          "to": "R",
+          "shape_id": 10
+        },
+        {
+          "edge": "L_R_W_0",
+          "from": "R",
+          "to": "W",
+          "shape_id": 11
+        },
+        {
+          "edge": "L_W_R_0",
+          "from": "W",
+          "to": "R",
+          "shape_id": 12
+        },
+        {
+          "edge": "L_R_Q_0",
+          "from": "R",
+          "to": "Q",
+          "shape_id": 13
+        },
+        {
+          "edge": "L_H_I_0",
+          "from": "H",
+          "to": "I",
+          "shape_id": 14
+        },
+        {
+          "edge": "L_H_P_0",
+          "from": "H",
+          "to": "P",
+          "shape_id": 15
+        },
+        {
+          "edge": "L_H_Q_0",
+          "from": "H",
+          "to": "Q",
+          "shape_id": 16
+        }
+      ],
+      "source_svg_sha256": "f797e22c01ec976953ee030004f2dd1eb6f99a8791e4274716316cf6910102e3"
+    }
+  ],
+  "vdx_sha256": "51de3ecaa68dbd421c29327e9b0673d40b0eff416e8a27fa81ef5ec4830da102"
+}

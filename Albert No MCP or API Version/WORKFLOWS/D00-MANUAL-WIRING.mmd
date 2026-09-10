@@ -1,0 +1,17 @@
+flowchart TD
+ S["One unpublished Studio agent · proposed GPT-5.5<br/>Instructions: 00-ALL-IN-ONE-PROMPT"]
+ I["Test chat: C01 intake → C02 source/exhibits → C03 ledger"]
+ P["C04 profile → C05 witness packet"]
+ R["Separate review context: C06<br/>C07 only for verified repair"]
+ W["C08 full chaptered script"]
+ Q["C09 pair consistency → C10 truthful rehearsal"]
+ H["Human saves, reopens and accepts each handoff<br/>No API / MCP / automatic file storage"]
+ S --> I
+ I --> P
+ P --> R
+ R -->|reviewed packet| W
+ W -->|review script| R
+ R -->|both artifacts reviewed| Q
+ H -.-> I
+ H -.-> P
+ H -.-> Q

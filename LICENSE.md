@@ -1,11 +1,7 @@
-# Repository license
+# License and ownership
 
-Albert-authored documentation, prompts, diagrams, and workflow material in this repository are offered under the Creative Commons Attribution 4.0 International license (CC BY 4.0) where the repository owner has the right to grant that license.
+Albert-authored prompts, diagrams and documentation are CC BY 4.0 where Lowell Wong holds the rights to grant it. Preserve attribution and credits. See https://creativecommons.org/licenses/by/4.0/.
 
-The following are excluded from that grant:
+This grant excludes Mini DAD, DAD-derived adaptations and assets, third-party dependencies, source cases and third-party marks. Mini DAD is proprietary intellectual property of Lowell Wong under [its restrictive notice](Extras/Mini%20DAD/LICENSE-PROPRIETARY.md). DAD-derived files elsewhere retain separate notices; no blanket CC BY grant applies. Third-party terms and prior valid license grants are preserved.
 
-- DAD-derived material and implementations, which remain subject to their original or separately stated terms.
-- Third-party or licensed mock-trial materials, including the PDFs in `Albert-MVP-Send-Ready-1.1.zip`.
-- Provider names, logos, model names, and other third-party marks.
-
-Before redistribution, preserve the package notices and perform a rights review for the exact files being copied.
+The public repository contains no licensed mock-trial PDF fixture pack. Obtain permission for any source case you supply. Public visibility is not a software-use license for excluded components.

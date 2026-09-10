@@ -1,0 +1,3 @@
+# DAD-derived material — proprietary boundary
+
+Copyright (c) 2026 Lowell Wong. All rights reserved in DAD-derived adaptations owned by Lowell Wong. Public availability permits inspection for evaluation; use, modification, deployment, redistribution, sublicensing, sale or hosted-service use requires separate written permission from Lowell Wong. Preserve provenance. Third-party terms, prior valid license grants and rights independently provided by law or hosting-platform terms remain unaffected. This notice applies only to DAD-derived material and does not withdraw CC BY rights in independently licensed Albert material.

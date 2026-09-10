@@ -1,0 +1,101 @@
+{
+  "scope": "local functional graph negative cases; one selected mutation except explicit empty-input test",
+  "baseline": "demo/WORKED-GRAPH.md",
+  "baseline_sha256": "5edb0e2f320eb3ff11492e1e7c87e5f0f31675fbf460dff4270a7ec8a59fe05a",
+  "cases": [
+    {
+      "file": "checks/fixtures/dangling-edge.md",
+      "sha256": "64e136670e72a1254ec4c1a9ae7677b2d94891e728e0d99a8b8a65b319d8bf36",
+      "expected_findings": [
+        {
+          "rule": "DANGLING_EDGE",
+          "identity": "E45"
+        }
+      ]
+    },
+    {
+      "file": "checks/fixtures/truth-upgrade.md",
+      "sha256": "9592bf9d755a217f949a31cdf19a9e80b40edc6d901ae9901588866850d27737",
+      "expected_findings": [
+        {
+          "rule": "CONFLICT_TRUTH_UPGRADE",
+          "identity": "CF01"
+        }
+      ]
+    },
+    {
+      "file": "checks/fixtures/grant-unit.md",
+      "sha256": "caed0e3a24ea9a46065e4c8490590094cdbd8959ad0db0244b323287d7961cad",
+      "expected_findings": [
+        {
+          "rule": "GRANT_UNIT",
+          "identity": "PG01"
+        }
+      ]
+    },
+    {
+      "file": "checks/fixtures/conflict-endpoint.md",
+      "sha256": "a97024251ec056b6e54c52d4364af046e40e7cc21a844b9b459551ffefc20658",
+      "expected_findings": [
+        {
+          "rule": "CONFLICT_ENDPOINTS",
+          "identity": "CF01"
+        }
+      ]
+    },
+    {
+      "file": "checks/fixtures/span-parent.md",
+      "sha256": "8a0b33cad55859b88a8b3f5e2305b3ac139beaf35ad523f7e2847e76979ecc36",
+      "expected_findings": [
+        {
+          "rule": "SPAN_PARENT",
+          "identity": "SP01"
+        }
+      ]
+    },
+    {
+      "file": "checks/fixtures/stale-edge.md",
+      "sha256": "3a0f70a99718dcc055de03ef2d90a3d6adfebc87470c5e29f75aa49edbd502ff",
+      "expected_findings": [
+        {
+          "rule": "EDGE_REVISION",
+          "identity": "E44"
+        }
+      ]
+    },
+    {
+      "file": "checks/fixtures/empty-graph.md",
+      "sha256": "e5151da1a8945fa1f8f155392881b2438ce1a5f275d8e45726c19ab6542f96a6",
+      "expected_findings": [
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "sources"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "spans"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "items"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "claims"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "grants"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "conflicts"
+        },
+        {
+          "rule": "MISSING_SECTION",
+          "identity": "edges"
+        }
+      ]
+    }
+  ]
+}

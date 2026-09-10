@@ -1,0 +1,23 @@
+flowchart TB
+  N_H01_H03["H01-H03: Human intake, boundary, profile<br/>04-ADMIN-SCREENS.md"]
+  N_P00_P03["P00-P03: Parent / source / profile roles<br/>10-CONFIGURATION-AND-PLACEMENT.md"]
+  N_F01_F05["F01-F05: Intake → witness view<br/>02-FLOWS-AND-STATE.md"]
+  N_S01_S03["S01-S03: Layout, chunks, graph / grants<br/>02-FLOWS-AND-STATE.md"]
+  N_H04["H04: Human exact rework decision<br/>04-ADMIN-SCREENS.md"]
+  N_P04_P06["P04-P06: Packet / script / evaluator<br/>10-CONFIGURATION-AND-PLACEMENT.md"]
+  N_F06_F08["F06-F08: Quality, pair, export<br/>02-FLOWS-AND-STATE.md"]
+  N_S04_S05["S04-S05: Jobs, artifacts, decision ledger<br/>02-FLOWS-AND-STATE.md"]
+  N_H05_H07["H05-H07: Approve, custody, delivery<br/>04-ADMIN-SCREENS.md"]
+  N_F09_F10["F09-F10: Status/cancel + custody<br/>02-FLOWS-AND-STATE.md"]
+  N_END["END: Saved approved exact scope<br/>11-CASE-STORAGE.md"]
+  N_H01_H03 -->|decisions| N_P00_P03
+  N_P00_P03 -->|candidates| N_F01_F05
+  N_F01_F05 -->|refs| N_S01_S03
+  N_S01_S03 -->|grants| N_P04_P06
+  N_P04_P06 -->|artifacts| N_F06_F08
+  N_F06_F08 -->|rework| N_H04
+  N_H04 -->|accepted plan| N_P04_P06
+  N_F06_F08 -->|state| N_S04_S05
+  N_S04_S05 -->|review| N_H05_H07
+  N_H05_H07 -->|decision| N_F09_F10
+  N_F09_F10 -->|delivery| N_END

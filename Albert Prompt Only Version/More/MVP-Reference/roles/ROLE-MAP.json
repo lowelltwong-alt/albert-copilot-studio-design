@@ -1,0 +1,30 @@
+{
+  "schema": "albert.innovation.roles.v1",
+  "runtime": "manual standalone Studio agents",
+  "roles": {
+    "ANALYST": {
+      "name": "Albert Case Analyst",
+      "description": "Build an attributed case graph and propose a witness-permitted source packet from supplied material.",
+      "instruction_file": "roles/ROLE-ANALYST.md",
+      "instructions_characters": 3112
+    },
+    "WRITER": {
+      "name": "Albert Writer",
+      "description": "Plan, write and carefully repair a two-host preparation transcript using a reviewed permitted packet.",
+      "instruction_file": "roles/ROLE-WRITER.md",
+      "instructions_characters": 3224
+    },
+    "EVIDENCE": {
+      "name": "Albert Evidence Reviewer",
+      "description": "Check exact plans, graphs and complete script/card assemblies against the supplied source and witness permissions.",
+      "instruction_file": "roles/ROLE-EVIDENCE.md",
+      "instructions_characters": 3188
+    },
+    "CONVERSATION": {
+      "name": "Albert Conversation Reviewer",
+      "description": "Evaluate the complete transcript as a listening experience with useful examination practice and accurate limits.",
+      "instruction_file": "roles/ROLE-CONVERSATION.md",
+      "instructions_characters": 3243
+    }
+  }
+}

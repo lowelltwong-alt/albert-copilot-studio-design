@@ -1,0 +1,113 @@
+{
+  "format": "Visio 2003 XML Drawing (.vdx)",
+  "editable_nodes_and_connectors": true,
+  "xml_parsed": true,
+  "native_visio_open": "not tested; desktop application unavailable",
+  "pages": [
+    {
+      "page": "D00-CONNECTED-WIRING",
+      "nodes": 8,
+      "edges": 9,
+      "node_mapping": [
+        {
+          "node": "S",
+          "shape_id": 1,
+          "text": "Studio parent \u00b7 proposed GPT-5.5\nInstructions: P00-parent"
+        },
+        {
+          "node": "W",
+          "shape_id": 2,
+          "text": "Assigned scoped workers\nP01 source \u00b7 P02 profile \u00b7 P03 plan\nP04 packet \u00b7 P05 script \u00b7 P07 rehearsal"
+        },
+        {
+          "node": "M",
+          "shape_id": 3,
+          "text": "MCP primary\nAuthenticated Streamable HTTP"
+        },
+        {
+          "node": "A",
+          "shape_id": 4,
+          "text": "HTTPS API alternative\nSame authenticated operation contract"
+        },
+        {
+          "node": "D",
+          "shape_id": 5,
+          "text": "Authoritative dispatcher + operation ledger\nFull Albert backend must be implemented"
+        },
+        {
+          "node": "E",
+          "shape_id": 6,
+          "text": "Separate assigned evaluator \u00b7 P06\nCurrent frozen inputs / no self-assignment"
+        },
+        {
+          "node": "H",
+          "shape_id": 7,
+          "text": "Human portal decision\nRecordHumanDecision is not an agent tool"
+        },
+        {
+          "node": "B",
+          "shape_id": 8,
+          "text": "Proposed durable source/artifact store\nChunks / claims / grants / conflicts / jobs"
+        }
+      ],
+      "edge_mapping": [
+        {
+          "edge": "L_S_W_0",
+          "from": "S",
+          "to": "W",
+          "shape_id": 9
+        },
+        {
+          "edge": "L_W_M_0",
+          "from": "W",
+          "to": "M",
+          "shape_id": 10
+        },
+        {
+          "edge": "L_W_A_0",
+          "from": "W",
+          "to": "A",
+          "shape_id": 11
+        },
+        {
+          "edge": "L_M_D_0",
+          "from": "M",
+          "to": "D",
+          "shape_id": 12
+        },
+        {
+          "edge": "L_A_D_0",
+          "from": "A",
+          "to": "D",
+          "shape_id": 13
+        },
+        {
+          "edge": "L_D_E_0",
+          "from": "D",
+          "to": "E",
+          "shape_id": 14
+        },
+        {
+          "edge": "L_E_D_0",
+          "from": "E",
+          "to": "D",
+          "shape_id": 15
+        },
+        {
+          "edge": "L_H_D_0",
+          "from": "H",
+          "to": "D",
+          "shape_id": 16
+        },
+        {
+          "edge": "L_D_B_0",
+          "from": "D",
+          "to": "B",
+          "shape_id": 17
+        }
+      ],
+      "source_svg_sha256": "7e18972a578c8e9510e7e5683aa313d3a267adab062d44da0c70ac4cc7eb351f"
+    }
+  ],
+  "vdx_sha256": "8aa5b6a6fcf8826c3296850b96d9dda99d8f74e000f36c4e8d630fbf6dfff08b"
+}

@@ -1,0 +1,119 @@
+{
+  "format": "Visio 2003 XML Drawing (.vdx)",
+  "editable_nodes_and_connectors": true,
+  "xml_parsed": true,
+  "native_visio_open": "not tested; desktop application unavailable",
+  "pages": [
+    {
+      "page": "D00-MVP-WIRING",
+      "nodes": 8,
+      "edges": 10,
+      "node_mapping": [
+        {
+          "node": "S",
+          "shape_id": 1,
+          "text": "Standard Copilot Studio \u00b7 unpublished agents"
+        },
+        {
+          "node": "A",
+          "shape_id": 2,
+          "text": "Case Analyst \u00b7 GPT-5.5\nInstructions: ROLE-ANALYST\nTest chat: RUN-01"
+        },
+        {
+          "node": "O",
+          "shape_id": 3,
+          "text": "Operator saves and reviews source/view"
+        },
+        {
+          "node": "W",
+          "shape_id": 4,
+          "text": "Writer \u00b7 Claude Sonnet 4.6\nInstructions: ROLE-WRITER\nTest chat: RUN-02 / 04 / 08 / 10"
+        },
+        {
+          "node": "E",
+          "shape_id": 5,
+          "text": "Evidence Reviewer \u00b7 GPT-5.5\nInstructions: ROLE-EVIDENCE\nTest chat: RUN-03 / 05 / 07 / 09"
+        },
+        {
+          "node": "C",
+          "shape_id": 6,
+          "text": "Conversation Reviewer \u00b7 GPT-5.5\nInstructions: ROLE-CONVERSATION\nTest chat: RUN-06"
+        },
+        {
+          "node": "G",
+          "shape_id": 7,
+          "text": "Joined source + craft reports\nHuman accept / one repair / HOLD"
+        },
+        {
+          "node": "F",
+          "shape_id": 8,
+          "text": "Saved Markdown packets\nCopy exact complete inputs between roles"
+        }
+      ],
+      "edge_mapping": [
+        {
+          "edge": "L_S_A_0",
+          "from": "S",
+          "to": "A",
+          "shape_id": 9
+        },
+        {
+          "edge": "L_A_O_0",
+          "from": "A",
+          "to": "O",
+          "shape_id": 10
+        },
+        {
+          "edge": "L_O_W_0",
+          "from": "O",
+          "to": "W",
+          "shape_id": 11
+        },
+        {
+          "edge": "L_W_E_0",
+          "from": "W",
+          "to": "E",
+          "shape_id": 12
+        },
+        {
+          "edge": "L_W_C_0",
+          "from": "W",
+          "to": "C",
+          "shape_id": 13
+        },
+        {
+          "edge": "L_E_G_0",
+          "from": "E",
+          "to": "G",
+          "shape_id": 14
+        },
+        {
+          "edge": "L_C_G_0",
+          "from": "C",
+          "to": "G",
+          "shape_id": 15
+        },
+        {
+          "edge": "L_G_W_0",
+          "from": "G",
+          "to": "W",
+          "shape_id": 16
+        },
+        {
+          "edge": "L_G_F_0",
+          "from": "G",
+          "to": "F",
+          "shape_id": 17
+        },
+        {
+          "edge": "L_F_O_0",
+          "from": "F",
+          "to": "O",
+          "shape_id": 18
+        }
+      ],
+      "source_svg_sha256": "3d6f4f9f2d85f544d346d6aabd1f619c45dbac8030281b8c176c9517a335744f"
+    }
+  ],
+  "vdx_sha256": "dfac0937f5c0ac866c0681d7c3fbb0e61acb9b41aa3f2e2d500bad4b7871b273"
+}

@@ -1,0 +1,17 @@
+flowchart TB
+  N_H01["H01: Create one unpublished agent<br/>01-SETUP-AND-RUN-SEQUENCE.md"]
+  N_ALL["ALL: Paste all-in-one parent<br/>00-ALL-IN-ONE-PROMPT.md"]
+  N_CFG["CFG: Run C01–C10 named stages<br/>10-CONFIGURATION-AND-PLACEMENT.md"]
+  N_IN["IN: Approved passages + ledger<br/>01-SETUP-AND-RUN-SEQUENCE.md"]
+  N_ART["ART: Separate packet and script series<br/>03-OPERATOR-LEDGER-TEMPLATE.md"]
+  N_SAVE["SAVE: Manual save / reload snapshot<br/>11-CASE-STORAGE.md"]
+  N_K["K: Optional reviewed knowledge upload<br/>11-CASE-STORAGE.md"]
+  N_X["X: No MCP, API, backend; no fact inflation<br/>01-SETUP-AND-RUN-SEQUENCE.md"]
+  N_H01 -->|configure| N_ALL
+  N_ALL -->|instructions| N_CFG
+  N_IN -->|manual supply| N_CFG
+  N_CFG -->|freeze| N_ART
+  N_ART -->|record| N_SAVE
+  N_SAVE -->|optional| N_K
+  N_CFG -->|scope boundary| N_X
+  N_K -->|reload selected current files| N_CFG

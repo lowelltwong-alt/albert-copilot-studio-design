@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1900" height="665"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#465d76"/></marker></defs><rect width="100%" height="100%" fill="#f8fafc"/><text x="35" y="40" font-family="Segoe UI" font-size="29" font-weight="700" fill="#17304c">Full prompt workflow • placement and case recovery</text><text x="35" y="70" font-family="Segoe UI" font-size="16" fill="#455e78">Legend: yellow human • blue prompt • green flow • purple service/storage • red stop. Proposed design; not executable BPMN or deployment proof.</text>
+<polyline points="330,205 400,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="335.75" y="180" width="58.5" height="20" fill="white"/><text x="365.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">configure</text>
+<polyline points="700,205 770,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="696.0" y="180" width="78.0" height="20" fill="white"/><text x="735.0" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13">instructions</text>
+<polyline points="1290,149 1290,89 920,89 920,149" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1062.75" y="64" width="84.5" height="20" fill="white"/><text x="1105.0" y="79" text-anchor="middle" font-family="Segoe UI" font-size="13">manual supply</text>
+<polyline points="920,261 920,305 1660,305 1660,261" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="1263.0" y="280" width="54" height="20" fill="white"/><text x="1290.0" y="295" text-anchor="middle" font-family="Segoe UI" font-size="13">freeze</text>
+<polyline points="1660,261 1660,359 8,359 8,505 30,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="807.0" y="334" width="54" height="20" fill="white"/><text x="834.0" y="349" text-anchor="middle" font-family="Segoe UI" font-size="13">record</text>
+<polyline points="330,505 400,505" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="338.0" y="480" width="54" height="20" fill="white"/><text x="365.0" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13">optional</text>
+<polyline points="920,261 920,449" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="934.5" y="342.0" width="91.0" height="20" fill="white"/><text x="980" y="357.0" text-anchor="middle" font-family="Segoe UI" font-size="13">scope boundary</text>
+<polyline points="550,449 550,351 748,351 748,205 770,205" fill="none" stroke="#465d76" stroke-width="2.2" marker-end="url(#a)"/><rect x="554.75" y="326" width="188.5" height="20" fill="white"/><text x="649.0" y="341" text-anchor="middle" font-family="Segoe UI" font-size="13">reload selected current files</text>
+<a xlink:href="01-SETUP-AND-RUN-SEQUENCE.md"><rect x="30" y="149" width="300" height="112" rx="12" fill="#fff0d2" stroke="#8197ad"/>
+<text x="180" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">H01</text>
+<text x="180" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Create one unpublished agent</text>
+<text x="180" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">01-SETUP-AND-RUN-SEQUENCE.md</text>
+</a>
+<a xlink:href="00-ALL-IN-ONE-PROMPT.md"><rect x="400" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="550" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">ALL</text>
+<text x="550" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Paste all-in-one parent</text>
+<text x="550" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">00-ALL-IN-ONE-PROMPT.md</text>
+</a>
+<a xlink:href="10-CONFIGURATION-AND-PLACEMENT.md"><rect x="770" y="149" width="300" height="112" rx="12" fill="#e5efff" stroke="#8197ad"/>
+<text x="920" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">CFG</text>
+<text x="920" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Run C01–C10 named stages</text>
+<text x="920" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">10-CONFIGURATION-AND-PLACEMENT.md</text>
+</a>
+<a xlink:href="01-SETUP-AND-RUN-SEQUENCE.md"><rect x="1140" y="149" width="300" height="112" rx="12" fill="#fff0d2" stroke="#8197ad"/>
+<text x="1290" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">IN</text>
+<text x="1290" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Approved passages + ledger</text>
+<text x="1290" y="210" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">01-SETUP-AND-RUN-SEQUENCE.md</text>
+</a>
+<a xlink:href="03-OPERATOR-LEDGER-TEMPLATE.md"><rect x="1510" y="149" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="1660" y="174" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">ART</text>
+<text x="1660" y="192" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Separate packet and script</text>
+<text x="1660" y="210" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">series</text>
+<text x="1660" y="228" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">03-OPERATOR-LEDGER-TEMPLATE.md</text>
+</a>
+<a xlink:href="11-CASE-STORAGE.md"><rect x="30" y="449" width="300" height="112" rx="12" fill="#e9e0ff" stroke="#8197ad"/>
+<text x="180" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">SAVE</text>
+<text x="180" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Manual save / reload snapshot</text>
+<text x="180" y="510" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">11-CASE-STORAGE.md</text>
+</a>
+<a xlink:href="11-CASE-STORAGE.md"><rect x="400" y="449" width="300" height="112" rx="12" fill="#eef2f6" stroke="#8197ad"/>
+<text x="550" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">K</text>
+<text x="550" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">Optional reviewed knowledge</text>
+<text x="550" y="510" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">upload</text>
+<text x="550" y="528" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">11-CASE-STORAGE.md</text>
+</a>
+<a xlink:href="01-SETUP-AND-RUN-SEQUENCE.md"><rect x="770" y="449" width="300" height="112" rx="12" fill="#ffe1e1" stroke="#8197ad"/>
+<text x="920" y="474" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="700" fill="#19334f">X</text>
+<text x="920" y="492" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">No MCP, API, backend; no fact</text>
+<text x="920" y="510" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="400" fill="#19334f">inflation</text>
+<text x="920" y="528" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="400" fill="#19334f">01-SETUP-AND-RUN-SEQUENCE.md</text>
+</a>
+</svg>

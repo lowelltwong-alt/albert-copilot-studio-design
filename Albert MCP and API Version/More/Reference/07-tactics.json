@@ -1,0 +1,238 @@
+{
+  "status": "verified_starter_descriptions_not_legal_advice",
+  "prior_research_gap": "Local control-plan metadata inspected; inaccessible prior studies and protected transcripts not retrieved or reused. No empirical tactic-frequency estimate is asserted.",
+  "source_note": "Rule text reproduced by Cornell LII; official current rules index: https://www.uscourts.gov/forms-rules/current-rules-practice-procedure/federal-rules-evidence",
+  "tactics": [
+    {
+      "id": "tactic:leading_sequence",
+      "name": "Short leading-question sequence",
+      "aliases": [
+        "yes momentum",
+        "yes-set"
+      ],
+      "label_status": "descriptive_training_label",
+      "explanation": "A series of narrow leading questions seeks discrete admissions.",
+      "purpose": "Test one proposition at a time.",
+      "recognition_cues": [
+        "Repeated short propositions"
+      ],
+      "required_conditions": [
+        "Cross-examination permitted",
+        "Accurate propositions"
+      ],
+      "source_urls": [
+        "https://www.law.cornell.edu/rules/fre/rule_611",
+        "https://blog.richmond.edu/tab/files/2018/08/DouglassOutline.pdf"
+      ],
+      "verified_on": "2026-09-08",
+      "source_scope": "FRE 611 and Richmond outline pp. 5, 11",
+      "likelihood": "not_case_assessed",
+      "confidence": "medium",
+      "confidence_basis": "Public source support for technique description; no case-specific prediction or efficacy estimate.",
+      "limits": [
+        "Leading form does not require agreement.",
+        "Yes momentum is not a formal evidence doctrine.",
+        "Jurisdiction, competition rules and rulings control."
+      ],
+      "truthful_handling": [
+        "Assess each premise independently; qualify or correct inaccuracies."
+      ],
+      "audience": "split"
+    },
+    {
+      "id": "tactic:commit_contradict",
+      "name": "Commitment followed by contradiction",
+      "aliases": [
+        "lock-in"
+      ],
+      "label_status": "descriptive_training_label",
+      "explanation": "A clear present account is contrasted with conflicting evidence.",
+      "purpose": "Expose a specific inconsistency.",
+      "recognition_cues": [
+        "Present version fixed before document comparison"
+      ],
+      "required_conditions": [
+        "Genuine contradiction",
+        "Matching time and scope"
+      ],
+      "source_urls": [
+        "https://blog.richmond.edu/tab/files/2018/08/DouglassOutline.pdf"
+      ],
+      "verified_on": "2026-09-08",
+      "source_scope": "Richmond outline pp. 5, 7",
+      "likelihood": "not_case_assessed",
+      "confidence": "medium",
+      "confidence_basis": "Public source support for technique description; no case-specific prediction or efficacy estimate.",
+      "limits": [
+        "Do not manufacture conflict by stripping context.",
+        "Jurisdiction, competition rules and rulings control."
+      ],
+      "truthful_handling": [
+        "Keep the account accurate and explain a real distinction if one exists."
+      ],
+      "audience": "split"
+    },
+    {
+      "id": "tactic:prior_statement",
+      "name": "Prior inconsistent statement",
+      "aliases": [],
+      "label_status": "recognized_rule_or_term",
+      "explanation": "A prior statement is compared with current testimony.",
+      "purpose": "Assess credibility under applicable rules.",
+      "recognition_cues": [
+        "Earlier words contrasted with present account"
+      ],
+      "required_conditions": [
+        "Authenticated prior statement",
+        "Rule and ruling permit use"
+      ],
+      "source_urls": [
+        "https://www.law.cornell.edu/rules/fre/rule_613",
+        "https://www.law.cornell.edu/rules/fre/rule_801"
+      ],
+      "verified_on": "2026-09-08",
+      "source_scope": "FRE 613; FRE 801(d)(1)(A)",
+      "likelihood": "not_case_assessed",
+      "confidence": "medium",
+      "confidence_basis": "Public source support for technique description; no case-specific prediction or efficacy estimate.",
+      "limits": [
+        "Impeachment and substantive use differ.",
+        "FRE 613(b) generally requires an opportunity to explain/deny before extrinsic evidence, unless court orders otherwise; opposing-party statements are excepted.",
+        "Jurisdiction, competition rules and rulings control."
+      ],
+      "truthful_handling": [
+        "Read or listen carefully; acknowledge an accurate prior statement and truthfully explain any difference."
+      ],
+      "audience": "split"
+    },
+    {
+      "id": "tactic:omission",
+      "name": "Omission-based impeachment",
+      "aliases": [],
+      "label_status": "descriptive_training_label",
+      "explanation": "An earlier account lacks a detail now supplied.",
+      "purpose": "Test completeness and reliability.",
+      "recognition_cues": [
+        "Why was this not mentioned earlier?"
+      ],
+      "required_conditions": [
+        "Earlier account context makes omission probative"
+      ],
+      "source_urls": [
+        "https://blog.richmond.edu/tab/files/2018/08/DouglassOutline.pdf"
+      ],
+      "verified_on": "2026-09-08",
+      "source_scope": "Richmond outline p. 7",
+      "likelihood": "not_case_assessed",
+      "confidence": "medium",
+      "confidence_basis": "Public source support for technique description; no case-specific prediction or efficacy estimate.",
+      "limits": [
+        "Silence alone is not contradiction or lying.",
+        "Jurisdiction, competition rules and rulings control."
+      ],
+      "truthful_handling": [
+        "Explain the earlier account\u2019s scope honestly; do not invent an excuse."
+      ],
+      "audience": "split"
+    },
+    {
+      "id": "tactic:question_form",
+      "name": "Compound or false-premise question",
+      "aliases": [],
+      "label_status": "descriptive_training_label",
+      "explanation": "A question joins propositions or assumes an unsupported premise.",
+      "purpose": "Recognize a misleading answer constraint.",
+      "recognition_cues": [
+        "Multiple propositions",
+        "An assumption embedded in the question"
+      ],
+      "required_conditions": [
+        "Question actually contains ambiguity or unsupported premise"
+      ],
+      "source_urls": [
+        "https://blog.richmond.edu/tab/files/2018/08/DouglassOutline.pdf",
+        "https://www.law.cornell.edu/rules/fre/rule_611"
+      ],
+      "verified_on": "2026-09-08",
+      "source_scope": "Richmond outline pp. 5, 11; FRE 611 court control",
+      "likelihood": "not_case_assessed",
+      "confidence": "medium",
+      "confidence_basis": "Public source support for technique description; no case-specific prediction or efficacy estimate.",
+      "limits": [
+        "Question-form objections depend on applicable rules and rulings.",
+        "Jurisdiction, competition rules and rulings control."
+      ],
+      "truthful_handling": [
+        "Ask to separate or clarify; correct a false premise without guessing."
+      ],
+      "audience": "split"
+    },
+    {
+      "id": "tactic:speculation",
+      "name": "Invitation to speculate",
+      "aliases": [
+        "personal-knowledge limit"
+      ],
+      "label_status": "descriptive_training_label",
+      "explanation": "A question asks beyond the witness\u2019s perception or permitted expertise.",
+      "purpose": "Maintain truthful knowledge limits.",
+      "recognition_cues": [
+        "Questions about unseen events or another person\u2019s thoughts"
+      ],
+      "required_conditions": [
+        "No adequate personal-knowledge foundation or approved expert basis"
+      ],
+      "source_urls": [
+        "https://www.law.cornell.edu/rules/fre/rule_602",
+        "https://www.law.cornell.edu/rules/fre/rule_701"
+      ],
+      "verified_on": "2026-09-08",
+      "source_scope": "FRE 602 and 701",
+      "likelihood": "not_case_assessed",
+      "confidence": "medium",
+      "confidence_basis": "Public source support for technique description; no case-specific prediction or efficacy estimate.",
+      "limits": [
+        "Expert testimony has distinct rules; do not apply lay limits mechanically.",
+        "Jurisdiction, competition rules and rulings control."
+      ],
+      "truthful_handling": [
+        "Distinguish what you perceived from inference and what you do not know."
+      ],
+      "audience": "split"
+    },
+    {
+      "id": "tactic:selective_context",
+      "name": "Selective statement and completeness",
+      "aliases": [
+        "selective documents",
+        "rule of completeness"
+      ],
+      "label_status": "descriptive_training_label",
+      "explanation": "A selected passage may omit context needed to avoid misimpression.",
+      "purpose": "Recognize context loss.",
+      "recognition_cues": [
+        "Isolated quotation without surrounding qualification"
+      ],
+      "required_conditions": [
+        "Omitted context materially changes impression"
+      ],
+      "source_urls": [
+        "https://www.law.cornell.edu/rules/fre/rule_106"
+      ],
+      "verified_on": "2026-09-08",
+      "source_scope": "FRE 106 including 2023 amendment",
+      "likelihood": "not_case_assessed",
+      "confidence": "medium",
+      "confidence_basis": "Public source support for technique description; no case-specific prediction or efficacy estimate.",
+      "limits": [
+        "Current FRE 106 covers statements, including unrecorded oral statements.",
+        "Completion is not automatic admission of every related passage.",
+        "Jurisdiction, competition rules and rulings control."
+      ],
+      "truthful_handling": [
+        "Identify the missing qualification accurately; counsel handles a completeness request."
+      ],
+      "audience": "split"
+    }
+  ]
+}
